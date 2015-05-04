@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- fileio.cpp -->
+  <title>FileIO Class | Neuronify </title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+        <ul>
+<li>FileIO</li>
+<li id="buildversion">
+</li>
+    </ul>
+    </div>
+</div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">FileIO Class</h1>
+<!-- $$$FileIO-brief -->
+<p>FileIO is a helper class used for reading and writing files from QML. <a href="#details">More...</a></p>
+<!-- @@@FileIO -->
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> </b><tt><span class="preprocessor">#include &lt;FileIO&gt;</span>
+</tt></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="http://qt-project.org/doc/qt-5.3/qobject.html">QObject</a>.</td></tr></table><ul>
+<li><a href="fileio-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><a href="fileio.html#source-prop">source</a></b> : QUrl</li>
+</ul>
+<ul>
+<li class="fn">1 property inherited from <a href="http://qt-project.org/doc/qt-5.3/qobject.html#properties">QObject</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="fileio.html#FileIO">FileIO</a></b>(QObject *<i> parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QUrl </td><td class="memItemRight bottomAlign"><b><a href="fileio.html#source-prop">source</a></b>()</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="http://qt-project.org/doc/qt-5.3/qobject.html#public-functions">QObject</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2>Public Slots</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="fileio.html#source-prop">setSource</a></b>(const QUrl &amp;<i> source</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">1 public slot inherited from <a href="http://qt-project.org/doc/qt-5.3/qobject.html#public-slots">QObject</a></li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="fileio.html#error">error</a></b>(const QString &amp;<i> msg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="fileio.html#source-prop">sourceChanged</a></b>(const QUrl &amp;<i> source</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">2 signals inherited from <a href="http://qt-project.org/doc/qt-5.3/qobject.html#signals">QObject</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 public variable inherited from <a href="http://qt-project.org/doc/qt-5.3/qobject.html#public-variables">QObject</a></li>
+<li class="fn">10 static public members inherited from <a href="http://qt-project.org/doc/qt-5.3/qobject.html#static-public-members">QObject</a></li>
+<li class="fn">9 protected functions inherited from <a href="http://qt-project.org/doc/qt-5.3/qobject.html#protected-functions">QObject</a></li>
+<li class="fn">2 protected variables inherited from <a href="http://qt-project.org/doc/qt-5.3/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$FileIO-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>FileIO is a helper class used for reading and writing files from QML.</p>
+<p>This is mainly used to read and save simulation files.</p>
+</div>
+<!-- @@@FileIO -->
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$source-prop$$$source$$$setSourceconstQUrl&$$$sourceChangedconstQUrl& -->
+<h3 class="fn"><a name="source-prop"></a><span class="name">source</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.3/qurl.html">QUrl</a></span></h3>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QUrl </td><td class="memItemRight bottomAlign"><span class="name"><b>source</b></span>()</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setSource</b></span>(const QUrl &amp;<i> source</i>)</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>sourceChanged</b></span>(const QUrl &amp;<i> source</i>)</td></tr>
+</table>
+<!-- @@@source -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$FileIO[overload1]$$$FileIOQObject* -->
+<h3 class="fn"><a name="FileIO"></a>FileIO::<span class="name">FileIO</span>(<span class="type"><a href="http://qt-project.org/doc/qt-5.3/qobject.html">QObject</a></span> *<i> parent</i> = 0)</h3>
+<!-- @@@FileIO -->
+<!-- $$$error[overload1]$$$errorconstQString& -->
+<h3 class="fn"><a name="error"></a><span class="type">void</span> FileIO::<span class="name">error</span>(const <span class="type"><a href="http://qt-project.org/doc/qt-5.3/qstring.html">QString</a></span> &amp;<i> msg</i>)<tt> [signal]</tt></h3>
+<!-- @@@error -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+   subsidiaries. Documentation contributions included herein are the copyrights of
+   their respective owners.<br>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br>    Digia, Qt and their respective logos are trademarks of Digia Plc     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>
