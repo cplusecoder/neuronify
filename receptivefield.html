@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- index.qdoc -->
-  <title>QML TYPES | Neuronify </title>
+<!-- receptiveField.qdoc -->
+  <title>Receptive field | Neuronify </title>
   <link rel="stylesheet" type="text/css" href="style/online-neuronify.css" />
   <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
   <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
@@ -52,7 +52,7 @@
     </div>
     <ul>
        <li class="first"><a href="index.html">Neuronify</a></li>
-<li>QML TYPES</li>
+<li>Receptive field</li>
 <li id="buildversion">
 </li>
     </ul>
@@ -61,13 +61,16 @@
     <div class="line">
         <div class="content mainContent">
 <div class="context">
-<h1 class="title">QML TYPES</h1>
+<h1 class="title">Receptive field</h1>
 <span class="subtitle"></span>
-<!-- $$$qmlTypes.html-description -->
+<!-- $$$receptiveField.html-description -->
 <div class="descr"> <a name="details"></a>
-<p>This is a list of all documented QML Types in Neuronify.</p>
+<p>Neurons in the early visual system, consisting of the retina, lateral geniculate nucleus (LGN), and primary visual cortex (V1), respond to light stimuli in restricted regions of the visual field called their receptive fields (RFs). The spatial and temporal structure of the RFs among the neurons in the visual system varies, but they usually consist of two parts; one part that derpolarize the cell under illumination and one part that hyperpolarize the cell when illuminated. A typical RF structure is the so-called center-surround RF, consisting of a central disk (center) and a concentric ring (surround), each responding oppositely to light. For example, illumination of the center might increase the firing of a neuron, whereas light in the surround would decrease the firing of that neuron.</p>
+<p>The firing rate of a neuron evoked by a stimulus \(s(\mathrm{r},t-\tau) \) can be estimated using a linear kernel as</p>
+<p>\( r(t) = r_0 + \displaystyle \int \int D(\mathrm{r},\tau) s(\mathrm{r},t-\tau) d\tau d\mathrm{r} \),</p>
+<p>where \( D(\mathrm{r},\tau) \) is a weighting factor that determines how strongly, and with what sign, the value of the stimulus at point \( \mathrm{r} \) and at time \( t-\tau\) affects the firing rate at time \( t \). In the visual system, the kernel \( D(\mathrm{r},\tau) \) defines the time-space RF of a neuron.</p>
 </div>
-<!-- @@@qmlTypes.html -->
+<!-- @@@receptiveField.html -->
 </div>
 </div>
 </div>
