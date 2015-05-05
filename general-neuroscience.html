@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- general-neuroscience.qdoc -->
+  <title>General neuroscience | Neuronify </title>
+  <link rel="stylesheet" type="text/css" href="style/online-neuronify.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="http://d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/js/combo.js.gzip"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <div id="main_title_bar">
+        <h1>Neuronify Documentation</h1>
+    </div>
+    <ul>
+       <li class="first"><a href="index.html">Neuronify</a></li>
+<li>General neuroscience</li>
+<li id="buildversion">
+</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="context">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#brain-tissue-and-cell-types">Brain tissue and cell types</a></li>
+<li class="level1"><a href="#neuron-signaling">Neuron signaling</a></li>
+</ul>
+</div>
+<h1 class="title">General neuroscience</h1>
+<span class="subtitle"></span>
+<!-- $$$general-neuroscience-description -->
+<div class="descr"> <a name="details"></a>
+<p>The simulations in Neuronify mimic neural networks in our body. This page is intended to give you a short introduction to basic concepts of neuroscience that you might encounter while using the app. In the future, this information may become part of Neuronify itself.</p>
+<a name="brain-tissue-and-cell-types"></a>
+<h2>Brain tissue and cell types</h2>
+<p>Neocortex is the outer part of our brain. It is the big part of the brain that is underlying our skull. It is about 1-4 millimeters thick and consists of six layers. Each layer has some characteristic properties, but there are several connections between the layers.</p>
+<p>In regular cortical tissue, there are two types of cells: Neurons and glia cells. Neuronify focuses solely on the neurons. Glia cells are traditionally known as helper cells, but recent research shows that they might be playing a bigger role in signal processing than previously thought.</p>
+<p>The morphology of a neuron, i.e&#x2e; its shape, is typically divded into three main parts: Dendrites, soma and axon. The dendrites receive input from other cells, which then travels through the cell body, known as the soma, before its projected out through the axon towards connections to other cells. These connections are known as synapses.</p>
+<p>There are about 15-20 billion neurons in the human neocortex, with about 1000 - 10000 synapses per neuron. This results in about 10Â¹â´ connections between neurons in total. Neuronify is only capable of simulating a tiny fraction of these in about a thousand of real time speed. Other simulators can give valuable results from millions of neurons on a desktop computer. These simulators are typically not used for educational purposes alone, but rather for research on large-scale networks.</p>
+<a name="neuron-signaling"></a>
+<h2>Neuron signaling</h2>
+<p>Within a neuron, a propagating signal is known as an action potential. The action potential is driven by ion channels that allow different charges to flow through. Some ion channels are voltage sensitive, meaning that they open or close depending on the voltage difference between the inside and outside of the cell. Others react with neurotransmitter molecules in the extracellular or intracellular fluids. Another type of channels are simply passive. They are always open, but may be selective to specific types of ions or molecules.</p>
+<p>A synapse may be chemical or electrical, depending on its function. In a chemical synapse, the presynaptic neuron (sender) emits neurotransmitters (molecules) that activate reactive sites on the postsynaptic (receiver) neuron. In an electrical synapse, the two neurons are interconnected with shared ion channels. This keeps the contents of the intracellular fluid of the two neurons in sync. Functionally, the biggest difference between electrical and chemical synapses is in speed and amplification. Chemical synapses can amplify signals, while electrical synapses are much faster. In Neuronify we deal mainly with chemical synapses. However, note that current clamps and similar items inject current directly into a receiving neuron, rather than to trigger its synapse.</p>
+<p>Neurons may be either excitatory or inhibitory. Excitatory neurons have synapses that increase the membrane potential of the postsynaptic neuron. Inhibitory neurons decrease the membrane potential. About 80 % of the cortical neurons are excitatory, while 20 % of the neurons are inhibitory. These numbers are debated, because they depend on the way neurons are counted (by mass, number, etc.) and the techniques used to map the different neurons. Therefore, results from some labs differ from the above numbers.</p>
+</div>
+<!-- @@@general-neuroscience -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
