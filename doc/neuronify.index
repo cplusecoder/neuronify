@@ -78,6 +78,11 @@
             <contents name="ion-channels-and-pumps" title="Ion channels and pumps" level="2"/>
             <contents name="resting-membrane-potential" title="Resting membrane potential" level="2"/>
             <contents name="nernst-planck-equation" title="Nernst-Planck equation" level="1"/>
+            <contents name="electrical-drift" title="Electrical drift" level="2"/>
+            <contents name="diffusion" title="Diffusion" level="2"/>
+            <contents name="concentrations-in-moles" title="Concentrations in moles" level="2"/>
+            <contents name="total-flux" title="Total flux" level="2"/>
+            <contents name="nernst-potential" title="Nernst potential" level="2"/>
             <contents name="neuron-signaling" title="Neuron signaling" level="1"/>
         </page>
         <page name="classes.html" href="classes.html" status="commendable" location="index.qdoc" filepath="/home/svenni/Dropbox/projects/programming/neuroscience/neuronify/neuronify/doc/index.qdoc" lineno="54" subtype="page" title="All Classes" fulltitle="All Classes" subtitle="" module="Neuronify" brief="If you know the name of the class you want, find it here"/>

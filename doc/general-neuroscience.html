@@ -67,6 +67,11 @@
 <li class="level2"><a href="#ion-channels-and-pumps">Ion channels and pumps</a></li>
 <li class="level2"><a href="#resting-membrane-potential">Resting membrane potential</a></li>
 <li class="level1"><a href="#nernst-planck-equation">Nernst-Planck equation</a></li>
+<li class="level2"><a href="#electrical-drift">Electrical drift</a></li>
+<li class="level2"><a href="#diffusion">Diffusion</a></li>
+<li class="level2"><a href="#concentrations-in-moles">Concentrations in moles</a></li>
+<li class="level2"><a href="#total-flux">Total flux</a></li>
+<li class="level2"><a href="#nernst-potential">Nernst potential</a></li>
 <li class="level1"><a href="#neuron-signaling">Neuron signaling</a></li>
 </ul>
 </div>
@@ -98,11 +103,66 @@
 <p>The resting membrane potential is defined as the membrane potential of a neuron at rest. The main mechanism behind the resting membrane potential comes from an initial concentration difference between the inside and outside of the cell membrane. For simplicity, let's assume that the cell exterior has a high sodium (Na+) and chloride (Cl-) concentration. The inside of the cell, on the other hand, has a high potassium (K+) and general anion (An-) concentration.</p>
 <p>Let's assume that the cell membrane only has potassium ion channels open. This would allow only the potassium to leave the cell. Due to the concentration gradient, some potassium would leave the cell due to diffusion. However, as soon as the potassium starts to leave the cell, an electric gradient would start building up. When the force from the concentration gradient and the force from the electric field are equal, no more potassium would leave the cell. This would be an equilibrium, or resting, state.</p>
 <p>The above mechanism is only one of the driving forces behind the resting membrane potential. Ion pumps and other ion channels are also involved in this process. Particularly important is the Na+-K+ pump that pumps sodium back out of cells and K+ into the cells. Considering only the above process of potassium leaving this cell, this may seem counter-intuitive, as we already see that potassium will leave the cell because of the concentration gradient. However, as we will see later, this is necessary to prepare the action potential - the main player in neuron signaling.</p>
-<p>At any given time, even during activity, the membrane potential is driven towards the resting membrane potential by the above mechanism. This means that even after a long stretch of activity, the neuron will return to the resting membrane potential.</p>
+<p>Electrogenic pumps are those that create a net movement of charge over the cell membrane.</p>
+<p>At any given time, even during activity, the membrane potential is driven towards the resting membrane potential by the above mechanisms. This means that even after a long stretch of activity, the neuron will return to the resting membrane potential.</p>
 <p>In neurons, the resting membrane potential is typically around -70 mV.</p>
 <a name="nernst-planck-equation"></a>
 <h2 id="nernst-planck-equation">Nernst-Planck equation</h2>
-<p>...</p>
+<p>To put numbers on the above ion movement through the ion channels, we need to take a closer look at the electrical force and the diffusion force. These both contribute to the total flux of particles through the cell membrane. This flux is given by the Nernst-Planck equation, which we will give a simplified derivation of in this section.</p>
+<a name="electrical-drift"></a>
+<h3 >Electrical drift</h3>
+<p>Charged particles are subject to an electric force when in an electric field:</p>
+\[ \mathbf F_E = q \mathbf E \]
+<p>We will change the notation slightly, because it's customary to write charge with a big \(Z\) in chemistry:</p>
+\[ \mathbf F_E = Z \mathbf E \]
+<p>The electric field is the gradient of the potential:</p>
+\[ \mathbf F_E = Z \nabla V \]
+<p>With no other external forces, the mean drift of a charged particle is equal to this force:</p>
+\[ \mathbf F_E = \frac{1}{\mu} \mathbf v_\mathrm{drift} \]
+<p>Here \( \mu \) is the friction from collision with other particles. The two expression for \( F_E \) may be joined to one equation:</p>
+\[ Z \nabla V = \frac{1}{\mu} \mathbf v_\mathrm{drift} \]
+<p>The Einstein relation is</p>
+\[ \mu = \frac{D}{k_B T}, \]
+where \( k_B \) is Boltzmann's constant, \( T \) is the temperature and
+\( D \) is the diffusion constant for the given species.
+<p>We then get the drift velocity as</p>
+\[ \mathbf v_\mathrm{drift} = \frac{Z \nabla V D}{k_B T}. \]
+<p>The flux is the velocity times the number concentration (number of particles per volume) \( c \):</p>
+\[ \mathbf j_\mathrm{drift} = \frac{Z c D}{k_B T} \nabla V. \]
+<p>This is the electric contribution to the flux.</p>
+<a name="diffusion"></a>
+<h3 >Diffusion</h3>
+<p>The diffusive flux is given by Fick's law:</p>
+\[ \mathbf j_\mathrm{diffusion} = - D \nabla c. \]
+<p>For a derivation of this, see for instance the <a href="http://en.wikipedia.org/wiki/Fick%27s_laws_of_diffusion#Derivation_of_Fick.27s_laws">Wikipedia article on Fick's law</a>.</p>
+<a name="concentrations-in-moles"></a>
+<h3 >Concentrations in moles</h3>
+<p>It is customary to write the flux in terms of concentrations in moles, rather than regular numbers. Further, we replace Boltzmann's constant with the gas constant and Faraday's constant:</p>
+\[ \mathbf J_\mathrm{drift} = \frac{Z F D}{R T} [X] \nabla V. \]
+\[ \mathbf J_\mathrm{diffusion} = - D \nabla [X]. \]
+<p>Here \( [X] \) is the concentration of species \( X \) in moles.</p>
+<a name="total-flux"></a>
+<h3 >Total flux</h3>
+<p>If we sum the two contributions to the flux, we get the Nernst-Planck equation:</p>
+\begin{align}
+\mathbf J &= J_\mathrm{diffusion} + \mathbf J_\mathrm{drift} \\
+          &= - D \left ( \nabla [X] - \frac{Z F}{R T} [X] \nabla V \right )
+\end{align}
+<a name="nernst-potential"></a>
+<h3 >Nernst potential</h3>
+<p>We assume that only one species is free to move so that we can treat all other as a static background electric field. The Nernst potential is then given when there is no net flux of the given species. This can be found by setting the Nernst-Planck equation to zero, i.e&#x2e; no net flux. Further, we focus only on the potential difference in one direction, the \( x \)-direction.</p>
+\begin{align}
+\int_{x_1}^{x_2} \frac{1}{[\mathrm X]} \frac{d[\mathrm X]}{dx} \, dx
+&= \frac{Z F}{R T} \int_{x_1}^{x_2} \frac{dV}{dx} \, dx \\
+\int_{[\mathrm X]_1}^{[\mathrm X]_2} \frac{1}{[\mathrm X]} d[\mathrm X]
+&= \frac{Z F}{R T} \int_{V_1}^{V_2} dV \\
+\ln \frac{[\mathrm X]_2}{[\mathrm X]_1}
+&= \frac{Z F}{R T} (V_2 - V_1) \\
+E_{\mathrm X}
+&= \frac{R T}{Z F} \ln \frac{[\mathrm X]_2}{[\mathrm X]_1}.
+\end{align}
+The potential difference \( E_{\mathrm X} = V_2 - V_1 \) is known as the Nernst potential for
+the species \( \mathrm X \).
 <a name="neuron-signaling"></a>
 <h2 id="neuron-signaling">Neuron signaling</h2>
 <p>Within a neuron, a propagating signal is known as an action potential. The action potential is driven by ion channels that allow different charges to flow through.</p>
