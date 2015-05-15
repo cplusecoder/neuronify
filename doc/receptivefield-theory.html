@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- receptiveField.qdoc -->
+  <title>Receptive field | Neuronify </title>
+  <link rel="stylesheet" type="text/css" href="style/online-neuronify.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="http://d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/js/combo.js.gzip"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <div id="main_title_bar">
+        <h1>Neuronify Documentation</h1>
+    </div>
+    <ul>
+       <li class="first"><a href="index.html">Neuronify</a></li>
+<li>Receptive field</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#estimating-firing-rates">Estimating firing rates</a></li>
+<li class="level1"><a href="#spatial-receptive-fields">Spatial receptive fields</a></li>
+<li class="level1"><a href="#receptive-fields-in-neuronify">Receptive fields in Neuronify</a></li>
+<li class="level1"><a href="#references">References</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Receptive field</h1>
+<span class="subtitle"></span>
+<!-- $$$receptiveField_theory.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>Neurons in the early visual system, consisting of the retina, lateral geniculate nucleus (LGN), and primary visual cortex (V1), respond to light stimuli in restricted regions of the visual field called their receptive fields (RFs). The spatial and temporal structure of the RFs among the neurons in the visual system varies, but they usually consist of two parts; one part that depolarize the cell under illumination and one part that hyperpolarize the cell when illuminated. A typical RF structure is the so-called center-surround RF, consisting of a central disk (center) and a concentric ring (surround), each responding oppositely to light. For example, illumination of the center might increase the firing of a neuron, whereas light in the surround would decrease the firing of that neuron.</p>
+<a name="estimating-firing-rates"></a>
+<h2 id="estimating-firing-rates">Estimating firing rates</h2>
+<p>The firing rate of a neuron evoked by a stimulus \(s(\mathbf{r},t-\tau) \) can be estimated using a linear kernel as</p>
+<p>\( r(t) = r_0 + \displaystyle \int \int D(\mathbf{r},\tau) s(\mathbf{r},t-\tau) d\tau d\mathbf{r} \),</p>
+<p>where \( r_0\) is the mean firing rate and \( D(\mathbf{r},\tau) \) is a weighting factor that determines how strongly, and with what sign, the value of the stimulus at point \( \mathbf{r} = (x,y) \) and at time \( t-\tau\) affects the firing rate at time \( t \). For cells in the visual system, the kernel \( D(\mathbf{r},\tau) \) defines the time-space RF of a neuron.</p>
+<p>An intuitive interpretation of the linear estimate of the equation above can be obtained by performing maximum stimulus analysis[1], where the result is that the stimulus producing the maximum response (at fixed stimulus energy) is proportional to the optimal kernel \( D(\mathrm{r},\tau) \). This means that the integral above measures the overlap between the actual stimulus and the most effective stimulus. A large overlap between these two increases the value of the integral resulting in a large firing rate \( r(t)\), while mismatches give lower predictions for the firing rate.</p>
+<a name="spatial-receptive-fields"></a>
+<h2 id="spatial-receptive-fields">Spatial receptive fields</h2>
+<p>Some neurons have separable space-time RF, meaning that the RF can be written as product of two functions; one that describe the spatial structure of the RF and the other the temporal RF:</p>
+<p>\( D(\mathbf{r},\tau) = D_s(\mathbf{r}) D_t(\tau) \).</p>
+<p>In these neurons the spatial structure of the RF does not change over time except by an overall multiplication factor. A popular mathematical approximation of the spatial RF of simple cell is the Gabor function, which is a product of a Gaussian function and a sinusoidal function:</p>
+<p>\( D_s(x,y) = \frac{1}{2\pi \sigma_x \sigma_y} \mathrm{exp}\left(-\frac{x^2}{2\sigma_x^2} - \frac{y^2}{2\sigma_y^2}\right)\cos(kx - \phi) \).</p>
+<p>The parameters \( \sigma_x \) and \( \sigma_y \) determine the extent in the \(x \) and \( y \) direction respectively, \(k\) is the preferred spatial frequency and \( \phi \) is the preferred spatial phase. In the figure below the Gabor function is shown for some given parameters. The red regions corresponds to the ON-part of the RF and the blue regions are the OFF-part of the RF.</p>
+<p class="centerAlign"><img src="images/gabor.png" alt="&quot;Gabor function&quot;" /></p><a name="receptive-fields-in-neuronify"></a>
+<h2 id="receptive-fields-in-neuronify">Receptive fields in Neuronify</h2>
+<p>In Neuronify several types of RFs can be chosen. These are defined as 2D matrices with user-defined dimensions that can be adjusted in the option menu of <a href="qml-neuronify-retina.html">Retina</a> objects. The simplest RF-types in Neuronify are the one where half of the matrix is set to +1 (white) and the other half -1 (black), representing the ON and OFF regions of the spatial RF (see figure below).</p>
+<p class="centerAlign"><img src="images/recRFs.png" alt="&quot;Simple receptive fields&quot;" /></p><p>When the frame seen by the camera consists of a dark area and a light area that overlap with the negative and positive part of the matrix, respectively, we will get high activity. The opposite, dark on positive part and light on negative part, will silence the cell.</p>
+<p>Here you see how a cell with left-OFF RF will respond to different stimulus:</p>
+<p><img src="images/screenShotRetina.png" alt="" /> <img src="images/screenShotRetina1.png" alt="" /></p>
+<a name="references"></a>
+<h2 id="references">References</h2>
+<p>[1] Peter Dayan and L. F. Abbott. 2005. Theoretical Neuroscience: Computational and Mathematical Modeling of Neural Systems. The MIT Press.</p>
+</div>
+<!-- @@@receptiveField_theory.html -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
