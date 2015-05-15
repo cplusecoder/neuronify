@@ -146,7 +146,7 @@
             <contents name="goldman-hodgkin-katz-equations" title="Goldman-Hodgkin-Katz equations" level="1"/>
             <contents name="neuron-signaling" title="Neuron signaling" level="1"/>
         </page>
-        <page name="classes.html" href="classes.html" status="commendable" location="index.qdoc" filepath="/home/svenni/Dropbox/projects/programming/neuroscience/neuronify/neuronify/doc/index.qdoc" lineno="136" subtype="page" title="All Classes" fulltitle="All Classes" subtitle="" module="Neuronify" brief="If you know the name of the class you want, find it here"/>
+        <page name="classes.html" href="classes.html" status="commendable" location="index.qdoc" filepath="/home/svenni/Dropbox/projects/programming/neuroscience/neuronify/neuronify/doc/index.qdoc" lineno="138" subtype="page" title="All Classes" fulltitle="All Classes" subtitle="" module="Neuronify" brief="If you know the name of the class you want, find it here"/>
         <page name="index.html" href="index.html" status="commendable" location="index.qdoc" filepath="/home/svenni/Dropbox/projects/programming/neuroscience/neuronify/neuronify/doc/index.qdoc" lineno="1" subtype="page" title="Neuronify documentation" fulltitle="Neuronify documentation" subtitle="" module="Neuronify">
             <contents name="getting-started" title="Getting started" level="1"/>
             <contents name="neuroscience-theory" title="Neuroscience theory" level="1"/>
@@ -1066,13 +1066,13 @@
         <group name="neuronify-core" href="neuronify-core.html" status="internal" seen="false" title="" members="Edge,GraphEngine,NodeBase,NodeEngine"/>
         <group name="neuronify-generators" href="neuronify-generators.html" status="internal" seen="false" title="" members="ACClamp,CurrentClamp,PoissonGenerator"/>
         <group name="neuronify-hud" href="neuronify-hud.html" status="internal" seen="false" title="" members="VoltmeterControls"/>
-        <group name="neuronify-io" href="neuronify-io.html" status="commendable" location="index.qdoc" filepath="/home/svenni/Dropbox/projects/programming/neuroscience/neuronify/neuronify/doc/index.qdoc" lineno="157" seen="true" title="Input/Output" module="Neuronify" groups="classlists" members="FileManager"/>
+        <group name="neuronify-io" href="neuronify-io.html" status="commendable" location="index.qdoc" filepath="/home/svenni/Dropbox/projects/programming/neuroscience/neuronify/neuronify/doc/index.qdoc" lineno="159" seen="true" title="Input/Output" module="Neuronify" groups="classlists" members="FileManager"/>
         <group name="neuronify-meters" href="neuronify-meters.html" status="internal" seen="false" title="" members="Speaker,Voltmeter"/>
         <group name="neuronify-neurons" href="neuronify-neurons.html" status="internal" seen="false" title="" members="AdaptationCurrent,Current,NeuronEngine,PassiveCurrent"/>
         <group name="neuronify-sensors" href="neuronify-sensors.html" status="internal" seen="false" title="" members="Retina,TouchSensor,ReceptiveField,RetinaEngine,RetinaPainter,VideoSurface"/>
         <group name="neuronify-utils" href="neuronify-utils.html" status="internal" seen="false" title="" members="FileIO"/>
         <module name="Neuronify" href="neuronify-module.html" status="internal" seen="false" title="" members="Edge,GraphEngine,NodeBase,NodeEngine,FileIO,AdaptationCurrent,Current,NeuronEngine,PassiveCurrent,ReceptiveField,RetinaEngine,RetinaPainter,VideoSurface"/>
         <module name="theory" href="theory-module.html" status="internal" seen="false" title="" members="adaptation.html,integrate-and-fire_neuron,poissonGenerator,receptiveFieldTheory.html"/>
-        <qmlmodule name="Neuronify" qml-module-name="Neuronify" qml-module-version="." href="neuronify-qmlmodule.html" status="commendable" location="index.qdoc" filepath="/home/svenni/Dropbox/projects/programming/neuroscience/neuronify/neuronify/doc/index.qdoc" lineno="147" seen="true" title="Neuronify QML Types" module="Neuronify" members="Neuronify,ACClamp,CurrentClamp,PoissonGenerator,VoltmeterControls,FileManager,Speaker,Voltmeter,Retina,TouchSensor" brief="If you know the name of the QML Type, find it here"/>
+        <qmlmodule name="Neuronify" qml-module-name="Neuronify" qml-module-version="." href="neuronify-qmlmodule.html" status="commendable" location="index.qdoc" filepath="/home/svenni/Dropbox/projects/programming/neuroscience/neuronify/neuronify/doc/index.qdoc" lineno="149" seen="true" title="Neuronify QML Types" module="Neuronify" members="Neuronify,ACClamp,CurrentClamp,PoissonGenerator,VoltmeterControls,FileManager,Speaker,Voltmeter,Retina,TouchSensor" brief="If you know the name of the QML Type, find it here"/>
     </namespace>
 </INDEX>
