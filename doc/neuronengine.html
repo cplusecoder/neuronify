@@ -168,7 +168,7 @@
 <h2 id="details">Detailed Description</h2>
 <p>The <a href="neuronengine.html">NeuronEngine</a> class is a common engine used by most neurons.</p>
 <p>Neurons have common properties such as the resting membrane potential, possible synaptic input and a voltage. Currents are responsible for changes to the voltage.</p>
-<p><a href="nodeengine.html">NodeEngine</a> holds a list of all children added in QML. In <a href="neuronengine.html#stepEvent">stepEvent</a>() all the children are iterated, and if they contain a Current object, the <a href="current.html#current-prop">Current::current</a>() function is called to obtain the current value of the given current. The Current class can be subclassed in C++ or QML to define different types of currents, such as <a href="passivecurrent.html">PassiveCurrent</a> and <a href="adaptationcurrent.html">AdaptationCurrent</a>.</p>
+<p><a href="nodeengine.html">NodeEngine</a> holds a list of all children added in QML. In <a href="neuronengine.html#stepEvent">stepEvent</a>() all the children are iterated, and if they contain a <a href="current.html">Current</a> object, the <a href="current.html#current-prop">Current::current</a>() function is called to obtain the current value of the given current. The <a href="current.html">Current</a> class can be subclassed in C++ or QML to define different types of currents, such as <a href="passivecurrent.html">PassiveCurrent</a> and <a href="adaptationcurrent.html">AdaptationCurrent</a>.</p>
 </div>
 <!-- @@@NeuronEngine -->
 <div class="prop">

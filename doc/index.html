@@ -94,20 +94,21 @@
 <h3 >Core</h3>
 <p>The core of Neuronify consists of a small set of GUI and engine classes. At the heart of the GUI is the <a href="qml-neuronify-neuronify.html">Neuronify</a> QML type that organizes all the visual items and the holds a reference to <a href="graphengine.html">GraphEngine</a>. Each item in the network is controlled by the <a href="graphengine.html">GraphEngine</a>. This is a C++ class that holds a list of nodes and their connections through edges.</p>
 <p>The nodes of the network are split into three parts: <a href="nodebase.html">NodeBase</a>, <a href="nodeengine.html">NodeEngine</a> and <a href="qml-node.html">Node</a>. The former two are C++ classes, while the latter is a QML type.</p>
-<p>In principle, <a href="nodebase.html">NodeBase</a> and <a href="qml-node.html">Node</a> could have been the one and same C++ class. The reason they are split up is because some features of <a href="qml-node.html">Node</a> are defined in QML, such as a <a href="http://qt-project.org/doc/qt-5.2/qml-qtquick-mousearea.html">MouseArea</a> with dragging. Since <a href="nodeengine.html">NodeEngine</a>, <a href="edge.html">Edge</a> and <a href="graphengine.html">GraphEngine</a> are C++ classes, they cannot have type-safe pointers to a runtime <a href="qml-node.html">Node</a> QML type object. That is why they instead refer to the C++ type <a href="nodebase.html">NodeBase</a>. In the future, this may change and all features of <a href="qml-node.html">Node</a> may be incorporated in a C++ class.</p>
+<p>In principle, <a href="nodebase.html">NodeBase</a> and <a href="qml-node.html">Node</a> could have been the one and same C++ class. The reason they are split up is because some features of <a href="qml-node.html">Node</a> are defined in QML, such as a <a href="http://qt-project.org/doc/qt-5.2/qml-qtquick-mousearea.html">MouseArea</a> with dragging. Since <a href="nodeengine.html">NodeEngine</a>, <a href="edge.html">Edge</a> and <a href="graphengine.html">GraphEngine</a> are C++ classes, they cannot have type-safe pointers to a <a href="qml-node.html">Node</a> object because this will be defined first once the application has started. That is why they instead refer to the C++ type <a href="nodebase.html">NodeBase</a>. In the future, this may change and all features of <a href="qml-node.html">Node</a> may be incorporated in a C++ class.</p>
 <div class="table"><table class="annotated">
-<tr class="odd topAlign"><td class="tblName"><p><a href="edge.html">Edge</a></p></td><td class="tblDescr"><p>The basic connection between two nodes</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="edge.html">Edge</a></p></td><td class="tblDescr"><p>Basic connection between two nodes</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="graphengine.html">GraphEngine</a></p></td><td class="tblDescr"><p>The core engine of Neuronify</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="nodebase.html">NodeBase</a></p></td><td class="tblDescr"><p>The basic functionality of all nodes</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="nodeengine.html">NodeEngine</a></p></td><td class="tblDescr"><p>The basic functionality for the logic in all nodes</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="nodebase.html">NodeBase</a></p></td><td class="tblDescr"><p>Basic functionality of all nodes</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="nodeengine.html">NodeEngine</a></p></td><td class="tblDescr"><p>Used to perform operations in for NodeBase</p></td></tr>
 </table></div>
 <a name="neurons"></a>
 <h3 >Neurons</h3>
-<p>Neurons are defined by subclassing the Neuron QML Type and adding a <a href="neuronengine.html">NeuronEngine</a>. To change the behavior of a <a href="neuronengine.html">NeuronEngine</a>, Current objects may be added as children to it. The <a href="neuronengine.html">NeuronEngine</a> will iterate all its children and sum their currents.</p>
+<p>Neurons are defined by subclassing the <a href="qml-neuron.html">Neuron</a> QML Type and adding a <a href="neuronengine.html">NeuronEngine</a>. To change the behavior of a <a href="neuronengine.html">NeuronEngine</a>, <a href="current.html">Current</a> objects may be added as children to it. The <a href="neuronengine.html">NeuronEngine</a> will iterate all its children and sum their currents.</p>
 <div class="table"><table class="annotated">
-<tr class="odd topAlign"><td class="tblName"><p><a href="adaptationcurrent.html">AdaptationCurrent</a></p></td><td class="tblDescr"><p>Adaptive Current calculates the neuron conductance based on an adaptive rule</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="neuronengine.html">NeuronEngine</a></p></td><td class="tblDescr"><p>Common engine used by most neurons</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="passivecurrent.html">PassiveCurrent</a></p></td><td class="tblDescr"><p>Defines a current that drives the NeuronEngine towards the defined resting membrane potential</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="adaptationcurrent.html">AdaptationCurrent</a></p></td><td class="tblDescr"><p>Produces a current that drives the voltage towards the membrane potential and increases each time the neuron fires</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="current.html">Current</a></p></td><td class="tblDescr"><p>Defines the currents used by NeuronEngine</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="neuronengine.html">NeuronEngine</a></p></td><td class="tblDescr"><p>Common engine used by most neurons</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="passivecurrent.html">PassiveCurrent</a></p></td><td class="tblDescr"><p>Defines a current that drives the NeuronEngine towards the defined resting membrane potential</p></td></tr>
 </table></div>
 <a name="generators"></a>
 <h3 >Generators</h3>
@@ -128,8 +129,18 @@
 <h3 >Sensors</h3>
 <p>Sensors are used to get information from the outside world to the app.</p>
 <div class="table"><table class="annotated">
-<tr class="odd topAlign"><td class="tblName"><p><a href="qml-neuronify-retina.html">Retina</a></p></td><td class="tblDescr"><p>Visual sensor that can be connected to neurons to generate activity based on the receptive field of the sensor and the visual stimuli captured by the camera</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qml-neuronify-touchsensor.html">TouchSensor</a></p></td><td class="tblDescr"><p>Registers touch (or mouse) events and converts them into a current that may be injected into neurons</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="receptivefield.html">ReceptiveField</a></p></td><td class="tblDescr"><p>Creates different receptive field types, including both the spatial and temporal functions</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-neuronify-retina.html">Retina</a></p></td><td class="tblDescr"><p>Visual sensor that can be connected to neurons to generate activity based on the receptive field of the sensor and the visual stimuli captured by the camera</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="retinaengine.html">RetinaEngine</a></p></td><td class="tblDescr"><p>Calculates the firing rate of a neuron based on the stimulus and the receptive field type</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="retinapainter.html">RetinaPainter</a></p></td><td class="tblDescr"><p>Paints the camera frame and the spatial receptive field function</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-neuronify-touchsensor.html">TouchSensor</a></p></td><td class="tblDescr"><p>Registers touch (or mouse) events and converts them into a current that may be injected into neurons</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="videosurface.html">VideoSurface</a></p></td><td class="tblDescr"><p>Converts the camera frame to a gray-scale image</p></td></tr>
+</table></div>
+<a name="tools"></a>
+<h3 >Tools</h3>
+<p>The following classes are used as tools to aid other types.</p>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="fileio.html">FileIO</a></p></td><td class="tblDescr"><p>Helper class used for reading and writing files from QML</p></td></tr>
 </table></div>
 <a name="complete-list-of-items"></a>
 <h3 >Complete list of items</h3>
