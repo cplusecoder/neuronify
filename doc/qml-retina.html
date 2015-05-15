@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- PoissonGenerator.qml -->
-  <title>PoissonGenerator QML Type | Neuronify </title>
+<!-- Retina.qml -->
+  <title>Retina QML Type | Neuronify </title>
   <link rel="stylesheet" type="text/css" href="style/online-neuronify.css" />
   <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
   <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
@@ -67,41 +67,40 @@
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
 <div class="context">
-<h1 class="title">PoissonGenerator QML Type</h1>
+<h1 class="title">Retina QML Type</h1>
 <span class="subtitle"></span>
-<!-- $$$PoissonGenerator-brief -->
-<p>An spike generator which can suply input spikes to neurons. <a href="#details">More...</a></p>
-<!-- @@@PoissonGenerator -->
+<!-- $$$Retina-brief -->
+<p>A visual sensor that can be connected to neurons to generate activity based on the receptive field of the sensor and the visual stimuli captured by the camera. <a href="#details">More...</a></p>
+<!-- @@@Retina -->
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import Neuronify .</td></tr></table></div><ul>
-<li><a href="qml-neuronify-poissongenerator-members.html">List of all members, including inherited members</a></li>
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import  .</td></tr></table></div><ul>
+<li><a href="qml-retina-members.html">List of all members, including inherited members</a></li>
 </ul>
 <a name="properties"></a>
 <h2 id="properties">Properties</h2>
 <ul>
-<li class="fn"><b><b><a href="qml-neuronify-poissongenerator.html#connectionPoint-prop">connectionPoint</a></b></b> : point</li>
-<li class="fn"><b><b><a href="qml-neuronify-poissongenerator.html#imageSource-prop">imageSource</a></b></b> : url</li>
-<li class="fn"><b><b><a href="qml-neuronify-poissongenerator.html#inhibitory-prop">inhibitory</a></b></b> : bool</li>
-<li class="fn"><b><b><a href="qml-neuronify-poissongenerator.html#inhibitoryImageSource-prop">inhibitoryImageSource</a></b></b> : url</li>
+<li class="fn"><b><b><a href="qml-retina.html#connectionPoint-prop">connectionPoint</a></b></b> : point</li>
+<li class="fn"><b><b><a href="qml-retina.html#fieldIndex-prop">fieldIndex</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-retina.html#videoSurface-prop">videoSurface</a></b></b> : VideoSurface</li>
+<li class="fn"><b><b><a href="qml-retina.html#viewIndex-prop">viewIndex</a></b></b> : int</li>
 </ul>
-<!-- $$$PoissonGenerator-description -->
+<!-- $$$Retina-description -->
 <a name="details"></a>
 <h2 id="details">Detailed Description</h2>
 </p>
-<p>The Poisson generator can be connected to neurons, and will then suply the neurons with spikes generated from a poisson process. The generator has a control panel where you can adjust the firing rate and stimulation output, as well as whether or not the generated spikes are inhibitory or excitatory.</p>
-<!-- @@@PoissonGenerator -->
+<!-- @@@Retina -->
 <h2>Property Documentation</h2>
 <!-- $$$connectionPoint -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="connectionPoint-prop"><td class="tblQmlPropNode"><p><a name="connectionPoint-prop"></a><span class="name">connectionPoint</span> : <span class="type">point</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@connectionPoint -->
 <br/>
-<!-- $$$imageSource -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="imageSource-prop"><td class="tblQmlPropNode"><p><a name="imageSource-prop"></a><span class="name">imageSource</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-url.html">url</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@imageSource -->
+<!-- $$$fieldIndex -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="fieldIndex-prop"><td class="tblQmlPropNode"><p><a name="fieldIndex-prop"></a><span class="name">fieldIndex</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@fieldIndex -->
 <br/>
-<!-- $$$inhibitory -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="inhibitory-prop"><td class="tblQmlPropNode"><p><a name="inhibitory-prop"></a><span class="qmlreadonly">read-only</span><span class="name">inhibitory</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@inhibitory -->
+<!-- $$$videoSurface -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="videoSurface-prop"><td class="tblQmlPropNode"><p><a name="videoSurface-prop"></a><span class="name">videoSurface</span> : <span class="type"><a href="videosurface.html">VideoSurface</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@videoSurface -->
 <br/>
-<!-- $$$inhibitoryImageSource -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="inhibitoryImageSource-prop"><td class="tblQmlPropNode"><p><a name="inhibitoryImageSource-prop"></a><span class="name">inhibitoryImageSource</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-url.html">url</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@inhibitoryImageSource -->
+<!-- $$$viewIndex -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="viewIndex-prop"><td class="tblQmlPropNode"><p><a name="viewIndex-prop"></a><span class="name">viewIndex</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@viewIndex -->
 <br/>
 </div>
 </div>
