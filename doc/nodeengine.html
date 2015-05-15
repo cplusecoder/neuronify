@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- nodeengine.cpp -->
+  <title>NodeEngine Class | Neuronify </title>
+  <link rel="stylesheet" type="text/css" href="style/online-neuronify.css" />
+  <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
+  <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="http://d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/js/combo.js.gzip"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="container">
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <div id="main_title_bar">
+        <h1>Neuronify Documentation</h1>
+    </div>
+    <ul>
+       <li class="first"><a href="index.html">Neuronify</a></li>
+<li>NodeEngine</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">NodeEngine Class</h1>
+<!-- $$$NodeEngine-brief -->
+<p>The <a href="nodeengine.html">NodeEngine</a> class provides the basic functionality for the logic in all nodes <a href="#details">More...</a></p>
+<!-- @@@NodeEngine -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <span class="preprocessor">#include &lt;NodeEngine&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="http://qt-project.org/doc/qt-5.2/qquickitem.html">QQuickItem</a>.</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="adaptationcurrent.html">AdaptationCurrent</a> and <a href="retinaengine.html">RetinaEngine</a>.</p>
+</td></tr></table></div><ul>
+<li><a href="nodeengine-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2 id="properties">Properties</h2>
+<ul>
+<li class="fn"><b><a href="nodeengine.html#currentOutput-prop">currentOutput</a></b> : double</li>
+<li class="fn"><b><a href="nodeengine.html#fireOutput-prop">fireOutput</a></b> : double</li>
+</ul>
+<ul>
+<li class="fn">23 properties inherited from <a href="http://qt-project.org/doc/qt-5.2/qquickitem.html#properties">QQuickItem</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#NodeEngine">NodeEngine</a></b>(QQuickItem *<i> parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#dtor.NodeEngine">~NodeEngine</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#currentOutput-prop">currentOutput</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#fireOutput-prop">fireOutput</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#hasFired">hasFired</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#setHasFired">setHasFired</a></b>(bool<i> arg</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">90 public functions inherited from <a href="http://qt-project.org/doc/qt-5.2/qquickitem.html#public-functions">QQuickItem</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2 id="public-slots">Public Slots</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#finalizeStep">finalizeStep</a></b>(double<i> dt</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#fire">fire</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#receiveCurrent">receiveCurrent</a></b>(double<i> currentOutput</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#receiveFire">receiveFire</a></b>(double<i> fireOutput</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#currentOutput-prop">setCurrentOutput</a></b>(double<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#fireOutput-prop">setFireOutput</a></b>(double<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#step">step</a></b>(double<i> dt</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 public slot inherited from <a href="http://qt-project.org/doc/qt-5.2/qquickitem.html#public-slots">QQuickItem</a></li>
+</ul>
+<a name="signals"></a>
+<h2 id="signals">Signals</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#currentOutput-prop">currentOutputChanged</a></b>(double<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#finalizedStep">finalizedStep</a></b>(double<i> dt</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#fireOutput-prop">fireOutputChanged</a></b>(double<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#fired">fired</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#receivedCurrent">receivedCurrent</a></b>(double<i> current</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#receivedFire">receivedFire</a></b>(double<i> stimulation</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#stepped">stepped</a></b>(double<i> dt</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">1 signal inherited from <a href="http://qt-project.org/doc/qt-5.2/qquickitem.html#signals">QQuickItem</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#finalizeStepEvent">finalizeStepEvent</a></b>(double<i> dt</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#fireEvent">fireEvent</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#receiveCurrentEvent">receiveCurrentEvent</a></b>(double<i> currentOutput</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#receiveFireEvent">receiveFireEvent</a></b>(double<i> fireOutput</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="nodeengine.html#stepEvent">stepEvent</a></b>(double<i> dt</i>)</td></tr>
+</table></div>
+<ul>
+<li class="fn">33 protected functions inherited from <a href="http://qt-project.org/doc/qt-5.2/qquickitem.html#protected-functions">QQuickItem</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$NodeEngine-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>The <a href="nodeengine.html">NodeEngine</a> class provides the basic functionality for the logic in all nodes</p>
+<p>All <a href="nodebase.html">NodeBase</a> objects can hold a pointer to a <a href="nodeengine.html">NodeEngine</a>. The <a href="nodeengine.html">NodeEngine</a> performs the logic for the given node and should hold all information about the state of the node.</p>
+</div>
+<p><b>See also </b><a href="qml-node.html">Node</a> and <a href="nodebase.html">NodeBase</a>.</p>
+<!-- @@@NodeEngine -->
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$currentOutput-prop$$$currentOutput$$$setCurrentOutputdouble$$$currentOutputChangeddouble -->
+<h3 class="fn" id="currentOutput-prop"><a name="currentOutput-prop"></a><span class="name">currentOutput</span> : <span class="type">double</span></h3>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> double </td><td class="memItemRight bottomAlign"><span class="name"><b>currentOutput</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setCurrentOutput</b></span>(double<i> arg</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>currentOutputChanged</b></span>(double<i> arg</i>)</td></tr>
+</table></div>
+<!-- @@@currentOutput -->
+<!-- $$$fireOutput-prop$$$fireOutput$$$setFireOutputdouble$$$fireOutputChangeddouble -->
+<h3 class="fn" id="fireOutput-prop"><a name="fireOutput-prop"></a><span class="name">fireOutput</span> : <span class="type">double</span></h3>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> double </td><td class="memItemRight bottomAlign"><span class="name"><b>fireOutput</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setFireOutput</b></span>(double<i> arg</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>fireOutputChanged</b></span>(double<i> arg</i>)</td></tr>
+</table></div>
+<!-- @@@fireOutput -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$NodeEngine[overload1]$$$NodeEngineQQuickItem* -->
+<h3 class="fn" id="NodeEngine"><a name="NodeEngine"></a>NodeEngine::<span class="name">NodeEngine</span>(<span class="type"><a href="http://qt-project.org/doc/qt-5.2/qquickitem.html#QQuickItem">QQuickItem</a></span> *<i> parent</i> = 0)</h3>
+<!-- @@@NodeEngine -->
+<!-- $$$~NodeEngine[overload1]$$$~NodeEngine -->
+<h3 class="fn" id="dtor.NodeEngine"><a name="dtor.NodeEngine"></a>NodeEngine::<span class="name">~NodeEngine</span>()</h3>
+<!-- @@@~NodeEngine -->
+<!-- $$$finalizeStep[overload1]$$$finalizeStepdouble -->
+<h3 class="fn" id="finalizeStep"><a name="finalizeStep"></a><code>[slot] </code><span class="type">void</span> NodeEngine::<span class="name">finalizeStep</span>(<span class="type">double</span><i> dt</i>)</h3>
+<!-- @@@finalizeStep -->
+<!-- $$$finalizeStepEvent[overload1]$$$finalizeStepEventdouble -->
+<h3 class="fn" id="finalizeStepEvent"><a name="finalizeStepEvent"></a><code>[virtual protected] </code><span class="type">void</span> NodeEngine::<span class="name">finalizeStepEvent</span>(<span class="type">double</span><i> dt</i>)</h3>
+<!-- @@@finalizeStepEvent -->
+<!-- $$$finalizedStep[overload1]$$$finalizedStepdouble -->
+<h3 class="fn" id="finalizedStep"><a name="finalizedStep"></a><code>[signal] </code><span class="type">void</span> NodeEngine::<span class="name">finalizedStep</span>(<span class="type">double</span><i> dt</i>)</h3>
+<!-- @@@finalizedStep -->
+<!-- $$$fire[overload1]$$$fire -->
+<h3 class="fn" id="fire"><a name="fire"></a><code>[slot] </code><span class="type">void</span> NodeEngine::<span class="name">fire</span>()</h3>
+<!-- @@@fire -->
+<!-- $$$fireEvent[overload1]$$$fireEvent -->
+<h3 class="fn" id="fireEvent"><a name="fireEvent"></a><code>[virtual protected] </code><span class="type">void</span> NodeEngine::<span class="name">fireEvent</span>()</h3>
+<!-- @@@fireEvent -->
+<!-- $$$fired[overload1]$$$fired -->
+<h3 class="fn" id="fired"><a name="fired"></a><code>[signal] </code><span class="type">void</span> NodeEngine::<span class="name">fired</span>()</h3>
+<!-- @@@fired -->
+<!-- $$$hasFired[overload1]$$$hasFired -->
+<h3 class="fn" id="hasFired"><a name="hasFired"></a><span class="type">bool</span> NodeEngine::<span class="name">hasFired</span>()</h3>
+<p><b>See also </b><a href="nodeengine.html#setHasFired">setHasFired</a>().</p>
+<!-- @@@hasFired -->
+<!-- $$$receiveCurrent[overload1]$$$receiveCurrentdouble -->
+<h3 class="fn" id="receiveCurrent"><a name="receiveCurrent"></a><code>[slot] </code><span class="type">void</span> NodeEngine::<span class="name">receiveCurrent</span>(<span class="type">double</span><i> currentOutput</i>)</h3>
+<!-- @@@receiveCurrent -->
+<!-- $$$receiveCurrentEvent[overload1]$$$receiveCurrentEventdouble -->
+<h3 class="fn" id="receiveCurrentEvent"><a name="receiveCurrentEvent"></a><code>[virtual protected] </code><span class="type">void</span> NodeEngine::<span class="name">receiveCurrentEvent</span>(<span class="type">double</span><i> currentOutput</i>)</h3>
+<!-- @@@receiveCurrentEvent -->
+<!-- $$$receiveFire[overload1]$$$receiveFiredouble -->
+<h3 class="fn" id="receiveFire"><a name="receiveFire"></a><code>[slot] </code><span class="type">void</span> NodeEngine::<span class="name">receiveFire</span>(<span class="type">double</span><i> fireOutput</i>)</h3>
+<!-- @@@receiveFire -->
+<!-- $$$receiveFireEvent[overload1]$$$receiveFireEventdouble -->
+<h3 class="fn" id="receiveFireEvent"><a name="receiveFireEvent"></a><code>[virtual protected] </code><span class="type">void</span> NodeEngine::<span class="name">receiveFireEvent</span>(<span class="type">double</span><i> fireOutput</i>)</h3>
+<!-- @@@receiveFireEvent -->
+<!-- $$$receivedCurrent[overload1]$$$receivedCurrentdouble -->
+<h3 class="fn" id="receivedCurrent"><a name="receivedCurrent"></a><code>[signal] </code><span class="type">void</span> NodeEngine::<span class="name">receivedCurrent</span>(<span class="type">double</span><i> current</i>)</h3>
+<!-- @@@receivedCurrent -->
+<!-- $$$receivedFire[overload1]$$$receivedFiredouble -->
+<h3 class="fn" id="receivedFire"><a name="receivedFire"></a><code>[signal] </code><span class="type">void</span> NodeEngine::<span class="name">receivedFire</span>(<span class="type">double</span><i> stimulation</i>)</h3>
+<!-- @@@receivedFire -->
+<!-- $$$setHasFired[overload1]$$$setHasFiredbool -->
+<h3 class="fn" id="setHasFired"><a name="setHasFired"></a><span class="type">void</span> NodeEngine::<span class="name">setHasFired</span>(<span class="type">bool</span><i> arg</i>)</h3>
+<p><b>See also </b><a href="nodeengine.html#hasFired">hasFired</a>().</p>
+<!-- @@@setHasFired -->
+<!-- $$$step[overload1]$$$stepdouble -->
+<h3 class="fn" id="step"><a name="step"></a><code>[slot] </code><span class="type">void</span> NodeEngine::<span class="name">step</span>(<span class="type">double</span><i> dt</i>)</h3>
+<!-- @@@step -->
+<!-- $$$stepEvent[overload1]$$$stepEventdouble -->
+<h3 class="fn" id="stepEvent"><a name="stepEvent"></a><code>[virtual protected] </code><span class="type">void</span> NodeEngine::<span class="name">stepEvent</span>(<span class="type">double</span><i> dt</i>)</h3>
+<!-- @@@stepEvent -->
+<!-- $$$stepped[overload1]$$$steppeddouble -->
+<h3 class="fn" id="stepped"><a name="stepped"></a><code>[signal] </code><span class="type">void</span> NodeEngine::<span class="name">stepped</span>(<span class="type">double</span><i> dt</i>)</h3>
+<!-- @@@stepped -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

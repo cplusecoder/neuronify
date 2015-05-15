@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- index.qdoc -->
-  <title>Neuronify </title>
+  <title>Neuronify documentation | Neuronify </title>
   <link rel="stylesheet" type="text/css" href="style/online-neuronify.css" />
   <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
   <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
@@ -52,32 +52,78 @@
     </div>
     <ul>
        <li class="first"><a href="index.html">Neuronify</a></li>
-<li>Neuronify</li>
+<li>Neuronify documentation</li>
     </ul>
 </div>
 <div class="content">
     <div class="line">
         <div class="content mainContent">
 <div class="context">
-<h1 class="title">Neuronify</h1>
+<h1 class="title">Neuronify documentation</h1>
 <span class="subtitle"></span>
 <!-- $$$index.html-description -->
 <div class="descr"> <a name="details"></a>
-<p>Neuronify is an educational app for studying neural networks. The engine is based on an integrate-and-fire model.</p>
+<p>Neuronify is an educational app for studying neural networks. The engine is based on an integrate-and-fire model. This documentation provides information about how you can obtain the program and how it is structured.</p>
+<p>The documentation is written as a report for the course FYS388/PHDIMT10.</p>
 <a name="getting-started"></a>
 <h2 id="getting-started">Getting started</h2>
 <p>Neuronify can be downloaded for multiple platforms. Mobile versions of Neuronify will be available soon in Google Play and Apple App Store.</p>
-<p>For Mac and Windows users, Neuronify may be downloaded here:</p>
-<p><a href="https://github.com/CINPLA/neuronify/releases">Download Neuronify for Mac and Windows</a></p>
-<p>A short set of exercises that will help you get started can be found</p>
+<p>For Linux, Mac and Windows users, Neuronify may be downloaded here:</p>
+<ul>
+<li><a href="https://github.com/CINPLA/neuronify/releases">Download Neuronify</a></li>
+</ul>
+<p>For Linux users, the application must be built from source.</p>
+<p>A short set of exercises that will help you get started can be found here:</p>
 <p><a href="https://github.com/CINPLA/presentations/blob/master/neuronify-exercises/exercises.pdf">Exercises to get started with Neuronify</a></p>
-<a name="development"></a>
-<h2 id="development">Development</h2>
-<p>To read more about the technical details about the application, have a look at the different categories:</p>
-<p><a href="neuronify-io.html">Input/Output</a></p>
-<p>To read about the theory behind the calculations done in Neuronify, see <a href="theory.html">Theory</a>.</p>
-<p>For a comprehensive list, see <a href="classes.html">All Classes</a>.</p>
-<p>For a list of qmlTypes, see <a href="neuronify-qmltypes-woot.html">Neuronify QML Types</a></p>
+<a name="neuroscience-theory"></a>
+<h2 id="neuroscience-theory">Neuroscience theory</h2>
+<p>Neuronify is based on an integrate-and-fire model of neurons. To understand this model, we have outlined some basic theory of computational neuroscience in the following documents:</p>
+<ul>
+<li><a href="general-neuroscience.html">General neuroscience</a></li>
+<li><a href="integrate-and-fire-neuron.html">Integrate-and-fire model</a></li>
+<li><a href="adaptation.html">Adaptive neurons</a></li>
+<li><a href="poissongenerator.html">Poisson Distributed Spike Generator</a></li>
+<li><a href="receptivefieldtheory.html">Receptive field</a></li>
+</ul>
+<a name="development-and-technical-details"></a>
+<h2 id="development-and-technical-details">Development and technical details</h2>
+<p>Neuronify is written in C++ and QML using the <a href="http://qt.io">Qt Framework</a>. The GUI is written in QML, while the core parts of the engine that performs the time integration of the neural network is written in C++. However, several of the network elements and neurons used in Neuronify are written as QML objects.</p>
+<a name="core"></a>
+<h3 >Core</h3>
+<p>The core of Neuronify consists of a small set of GUI and engine classes. At the heart of the GUI is the <a href="qml-neuronify-neuronify.html">Neuronify</a> QML type that organizes all the visual items and the holds a reference to <a href="graphengine.html">GraphEngine</a>. Each item in the network is controlled by the <a href="graphengine.html">GraphEngine</a>. This is a C++ class that holds a list of nodes and their connections through edges.</p>
+<p>The nodes of the network are split into three parts: <a href="nodebase.html">NodeBase</a>, <a href="nodeengine.html">NodeEngine</a> and <a href="qml-node.html">Node</a>. The former two are C++ classes, while the latter is a QML type.</p>
+<a name="generators"></a>
+<h3 >Generators</h3>
+<p>Generators are used to feed the network with automatic input.</p>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-neuronify-acclamp.html">ACClamp</a></p></td><td class="tblDescr"><p>An alternating current generator which can suply input to neurons</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-neuronify-currentclamp.html">CurrentClamp</a></p></td><td class="tblDescr"><p>A direct current generator which can suply input to neurons</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-neuronify-poissongenerator.html">PoissonGenerator</a></p></td><td class="tblDescr"><p>An spike generator which can suply input spikes to neurons</p></td></tr>
+</table></div>
+<a name="meters"></a>
+<h3 >Meters</h3>
+<p>Meters can be used to measure the state of the neurons.</p>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-neuronify-speaker.html">Speaker</a></p></td><td class="tblDescr"><p>A speaker that emits a sound whenever a connected neuron fires</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-neuronify-voltmeter.html">Voltmeter</a></p></td><td class="tblDescr"><p>Reads the voltage of the neurons and shows a trace plot</p></td></tr>
+</table></div>
+<a name="sensors"></a>
+<h3 >Sensors</h3>
+<p>Sensors are used to get information from the outside world to the app.</p>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-neuronify-retina.html">Retina</a></p></td><td class="tblDescr"><p>Visual sensor that can be connected to neurons to generate activity based on the receptive field of the sensor and the visual stimuli captured by the camera</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-neuronify-touchsensor.html">TouchSensor</a></p></td><td class="tblDescr"><p>Registers touch (or mouse) events and converts them into a current that may be injected into neurons</p></td></tr>
+</table></div>
+<a name="complete-list-of-items"></a>
+<h3 >Complete list of items</h3>
+<p>For a comprehensive list, see <a href="classes.html">All Classes</a> and <a href="neuronify-qmlmodule.html">Neuronify QML Types</a></p>
+<a name="future-development"></a>
+<h2 id="future-development">Future development</h2>
+<p>Neuronify is in active development. Some target features that we wish to include in the future are:</p>
+<ul>
+<li>Long-term learning schemes such as long-term potentiation.</li>
+<li>User-generated neurons and items (written as QML plugins).</li>
+</ul>
 </div>
 <!-- @@@index.html -->
 </div>
