@@ -68,13 +68,15 @@
 <a name="getting-started"></a>
 <h2 id="getting-started">Getting started</h2>
 <p>Neuronify can be downloaded for multiple platforms. Mobile versions of Neuronify will be available soon in Google Play and Apple App Store.</p>
-<p>For Linux, Mac and Windows users, Neuronify may be downloaded here:</p>
+<p>For Linux, Mac and Windows users, Neuronify can be downloaded here:</p>
 <ul>
 <li><a href="https://github.com/CINPLA/neuronify/releases">Download Neuronify</a></li>
 </ul>
 <p>For Linux users, the application must be built from source.</p>
 <p>A short set of exercises that will help you get started can be found here:</p>
-<p><a href="https://github.com/CINPLA/presentations/blob/master/neuronify-exercises/exercises.pdf">Exercises to get started with Neuronify</a></p>
+<ul>
+<li><a href="https://github.com/CINPLA/presentations/blob/master/neuronify-exercises/exercises.pdf">Exercises to get started with Neuronify</a></li>
+</ul>
 <a name="neuroscience-theory"></a>
 <h2 id="neuroscience-theory">Neuroscience theory</h2>
 <p>Neuronify is based on an integrate-and-fire model of neurons. To understand this model, we have outlined some basic theory of computational neuroscience in the following documents:</p>
@@ -92,6 +94,21 @@
 <h3 >Core</h3>
 <p>The core of Neuronify consists of a small set of GUI and engine classes. At the heart of the GUI is the <a href="qml-neuronify-neuronify.html">Neuronify</a> QML type that organizes all the visual items and the holds a reference to <a href="graphengine.html">GraphEngine</a>. Each item in the network is controlled by the <a href="graphengine.html">GraphEngine</a>. This is a C++ class that holds a list of nodes and their connections through edges.</p>
 <p>The nodes of the network are split into three parts: <a href="nodebase.html">NodeBase</a>, <a href="nodeengine.html">NodeEngine</a> and <a href="qml-node.html">Node</a>. The former two are C++ classes, while the latter is a QML type.</p>
+<p>In principle, <a href="nodebase.html">NodeBase</a> and <a href="qml-node.html">Node</a> could have been the one and same C++ class. The reason they are split up is because some features of <a href="qml-node.html">Node</a> are defined in QML, such as a <a href="http://qt-project.org/doc/qt-5.2/qml-qtquick-mousearea.html">MouseArea</a> with dragging. Since <a href="nodeengine.html">NodeEngine</a>, <a href="edge.html">Edge</a> and <a href="graphengine.html">GraphEngine</a> are C++ classes, they cannot have type-safe pointers to a runtime <a href="qml-node.html">Node</a> QML type object. That is why they instead refer to the C++ type <a href="nodebase.html">NodeBase</a>. In the future, this may change and all features of <a href="qml-node.html">Node</a> may be incorporated in a C++ class.</p>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="edge.html">Edge</a></p></td><td class="tblDescr"><p>The basic connection between two nodes</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="graphengine.html">GraphEngine</a></p></td><td class="tblDescr"><p>The core engine of Neuronify</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="nodebase.html">NodeBase</a></p></td><td class="tblDescr"><p>The basic functionality of all nodes</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="nodeengine.html">NodeEngine</a></p></td><td class="tblDescr"><p>The basic functionality for the logic in all nodes</p></td></tr>
+</table></div>
+<a name="neurons"></a>
+<h3 >Neurons</h3>
+<p>Neurons are defined by subclassing the Neuron QML Type and adding a <a href="neuronengine.html">NeuronEngine</a>. To change the behavior of a <a href="neuronengine.html">NeuronEngine</a>, Current objects may be added as children to it. The <a href="neuronengine.html">NeuronEngine</a> will iterate all its children and sum their currents.</p>
+<div class="table"><table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="adaptationcurrent.html">AdaptationCurrent</a></p></td><td class="tblDescr"><p>Adaptive Current calculates the neuron conductance based on an adaptive rule</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="neuronengine.html">NeuronEngine</a></p></td><td class="tblDescr"><p>Common engine used by most neurons</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="passivecurrent.html">PassiveCurrent</a></p></td><td class="tblDescr"><p>Defines a current that drives the NeuronEngine towards the defined resting membrane potential</p></td></tr>
+</table></div>
 <a name="generators"></a>
 <h3 >Generators</h3>
 <p>Generators are used to feed the network with automatic input.</p>
