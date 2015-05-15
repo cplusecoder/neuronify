@@ -99,18 +99,25 @@
             <contents name="goldman-hodgkin-katz-equations" title="Goldman-Hodgkin-Katz equations" level="1"/>
             <contents name="neuron-signaling" title="Neuron signaling" level="1"/>
         </page>
-        <page name="classes.html" href="classes.html" status="commendable" location="index.qdoc" filepath="/home/milad/Dropbox/software/apps/neuronify/neuronify/doc/index.qdoc" lineno="60" subtype="page" title="All Classes" fulltitle="All Classes" subtitle="" module="Neuronify" brief="If you know the name of the class you want, find it here"/>
+        <page name="classes.html" href="classes.html" status="commendable" location="index.qdoc" filepath="/home/milad/Dropbox/software/apps/neuronify/neuronify/doc/index.qdoc" lineno="59" subtype="page" title="All Classes" fulltitle="All Classes" subtitle="" module="Neuronify" brief="If you know the name of the class you want, find it here"/>
         <page name="index.html" href="index.html" status="commendable" location="index.qdoc" filepath="/home/milad/Dropbox/software/apps/neuronify/neuronify/doc/index.qdoc" lineno="1" subtype="page" title="Neuronify" fulltitle="Neuronify" subtitle="" module="Neuronify">
             <contents name="getting-started" title="Getting started" level="1"/>
             <contents name="development" title="Development" level="1"/>
         </page>
-        <page name="qmlTypes.html" href="qmltypes.html" status="commendable" location="index.qdoc" filepath="/home/milad/Dropbox/software/apps/neuronify/neuronify/doc/index.qdoc" lineno="71" subtype="page" title="QML TYPES" fulltitle="QML TYPES" subtitle="" module="Neuronify" brief="If you know the name of the QML Type, find it here"/>
+        <page name="qmlTypes.html" href="qmltypes.html" status="commendable" location="index.qdoc" filepath="/home/milad/Dropbox/software/apps/neuronify/neuronify/doc/index.qdoc" lineno="70" subtype="page" title="QML TYPES" fulltitle="QML TYPES" subtitle="" module="Neuronify" brief="If you know the name of the QML Type, find it here"/>
         <page name="theory.html" href="theory.html" status="commendable" location="index.qdoc" filepath="/home/milad/Dropbox/software/apps/neuronify/neuronify/doc/index.qdoc" lineno="40" subtype="page" title="Theory" fulltitle="Theory" subtitle="" module="Neuronify" brief="Here you can read about the theory behind the calculations done in Neuronify"/>
         <page name="integrate-and-fire_neuron" href="integrate-and-fire-neuron.html" status="commendable" location="integrate-and-fire_neurons.qdoc" filepath="/home/milad/Dropbox/software/apps/neuronify/neuronify/doc/integrate-and-fire_neurons.qdoc" lineno="1" subtype="page" title="Integrate-and-fire model" fulltitle="Integrate-and-fire model" subtitle="" module="theory">
             <contents name="why-do-we-want-simpler-models" title="Why do we want simpler models?" level="1"/>
             <contents name="the-integrate-and-fire-neurons" title="The integrate-and-fire neurons" level="1"/>
             <contents name="modeling-integrate-and-fire-neurons" title="Modeling integrate-and-fire neurons" level="1"/>
             <contents name="how-is-spiking-achieved-and-threated" title="How is spiking achieved and threated?" level="1"/>
+        </page>
+        <page name="poissonGenerator" href="poissongenerator.html" status="commendable" location="poissonGenerator.qdoc" filepath="/home/milad/Dropbox/software/apps/neuronify/neuronify/doc/poissonGenerator.qdoc" lineno="1" subtype="page" title="Poisson Distributed Spike Generator" fulltitle="Poisson Distributed Spike Generator" subtitle="" module="theory">
+            <contents name="spike-generators" title="Spike generators" level="1"/>
+            <contents name="poisson-distribution" title="Poisson distribution" level="1"/>
+            <contents name="implementation" title="Implementation" level="1"/>
+            <contents name="drawbacks" title="Drawbacks" level="2"/>
+            <contents name="example-noise" title="Example: Noise" level="1"/>
         </page>
         <page name="receptiveField.html" href="receptivefield.html" status="commendable" location="receptiveField.qdoc" filepath="/home/milad/Dropbox/software/apps/neuronify/neuronify/doc/receptiveField.qdoc" lineno="1" subtype="page" title="Receptive field" fulltitle="Receptive field" subtitle="" module="theory">
             <contents name="estimating-firing-rates" title="Estimating firing rates" level="1"/>
@@ -1050,10 +1057,10 @@
         <group name="neuronify" href="neuronify.html" status="internal" seen="false" title="" members="Neuronify"/>
         <group name="neuronify-generators" href="neuronify-generators.html" status="internal" seen="false" title="" members="ACClamp,CurrentClamp,PoissonGenerator"/>
         <group name="neuronify-hud" href="neuronify-hud.html" status="internal" seen="false" title="" members="VoltmeterControls"/>
-        <group name="neuronify-io" href="neuronify-io.html" status="commendable" location="index.qdoc" filepath="/home/milad/Dropbox/software/apps/neuronify/neuronify/doc/index.qdoc" lineno="82" seen="true" title="Input/Output" module="Neuronify" groups="classlists" members="FileManager,FileIO"/>
+        <group name="neuronify-io" href="neuronify-io.html" status="commendable" location="index.qdoc" filepath="/home/milad/Dropbox/software/apps/neuronify/neuronify/doc/index.qdoc" lineno="81" seen="true" title="Input/Output" module="Neuronify" groups="classlists" members="FileManager,FileIO"/>
         <group name="neuronify-meters" href="neuronify-meters.html" status="internal" seen="false" title="" members="Speaker,Voltmeter"/>
         <module name="Neuronify" href="neuronify-module.html" status="internal" seen="false" title="" members="FileIO,AdaptationCurrent"/>
-        <module name="theory" href="theory-module.html" status="internal" seen="false" title="" members="adaptation.html,integrate-and-fire_neuron,receptiveField.html"/>
+        <module name="theory" href="theory-module.html" status="internal" seen="false" title="" members="adaptation.html,integrate-and-fire_neuron,poissonGenerator,receptiveField.html"/>
         <qmlmodule name="Neuronify" href="neuronify-qmlmodule.html" status="internal" seen="false" title="" members="Neuronify,ACClamp,CurrentClamp,PoissonGenerator,VoltmeterControls,FileManager,Speaker,Voltmeter"/>
     </namespace>
 </INDEX>

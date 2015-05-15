@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- adaptation.qdoc -->
-  <title>Adaptive neurons | Neuronify </title>
+<!-- poissonGenerator.qdoc -->
+  <title>Poisson Distributed Spike Generator | Neuronify </title>
   <link rel="stylesheet" type="text/css" href="style/online-neuronify.css" />
   <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
   <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
@@ -52,26 +52,42 @@
     </div>
     <ul>
        <li class="first"><a href="index.html">Neuronify</a></li>
-<li>Adaptive neurons</li>
+<li>Poisson Distributed Spike Generator</li>
     </ul>
 </div>
 <div class="content">
     <div class="line">
         <div class="content mainContent">
-<div class="sidebar"><div class="sidebar-content" id="sidebar-content"></div></div>
-<div class="context">
-<h1 class="title">Adaptive neurons</h1>
-<span class="subtitle"></span>
-<!-- $$$adaptation.html-description -->
-<div class="descr"> <a name="details"></a>
-<p>Neural adaptation refers to the change over time in the responsiveness of a cell to a sustained current injection. In many neurons, the firing rate decreases throughout the spike train, when a constant stimulus is injected. Such behaviour can be incorporated into the <a href="integrate-and-fire-neuron.html">Integrate-and-fire model</a> by adding an extra conductance \(I_{\mathrm{adapt}}\) that depends on the neuronal spiking. This additional term has a quasi-ohmic form:</p>
-\[ I_{\mathrm{adapt}} =  g_{\mathrm{adapt}}(V - E_m),\]
-<p>where the adaptive conductance \(g_{\mathrm{adapt}}\) is incremented by an amount \(\Delta g_{\mathrm{adapt}}\) whenever the neuron spikes, and otherwise it decays with a time constant of \( \tau_{\mathrm{adapt}}\):</p>
-\[\frac{\mathrm{d}}{\mathrm{d}t} g_{\mathrm{adapt}}= -\frac{g_{\mathrm{adapt}}}{\tau_{\mathrm{adapt}}}.\]
-<p>In Neuronify, both excitatory and inhibitory adaptive neurons are implemented. These can be chosen from the catagory menu with the following icons:</p>
-<p class="centerAlign"><img src="images/adaptive.png" alt="&quot;Adaptive excitatory&quot;" /></p><p class="centerAlign"><img src="images/adaptive_inhibitory.png" alt="&quot;Adaptive inhibitory&quot;" /></p><p>In option menu for these neurons, both the time constant \(\tau_{\mathrm{adapt}}\) and \(\Delta g_{\mathrm{adapt}}\) can be varied</p>
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#spike-generators">Spike generators</a></li>
+<li class="level1"><a href="#poisson-distribution">Poisson distribution</a></li>
+<li class="level1"><a href="#implementation">Implementation</a></li>
+<li class="level2"><a href="#drawbacks">Drawbacks</a></li>
+<li class="level1"><a href="#example-noise">Example: Noise</a></li>
+</ul>
 </div>
-<!-- @@@adaptation.html -->
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<div class="context">
+<h1 class="title">Poisson Distributed Spike Generator</h1>
+<span class="subtitle"></span>
+<!-- $$$poissonGenerator-description -->
+<div class="descr"> <a name="details"></a>
+<p>In models we often</p>
+<a name="spike-generators"></a>
+<h2 id="spike-generators">Spike generators</h2>
+<a name="poisson-distribution"></a>
+<h2 id="poisson-distribution">Poisson distribution</h2>
+<a name="implementation"></a>
+<h2 id="implementation">Implementation</h2>
+<a name="drawbacks"></a>
+<h3 >Drawbacks</h3>
+<a name="example-noise"></a>
+<h2 id="example-noise">Example: Noise</h2>
+</div>
+<!-- @@@poissonGenerator -->
 </div>
 </div>
 </div>
