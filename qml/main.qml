@@ -8,10 +8,7 @@ ApplicationWindow {
     width: 1136
     height: 640
     title: qsTr("Neuronify")
-
     Neuronify {
         anchors.fill: parent
     }
-
-
 }

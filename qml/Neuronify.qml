@@ -3,7 +3,7 @@ import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.0
 import QtQuick.Window 2.1
-import QtMultimedia 5.0
+//import QtMultimedia 5.0
 
 import Neuronify 1.0
 
@@ -602,32 +602,32 @@ Rectangle {
         }
     }
 
-    VideoSurface{
-        id: videoSurface
-        enabled: root.running
-        camera: Camera{
-            id:camera
-            property bool active: retinaCounter > 0 && root.running
-            property int retinaCounter: 0
+//    VideoSurface{
+//        id: videoSurface
+//        enabled: root.running
+//        camera: Camera{
+//            id:camera
+//            property bool active: retinaCounter > 0 && root.running
+//            property int retinaCounter: 0
 
-            onActiveChanged: {
-                if(active){
-                    camera.start()
-                }else{
-                    camera.stop()
-                }
-            }
-        }
-    }
+//            onActiveChanged: {
+//                if(active){
+//                    camera.start()
+//                }else{
+//                    camera.stop()
+//                }
+//            }
+//        }
+//    }
 
-    VideoOutput {
-        anchors.centerIn: parent
-        enabled: Qt.platform.os === "android" && videoSurface.enabled
-        visible: Qt.platform.os === "android" && videoSurface.enabled
-        width: 10
-        height: 10
-        source: videoSurface && videoSurface.camera ? videoSurface.camera : null
-    }
+//    VideoOutput {
+//        anchors.centerIn: parent
+//        enabled: Qt.platform.os === "android" && videoSurface.enabled
+//        visible: Qt.platform.os === "android" && videoSurface.enabled
+//        width: 10
+//        height: 10
+//        source: videoSurface && videoSurface.camera ? videoSurface.camera : null
+//    }
 
     //////////////////////// save/load ////////////////
 

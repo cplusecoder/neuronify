@@ -22,89 +22,89 @@ Item {
     property GraphEngine graphEngine: null
     property var otherItems: []
 
-    function showSaveDialog() {
-        saveFileDialog.visible = true
-    }
+//    function showSaveDialog() {
+//        saveFileDialog.visible = true
+//    }
 
-    function showLoadDialog() {
-        loadFileDialog.visible = true
-    }
+//    function showLoadDialog() {
+//        loadFileDialog.visible = true
+//    }
 
-    function saveState(fileUrl) {
-        var entities = graphEngine.nodes
-        var connections = graphEngine.edges
-        var fileString = ""
-        console.log("Saving to " + fileUrl)
+//    function saveState(fileUrl) {
+//        var entities = graphEngine.nodes
+//        var connections = graphEngine.edges
+//        var fileString = ""
+//        console.log("Saving to " + fileUrl)
 
-        var counter = 0
-        for(var i in entities) {
-            var entity = entities[i]
-            fileString += entity.dump(i)
-        }
+//        var counter = 0
+//        for(var i in entities) {
+//            var entity = entities[i]
+//            fileString += entity.dump(i)
+//        }
 
-        for(var i in connections) {
-            var connection = connections[i]
-            fileString += connection.dump(i, graphEngine)
-        }
+//        for(var i in connections) {
+//            var connection = connections[i]
+//            fileString += connection.dump(i, graphEngine)
+//        }
 
-        for(var i in otherItems) {
-            var item = otherItems[i]
-            fileString += item.dump()
-        }
+//        for(var i in otherItems) {
+//            var item = otherItems[i]
+//            fileString += item.dump()
+//        }
 
-        console.log(fileString)
+//        console.log(fileString)
 
-        saveFileIO.source = fileUrl
-        saveFileIO.write(fileString)
-    }
+//        saveFileIO.source = fileUrl
+//        saveFileIO.write(fileString)
+//    }
 
-    function read(fileUrl) {
-        console.log("Reading file " + fileUrl)
-        loadFileIO.source = fileUrl
-        var stateFile = loadFileIO.read()
-        return stateFile
-    }
+//    function read(fileUrl) {
+//        console.log("Reading file " + fileUrl)
+//        loadFileIO.source = fileUrl
+//        var stateFile = loadFileIO.read()
+//        return stateFile
+//    }
 
-    FileIO {
-        id: loadFileIO
-        source: "none"
-        onError: console.log(msg)
-    }
+//    FileIO {
+//        id: loadFileIO
+//        source: "none"
+//        onError: console.log(msg)
+//    }
 
-    FileIO {
-        id: saveFileIO
-        source: "none"
-        onError: console.log(msg)
-    }
+//    FileIO {
+//        id: saveFileIO
+//        source: "none"
+//        onError: console.log(msg)
+//    }
 
-    FileDialog {
-        id: saveFileDialog
-        title: "Please enter a filename"
-        visible : false
-        selectExisting: false
-        nameFilters: Qt.platform.os === "osx" ? [] : ["Nestify files (*.nfy)", "All files (*)"]
+//    FileDialog {
+//        id: saveFileDialog
+//        title: "Please enter a filename"
+//        visible : false
+//        selectExisting: false
+//        nameFilters: Qt.platform.os === "osx" ? [] : ["Nestify files (*.nfy)", "All files (*)"]
 
-        onAccepted: {
-            var fileUrlNew = fileUrl
-            var extensionSplit = fileUrlNew.toString().split(".")
-            var fileExtension = extensionSplit[extensionSplit.length - 1]
-            if(fileExtension !== "nfy") {
-                fileUrlNew = Qt.resolvedUrl(fileUrlNew.toString() + ".nfy")
-            }
-            saveState(fileUrlNew)
-        }
-    }
+//        onAccepted: {
+//            var fileUrlNew = fileUrl
+//            var extensionSplit = fileUrlNew.toString().split(".")
+//            var fileExtension = extensionSplit[extensionSplit.length - 1]
+//            if(fileExtension !== "nfy") {
+//                fileUrlNew = Qt.resolvedUrl(fileUrlNew.toString() + ".nfy")
+//            }
+//            saveState(fileUrlNew)
+//        }
+//    }
 
-    FileDialog {
-        id: loadFileDialog
-        title: "Please choose a file"
-        visible : false
-        nameFilters: Qt.platform.os === "osx" ? [] : ["Nestify files (*.nfy)", "All files (*)"]
+//    FileDialog {
+//        id: loadFileDialog
+//        title: "Please choose a file"
+//        visible : false
+//        nameFilters: Qt.platform.os === "osx" ? [] : ["Nestify files (*.nfy)", "All files (*)"]
 
-        onAccepted: {
-            console.log("Load dialog accepted")
-            loadState(fileUrl)
-        }
-    }
+//        onAccepted: {
+//            console.log("Load dialog accepted")
+//            loadState(fileUrl)
+//        }
+//    }
 }
 

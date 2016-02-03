@@ -6,7 +6,15 @@ android {
     TARGET = Neuronify
 }
 
-QT += qml quick widgets multimedia multimediawidgets
+CONFIG += noretina
+
+emscripten {
+    QMAKE_LFLAGS += --preload-file qt_qml
+    QMAKE_LFLAGS += --preload-file qt.conf
+    QMAKE_LFLAGS += -O2
+}
+
+QT += qml quick widgets # multimedia multimediawidgets
 
 CONFIG += c++11
 
@@ -18,13 +26,17 @@ HEADERS += \
     src/core/edge.h \
     src/neurons/current.h \
     src/neurons/neuronengine.h \
+    src/neurons/passivecurrent.h \
+    src/neurons/adaptationcurrent.h
+
+!noretina {
+HEADERS += \
     src/retina/androidmultimediautils.h \
     src/retina/receptivefield.h \
     src/retina/retinaengine.h \
     src/retina/retinapainter.h \
     src/retina/videosurface.h \
-    src/neurons/passivecurrent.h \
-    src/neurons/adaptationcurrent.h
+}
 
 SOURCES += \
     src/io/fileio.cpp \
@@ -35,13 +47,21 @@ SOURCES += \
     src/core/edge.cpp \
     src/neurons/current.cpp \
     src/neurons/neuronengine.cpp \
-    src/retina/retinaengine.cpp \
-    src/retina/retinapainter.cpp \
-    src/retina/videosurface.cpp \
-    src/retina/receptivefield.cpp \
-    src/retina/androidmultimediautils.cpp \
     src/neurons/adaptationcurrent.cpp \
     src/neurons/passivecurrent.cpp
+
+noretina {
+    DEFINES += NEURONIFY_NO_RETINA
+}
+
+!noretina {
+    SOURCES += \    src/retina/retinaengine.cpp \
+        src/retina/retinapainter.cpp \
+        src/retina/videosurface.cpp \
+        src/retina/receptivefield.cpp \
+        src/retina/androidmultimediautils.cpp \
+
+}
 
 RESOURCES += qml.qrc \
     images.qrc \

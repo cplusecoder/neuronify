@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
-import QtGraphicalEffects 1.0
+//import QtGraphicalEffects 1.0
 
 import "../../style"
 
@@ -31,11 +31,11 @@ Item {
         id: background
         anchors.fill: parent
 
-        FastBlur {
-            anchors.fill: parent
-            source: blurSource
-            radius: Style.size * 6
-        }
+//        FastBlur {
+//            anchors.fill: parent
+//            source: blurSource
+//            radius: Style.size * 6
+//        }
 
         Rectangle {
             anchors.fill: parent

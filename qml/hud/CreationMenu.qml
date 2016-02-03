@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.1
-import QtGraphicalEffects 1.0
+//import QtGraphicalEffects 1.0
 
 import "../neurons"
 import "../style"
@@ -89,12 +89,12 @@ Item {
             anchors.fill: parent
         }
 
-        FastBlur {
-            anchors.fill: parent
-            source: effectSource
+//        FastBlur {
+//            anchors.fill: parent
+//            source: effectSource
 
-            radius: Style.size * 6
-        }
+//            radius: Style.size * 6
+//        }
 
         Rectangle {
             anchors.fill: parent

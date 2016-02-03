@@ -33,7 +33,7 @@ Item {
         property real size: 2.5 * root.size
         property color color: Qt.rgba(0.15, 0.15, 0.15, 0.9)
         property int weight: Font.Light
-        property string family: "Roboto"
+//        property string family: "Roboto"
 
         Item {
             id: headingObject
