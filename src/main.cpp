@@ -20,6 +20,7 @@
 #include "neurons/passivecurrent.h"
 #include "neurons/adaptationcurrent.h"
 #include "io/fileio.h"
+#include "meters/vibratorengine.h"
 
 #include <QApplication>
 #include <QQmlApplicationEngine>
@@ -52,6 +53,8 @@ int main(int argc, char *argv[])
     qmlRegisterType<RetinaEngine>("Neuronify", 1, 0, "RetinaEngine");
     qmlRegisterType<RetinaPainter>("Neuronify", 1, 0, "RetinaPainter");
     qmlRegisterType<VideoSurface>("Neuronify", 1, 0, "VideoSurface");
+
+    qmlRegisterType<VibratorEngine>("Neuronify", 1, 0, "VibratorEngine");
 
     qmlRegisterType<Current>("Neuronify", 1, 0, "Current");
     qmlRegisterType<PassiveCurrent>("Neuronify", 1, 0, "PassiveCurrent");

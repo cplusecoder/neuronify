@@ -7,6 +7,9 @@ android {
 }
 
 QT += qml quick widgets multimedia multimediawidgets charts
+android {
+    QT += androidextras
+}
 
 CONFIG += c++11
 
@@ -31,7 +34,8 @@ HEADERS += \
     src/retina/kernels/dogkernelengine.h \
     src/retina/kernels/offrightkernelengine.h \
     src/retina/kernels/offtopkernelengine.h \
-    src/retina/kernels/offbottomkernelengine.h
+    src/retina/kernels/offbottomkernelengine.h \
+    src/meters/vibratorengine.h
 
 SOURCES += \
     src/io/fileio.cpp \
@@ -55,7 +59,8 @@ SOURCES += \
     src/retina/kernels/dogkernelengine.cpp \
     src/retina/kernels/offrightkernelengine.cpp \
     src/retina/kernels/offtopkernelengine.cpp \
-    src/retina/kernels/offbottomkernelengine.cpp
+    src/retina/kernels/offbottomkernelengine.cpp \
+    src/meters/vibratorengine.cpp
 
 RESOURCES += qml.qrc \
     images.qrc \
