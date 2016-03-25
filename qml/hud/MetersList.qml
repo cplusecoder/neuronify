@@ -19,4 +19,10 @@ ListModel {
         source: "qrc:/qml/meters/RasterPlot.qml"
         imageSource: "qrc:/images/meters/voltmeter.png"
     }
+    ListElement {
+        name: "Vibrator"
+        description: "Vibrates when a connected neuron fires."
+        source: "qrc:/qml/meters/Vibrator.qml"
+        imageSource: "qrc:/images/meters/speaker.png"
+    }
 }
