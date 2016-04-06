@@ -64,8 +64,7 @@
 <!-- $$$index.html-description -->
 <div class="descr"> <a name="details"></a>
 <p>Neuronify is an educational app for studying neural networks. The engine is based on an integrate-and-fire model. This documentation provides information about how you can obtain the program and how it is structured.</p>
-<p class="centerAlign"><img src="images/neuronify-0.91.png" alt="&quot;Screenshot of Neuronify 0.91&quot;" /></p><p>The documentation is written as a report for the course FYS388/PHDIMT10.</p>
-<a name="getting-started"></a>
+<p class="centerAlign"><img src="images/neuronify-0.92.png" alt="&quot;Screenshot of Neuronify 0.91&quot;" /></p><a name="getting-started"></a>
 <h2 id="getting-started">Getting started</h2>
 <p>Neuronify can be downloaded for multiple platforms. Mobile versions of Neuronify will be available soon in Google Play and Apple App Store.</p>
 <p>For Linux, Mac and Windows users, Neuronify can be downloaded here:</p>
@@ -94,7 +93,7 @@
 <h3 >Core</h3>
 <p>The core of Neuronify consists of a small set of GUI and engine classes. At the heart of the GUI is the <a href="qml-neuronify-neuronify.html">Neuronify</a> QML type that organizes all the visual items and the holds a reference to <a href="graphengine.html">GraphEngine</a>. Each item in the network is controlled by the <a href="graphengine.html">GraphEngine</a>. This is a C++ class that holds a list of nodes and their connections through edges.</p>
 <p>The nodes of the network are split into three parts: <a href="nodebase.html">NodeBase</a>, <a href="nodeengine.html">NodeEngine</a> and <a href="qml-node.html">Node</a>. The former two are C++ classes, while the latter is a QML type.</p>
-<p>In principle, <a href="nodebase.html">NodeBase</a> and <a href="qml-node.html">Node</a> could have been the one and same C++ class. The reason they are split up is because some features of <a href="qml-node.html">Node</a> are defined in QML, such as a <a href="http://qt-project.org/doc/qt-5.2/qml-qtquick-mousearea.html">MouseArea</a> with dragging. Since <a href="nodeengine.html">NodeEngine</a>, <a href="edge.html">Edge</a> and <a href="graphengine.html">GraphEngine</a> are C++ classes, they cannot have type-safe pointers to a <a href="qml-node.html">Node</a> object because this will be defined first once the application has started. That is why they instead refer to the C++ type <a href="nodebase.html">NodeBase</a>. In the future, this may change and all features of <a href="qml-node.html">Node</a> may be incorporated in a C++ class.</p>
+<p>In principle, <a href="nodebase.html">NodeBase</a> and <a href="qml-node.html">Node</a> could have been the one and same C++ class. The reason they are split up is because some features of <a href="qml-node.html">Node</a> are defined in QML, such as a <a href="http://doc.qt.io/qt-5/qml-qtquick-mousearea.html">MouseArea</a> with dragging. Since <a href="nodeengine.html">NodeEngine</a>, <a href="edge.html">Edge</a> and <a href="graphengine.html">GraphEngine</a> are C++ classes, they cannot have type-safe pointers to a <a href="qml-node.html">Node</a> object because this will be defined first once the application has started. That is why they instead refer to the C++ type <a href="nodebase.html">NodeBase</a>. In the future, this may change and all features of <a href="qml-node.html">Node</a> may be incorporated in a C++ class.</p>
 <div class="table"><table class="annotated">
 <tr class="odd topAlign"><td class="tblName"><p><a href="edge.html">Edge</a></p></td><td class="tblDescr"><p>Basic connection between two nodes</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="graphengine.html">GraphEngine</a></p></td><td class="tblDescr"><p>The core engine of Neuronify</p></td></tr>
@@ -109,6 +108,7 @@
 <tr class="even topAlign"><td class="tblName"><p><a href="current.html">Current</a></p></td><td class="tblDescr"><p>Defines the currents used by NeuronEngine</p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="neuronengine.html">NeuronEngine</a></p></td><td class="tblDescr"><p>Common engine used by most neurons</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="passivecurrent.html">PassiveCurrent</a></p></td><td class="tblDescr"><p>Defines a current that drives the NeuronEngine towards the defined resting membrane potential</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="rateengine.html">RateEngine</a></p></td><td class="tblDescr"><p>Common engine used RatePlot</p></td></tr>
 </table></div>
 <a name="generators"></a>
 <h3 >Generators</h3>
@@ -116,20 +116,22 @@
 <div class="table"><table class="annotated">
 <tr class="odd topAlign"><td class="tblName"><p><a href="qml-neuronify-acclamp.html">ACClamp</a></p></td><td class="tblDescr"><p>An alternating current generator which can suply input to neurons</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qml-neuronify-currentclamp.html">CurrentClamp</a></p></td><td class="tblDescr"><p>A direct current generator which can suply input to neurons</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qml-neuronify-poissongenerator.html">PoissonGenerator</a></p></td><td class="tblDescr"><p>An spike generator which can suply input spikes to neurons</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-neuronify-poissongenerator.html">PoissonGenerator</a></p></td><td class="tblDescr"><p>An spike generator which can supply input spikes to neurons</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-neuronify-rhythmgenerator.html">RhythmGenerator</a></p></td><td class="tblDescr"><p>An spike generator which can supply input spikes to neurons</p></td></tr>
 </table></div>
 <a name="meters"></a>
 <h3 >Meters</h3>
 <p>Meters can be used to measure the state of the neurons.</p>
 <div class="table"><table class="annotated">
-<tr class="odd topAlign"><td class="tblName"><p><a href="qml-neuronify-speaker.html">Speaker</a></p></td><td class="tblDescr"><p>A speaker that emits a sound whenever a connected neuron fires</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qml-neuronify-voltmeter.html">Voltmeter</a></p></td><td class="tblDescr"><p>Reads the voltage of the neurons and shows a trace plot</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-neuronify-rateplot.html">RatePlot</a></p></td><td class="tblDescr"><p>Reads the firing rate of the neurons and shows a trace plot</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-neuronify-speaker.html">Speaker</a></p></td><td class="tblDescr"><p>A speaker that emits a sound whenever a connected neuron fires</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-neuronify-voltmeter.html">Voltmeter</a></p></td><td class="tblDescr"><p>Reads the voltage of the neurons and shows a trace plot</p></td></tr>
 </table></div>
 <a name="sensors"></a>
 <h3 >Sensors</h3>
 <p>Sensors are used to get information from the outside world to the app.</p>
 <div class="table"><table class="annotated">
-<tr class="odd topAlign"><td class="tblName"><p><a href="receptivefield.html">ReceptiveField</a></p></td><td class="tblDescr"><p>Creates different receptive field types, including both the spatial and temporal functions</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="kernel.html">Kernel</a></p></td><td class="tblDescr"><p>Creates different kernel types</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qml-neuronify-retina.html">Retina</a></p></td><td class="tblDescr"><p>Visual sensor that can be connected to neurons to generate activity based on the receptive field of the sensor and the visual stimuli captured by the camera</p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="retinaengine.html">RetinaEngine</a></p></td><td class="tblDescr"><p>Calculates the firing rate of a neuron based on the stimulus and the receptive field type</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="retinapainter.html">RetinaPainter</a></p></td><td class="tblDescr"><p>Paints the camera frame and the spatial receptive field function</p></td></tr>

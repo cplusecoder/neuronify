@@ -85,12 +85,13 @@
 <h2 id="properties">Properties</h2>
 <div class="table"><table class="propsummary">
 <tr><td class="topAlign"><ul>
-<li class="fn"><b><a href="neuronengine.html#clampCurrent-prop">clampCurrent</a></b> : double</li>
-<li class="fn"><b><a href="neuronengine.html#clampCurrentEnabled-prop">clampCurrentEnabled</a></b> : bool</li>
+<li class="fn"><b><a href="neuronengine.html#capacitance-prop">capacitance</a></b> : double</li>
+<li class="fn"><b><a href="neuronengine.html#initialPotential-prop">initialPotential</a></b> : double</li>
 <li class="fn"><b><a href="neuronengine.html#restingPotential-prop">restingPotential</a></b> : double</li>
-<li class="fn"><b><a href="neuronengine.html#synapsePotential-prop">synapsePotential</a></b> : double</li>
-</ul></td><td class="topAlign"><ul>
 <li class="fn"><b><a href="neuronengine.html#synapticConductance-prop">synapticConductance</a></b> : double</li>
+</ul></td><td class="topAlign"><ul>
+<li class="fn"><b><a href="neuronengine.html#synapticPotential-prop">synapticPotential</a></b> : double</li>
+<li class="fn"><b><a href="neuronengine.html#synapticTimeConstant-prop">synapticTimeConstant</a></b> : double</li>
 <li class="fn"><b><a href="neuronengine.html#threshold-prop">threshold</a></b> : double</li>
 <li class="fn"><b><a href="neuronengine.html#voltage-prop">voltage</a></b> : double</li>
 </ul>
@@ -98,69 +99,70 @@
 </table></div>
 <ul>
 <li class="fn">2 properties inherited from <a href="nodeengine.html#properties">NodeEngine</a></li>
-<li class="fn">23 properties inherited from <a href="http://qt-project.org/doc/qt-5.2/qquickitem.html#properties">QQuickItem</a></li>
+<li class="fn">23 properties inherited from <a href="http://doc.qt.io/qt-5/qquickitem.html#properties">QQuickItem</a></li>
 </ul>
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#NeuronEngine">NeuronEngine</a></b>(QQuickItem *<i> parent</i> = 0)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#adaptionConductance">adaptionConductance</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#clampCurrent-prop">clampCurrent</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#clampCurrentEnabled-prop">clampCurrentEnabled</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#capacitance-prop">capacitance</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#initialPotential-prop">initialPotential</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#restingPotential-prop">restingPotential</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#synapsePotential-prop">synapsePotential</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#synapticConductance-prop">synapticConductance</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#synapticPotential-prop">synapticPotential</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#synapticTimeConstant-prop">synapticTimeConstant</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#threshold-prop">threshold</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> double </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#voltage-prop">voltage</a></b>() const</td></tr>
 </table></div>
 <ul>
 <li class="fn">4 public functions inherited from <a href="nodeengine.html#public-functions">NodeEngine</a></li>
-<li class="fn">90 public functions inherited from <a href="http://qt-project.org/doc/qt-5.2/qquickitem.html#public-functions">QQuickItem</a></li>
+<li class="fn">92 public functions inherited from <a href="http://doc.qt.io/qt-5/qquickitem.html#public-functions">QQuickItem</a></li>
 </ul>
 <a name="public-slots"></a>
 <h2 id="public-slots">Public Slots</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#initialize">initialize</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#reset">reset</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#resetVoltage">resetVoltage</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#clampCurrent-prop">setClampCurrent</a></b>(double<i> arg</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#clampCurrentEnabled-prop">setClampCurrentEnabled</a></b>(bool<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#resetEvent">resetEvent</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#capacitance-prop">setCapacitance</a></b>(double<i> capacitance</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#initialPotential-prop">setInitialPotential</a></b>(double<i> initialPotential</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#restingPotential-prop">setRestingPotential</a></b>(double<i> arg</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#synapsePotential-prop">setSynapsePotential</a></b>(double<i> arg</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#synapticConductance-prop">setSynapticConductance</a></b>(double<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#synapticPotential-prop">setSynapticPotential</a></b>(double<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#synapticTimeConstant-prop">setSynapticTimeConstant</a></b>(double<i> synapticTimeConstant</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#threshold-prop">setThreshold</a></b>(double<i> threshold</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#voltage-prop">setVoltage</a></b>(double<i> arg</i>)</td></tr>
 </table></div>
 <ul>
 <li class="fn">7 public slots inherited from <a href="nodeengine.html#public-slots">NodeEngine</a></li>
-<li class="fn">1 public slot inherited from <a href="http://qt-project.org/doc/qt-5.2/qquickitem.html#public-slots">QQuickItem</a></li>
+<li class="fn">1 public slot inherited from <a href="http://doc.qt.io/qt-5/qquickitem.html#public-slots">QQuickItem</a></li>
 </ul>
 <a name="signals"></a>
 <h2 id="signals">Signals</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#clampCurrent-prop">clampCurrentChanged</a></b>(double<i> arg</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#clampCurrentEnabled-prop">clampCurrentEnabledChanged</a></b>(bool<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#capacitance-prop">capacitanceChanged</a></b>(double<i> capacitance</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#initialPotential-prop">initialPotentialChanged</a></b>(double<i> initialPotential</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#restingPotential-prop">restingPotentialChanged</a></b>(double<i> arg</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#synapsePotential-prop">synapsePotentialChanged</a></b>(double<i> arg</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#synapticConductance-prop">synapticConductanceChanged</a></b>(double<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#synapticPotential-prop">synapticPotentialChanged</a></b>(double<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#synapticTimeConstant-prop">synapticTimeConstantChanged</a></b>(double<i> synapticTimeConstant</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#threshold-prop">thresholdChanged</a></b>(double<i> threshold</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#voltage-prop">voltageChanged</a></b>(double<i> arg</i>)</td></tr>
 </table></div>
 <ul>
-<li class="fn">7 signals inherited from <a href="nodeengine.html#signals">NodeEngine</a></li>
-<li class="fn">1 signal inherited from <a href="http://qt-project.org/doc/qt-5.2/qquickitem.html#signals">QQuickItem</a></li>
+<li class="fn">8 signals inherited from <a href="nodeengine.html#signals">NodeEngine</a></li>
+<li class="fn">1 signal inherited from <a href="http://doc.qt.io/qt-5/qquickitem.html#signals">QQuickItem</a></li>
 </ul>
 <a name="reimplemented-protected-functions"></a>
 <h2 id="reimplemented-protected-functions">Reimplemented Protected Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#fireEvent">fireEvent</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#receiveCurrentEvent">receiveCurrentEvent</a></b>(double<i> currentOutput</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#receiveFireEvent">receiveFireEvent</a></b>(double<i> fireOutput</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#stepEvent">stepEvent</a></b>(double<i> dt</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#receiveCurrentEvent">receiveCurrentEvent</a></b>(double<i> currentOutput</i>, NodeEngine *<i> sender</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#receiveFireEvent">receiveFireEvent</a></b>(double<i> fireOutput</i>, NodeEngine *<i> sender</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="neuronengine.html#stepEvent">stepEvent</a></b>(double<i> dt</i>, bool<i> parentEnabled</i>)</td></tr>
 </table></div>
 <ul>
-<li class="fn">5 protected functions inherited from <a href="nodeengine.html#protected-functions">NodeEngine</a></li>
-<li class="fn">33 protected functions inherited from <a href="http://qt-project.org/doc/qt-5.2/qquickitem.html#protected-functions">QQuickItem</a></li>
+<li class="fn">6 protected functions inherited from <a href="nodeengine.html#protected-functions">NodeEngine</a></li>
+<li class="fn">33 protected functions inherited from <a href="http://doc.qt.io/qt-5/qquickitem.html#protected-functions">QQuickItem</a></li>
 </ul>
 <a name="details"></a>
 <!-- $$$NeuronEngine-description -->
@@ -173,30 +175,30 @@
 <!-- @@@NeuronEngine -->
 <div class="prop">
 <h2>Property Documentation</h2>
-<!-- $$$clampCurrent-prop$$$clampCurrent$$$setClampCurrentdouble$$$clampCurrentChangeddouble -->
-<h3 class="fn" id="clampCurrent-prop"><a name="clampCurrent-prop"></a><span class="name">clampCurrent</span> : <span class="type">double</span></h3>
+<!-- $$$capacitance-prop$$$capacitance$$$setCapacitancedouble$$$capacitanceChangeddouble -->
+<h3 class="fn" id="capacitance-prop"><a name="capacitance-prop"></a><span class="name">capacitance</span> : <span class="type">double</span></h3>
 <p><b>Access functions:</b></p>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft topAlign rightAlign"> double </td><td class="memItemRight bottomAlign"><span class="name"><b>clampCurrent</b></span>() const</td></tr>
-<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setClampCurrent</b></span>(double<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> double </td><td class="memItemRight bottomAlign"><span class="name"><b>capacitance</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setCapacitance</b></span>(double<i> capacitance</i>)</td></tr>
 </table></div>
 <p><b>Notifier signal:</b></p>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>clampCurrentChanged</b></span>(double<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>capacitanceChanged</b></span>(double<i> capacitance</i>)</td></tr>
 </table></div>
-<!-- @@@clampCurrent -->
-<!-- $$$clampCurrentEnabled-prop$$$clampCurrentEnabled$$$setClampCurrentEnabledbool$$$clampCurrentEnabledChangedbool -->
-<h3 class="fn" id="clampCurrentEnabled-prop"><a name="clampCurrentEnabled-prop"></a><span class="name">clampCurrentEnabled</span> : <span class="type">bool</span></h3>
+<!-- @@@capacitance -->
+<!-- $$$initialPotential-prop$$$initialPotential$$$setInitialPotentialdouble$$$initialPotentialChangeddouble -->
+<h3 class="fn" id="initialPotential-prop"><a name="initialPotential-prop"></a><span class="name">initialPotential</span> : <span class="type">double</span></h3>
 <p><b>Access functions:</b></p>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>clampCurrentEnabled</b></span>() const</td></tr>
-<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setClampCurrentEnabled</b></span>(bool<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> double </td><td class="memItemRight bottomAlign"><span class="name"><b>initialPotential</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setInitialPotential</b></span>(double<i> initialPotential</i>)</td></tr>
 </table></div>
 <p><b>Notifier signal:</b></p>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>clampCurrentEnabledChanged</b></span>(bool<i> arg</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>initialPotentialChanged</b></span>(double<i> initialPotential</i>)</td></tr>
 </table></div>
-<!-- @@@clampCurrentEnabled -->
+<!-- @@@initialPotential -->
 <!-- $$$restingPotential-prop$$$restingPotential$$$setRestingPotentialdouble$$$restingPotentialChangeddouble -->
 <h3 class="fn" id="restingPotential-prop"><a name="restingPotential-prop"></a><span class="name">restingPotential</span> : <span class="type">double</span></h3>
 <p><b>Access functions:</b></p>
@@ -209,18 +211,6 @@
 <tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>restingPotentialChanged</b></span>(double<i> arg</i>)</td></tr>
 </table></div>
 <!-- @@@restingPotential -->
-<!-- $$$synapsePotential-prop$$$synapsePotential$$$setSynapsePotentialdouble$$$synapsePotentialChangeddouble -->
-<h3 class="fn" id="synapsePotential-prop"><a name="synapsePotential-prop"></a><span class="name">synapsePotential</span> : <span class="type">double</span></h3>
-<p><b>Access functions:</b></p>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft topAlign rightAlign"> double </td><td class="memItemRight bottomAlign"><span class="name"><b>synapsePotential</b></span>() const</td></tr>
-<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setSynapsePotential</b></span>(double<i> arg</i>)</td></tr>
-</table></div>
-<p><b>Notifier signal:</b></p>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>synapsePotentialChanged</b></span>(double<i> arg</i>)</td></tr>
-</table></div>
-<!-- @@@synapsePotential -->
 <!-- $$$synapticConductance-prop$$$synapticConductance$$$setSynapticConductancedouble$$$synapticConductanceChangeddouble -->
 <h3 class="fn" id="synapticConductance-prop"><a name="synapticConductance-prop"></a><span class="name">synapticConductance</span> : <span class="type">double</span></h3>
 <p><b>Access functions:</b></p>
@@ -233,6 +223,30 @@
 <tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>synapticConductanceChanged</b></span>(double<i> arg</i>)</td></tr>
 </table></div>
 <!-- @@@synapticConductance -->
+<!-- $$$synapticPotential-prop$$$synapticPotential$$$setSynapticPotentialdouble$$$synapticPotentialChangeddouble -->
+<h3 class="fn" id="synapticPotential-prop"><a name="synapticPotential-prop"></a><span class="name">synapticPotential</span> : <span class="type">double</span></h3>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> double </td><td class="memItemRight bottomAlign"><span class="name"><b>synapticPotential</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setSynapticPotential</b></span>(double<i> arg</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>synapticPotentialChanged</b></span>(double<i> arg</i>)</td></tr>
+</table></div>
+<!-- @@@synapticPotential -->
+<!-- $$$synapticTimeConstant-prop$$$synapticTimeConstant$$$setSynapticTimeConstantdouble$$$synapticTimeConstantChangeddouble -->
+<h3 class="fn" id="synapticTimeConstant-prop"><a name="synapticTimeConstant-prop"></a><span class="name">synapticTimeConstant</span> : <span class="type">double</span></h3>
+<p><b>Access functions:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> double </td><td class="memItemRight bottomAlign"><span class="name"><b>synapticTimeConstant</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setSynapticTimeConstant</b></span>(double<i> synapticTimeConstant</i>)</td></tr>
+</table></div>
+<p><b>Notifier signal:</b></p>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>synapticTimeConstantChanged</b></span>(double<i> synapticTimeConstant</i>)</td></tr>
+</table></div>
+<!-- @@@synapticTimeConstant -->
 <!-- $$$threshold-prop$$$threshold$$$setThresholddouble$$$thresholdChangeddouble -->
 <h3 class="fn" id="threshold-prop"><a name="threshold-prop"></a><span class="name">threshold</span> : <span class="type">double</span></h3>
 <p><b>Access functions:</b></p>
@@ -261,7 +275,7 @@
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$NeuronEngine[overload1]$$$NeuronEngineQQuickItem* -->
-<h3 class="fn" id="NeuronEngine"><a name="NeuronEngine"></a>NeuronEngine::<span class="name">NeuronEngine</span>(<span class="type"><a href="http://qt-project.org/doc/qt-5.2/qquickitem.html#QQuickItem">QQuickItem</a></span> *<i> parent</i> = 0)</h3>
+<h3 class="fn" id="NeuronEngine"><a name="NeuronEngine"></a>NeuronEngine::<span class="name">NeuronEngine</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qquickitem.html#QQuickItem">QQuickItem</a></span> *<i> parent</i> = 0)</h3>
 <!-- @@@NeuronEngine -->
 <!-- $$$adaptionConductance[overload1]$$$adaptionConductance -->
 <h3 class="fn" id="adaptionConductance"><a name="adaptionConductance"></a><span class="type">double</span> NeuronEngine::<span class="name">adaptionConductance</span>() const</h3>
@@ -269,23 +283,17 @@
 <!-- $$$fireEvent[overload1]$$$fireEvent -->
 <h3 class="fn" id="fireEvent"><a name="fireEvent"></a><code>[virtual protected] </code><span class="type">void</span> NeuronEngine::<span class="name">fireEvent</span>()</h3>
 <!-- @@@fireEvent -->
-<!-- $$$initialize[overload1]$$$initialize -->
-<h3 class="fn" id="initialize"><a name="initialize"></a><code>[slot] </code><span class="type">void</span> NeuronEngine::<span class="name">initialize</span>()</h3>
-<!-- @@@initialize -->
-<!-- $$$receiveCurrentEvent[overload1]$$$receiveCurrentEventdouble -->
-<h3 class="fn" id="receiveCurrentEvent"><a name="receiveCurrentEvent"></a><code>[virtual protected] </code><span class="type">void</span> NeuronEngine::<span class="name">receiveCurrentEvent</span>(<span class="type">double</span><i> currentOutput</i>)</h3>
+<!-- $$$receiveCurrentEvent[overload1]$$$receiveCurrentEventdoubleNodeEngine* -->
+<h3 class="fn" id="receiveCurrentEvent"><a name="receiveCurrentEvent"></a><code>[virtual protected] </code><span class="type">void</span> NeuronEngine::<span class="name">receiveCurrentEvent</span>(<span class="type">double</span><i> currentOutput</i>, <span class="type"><a href="nodeengine.html#NodeEngine">NodeEngine</a></span> *<i> sender</i>)</h3>
 <!-- @@@receiveCurrentEvent -->
-<!-- $$$receiveFireEvent[overload1]$$$receiveFireEventdouble -->
-<h3 class="fn" id="receiveFireEvent"><a name="receiveFireEvent"></a><code>[virtual protected] </code><span class="type">void</span> NeuronEngine::<span class="name">receiveFireEvent</span>(<span class="type">double</span><i> fireOutput</i>)</h3>
+<!-- $$$receiveFireEvent[overload1]$$$receiveFireEventdoubleNodeEngine* -->
+<h3 class="fn" id="receiveFireEvent"><a name="receiveFireEvent"></a><code>[virtual protected] </code><span class="type">void</span> NeuronEngine::<span class="name">receiveFireEvent</span>(<span class="type">double</span><i> fireOutput</i>, <span class="type"><a href="nodeengine.html#NodeEngine">NodeEngine</a></span> *<i> sender</i>)</h3>
 <!-- @@@receiveFireEvent -->
-<!-- $$$reset[overload1]$$$reset -->
-<h3 class="fn" id="reset"><a name="reset"></a><code>[slot] </code><span class="type">void</span> NeuronEngine::<span class="name">reset</span>()</h3>
-<!-- @@@reset -->
-<!-- $$$resetVoltage[overload1]$$$resetVoltage -->
-<h3 class="fn" id="resetVoltage"><a name="resetVoltage"></a><code>[slot] </code><span class="type">void</span> NeuronEngine::<span class="name">resetVoltage</span>()</h3>
-<!-- @@@resetVoltage -->
-<!-- $$$stepEvent[overload1]$$$stepEventdouble -->
-<h3 class="fn" id="stepEvent"><a name="stepEvent"></a><code>[virtual protected] </code><span class="type">void</span> NeuronEngine::<span class="name">stepEvent</span>(<span class="type">double</span><i> dt</i>)</h3>
+<!-- $$$resetEvent[overload1]$$$resetEvent -->
+<h3 class="fn" id="resetEvent"><a name="resetEvent"></a><code>[virtual slot] </code><span class="type">void</span> NeuronEngine::<span class="name">resetEvent</span>()</h3>
+<!-- @@@resetEvent -->
+<!-- $$$stepEvent[overload1]$$$stepEventdoublebool -->
+<h3 class="fn" id="stepEvent"><a name="stepEvent"></a><code>[virtual protected] </code><span class="type">void</span> NeuronEngine::<span class="name">stepEvent</span>(<span class="type">double</span><i> dt</i>, <span class="type">bool</span><i> parentEnabled</i>)</h3>
 <!-- @@@stepEvent -->
 </div>
 </div>

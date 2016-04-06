@@ -62,7 +62,6 @@
 <h3><a name="toc">Contents</a></h3>
 <ul>
 <li class="level1"><a href="#properties">Properties</a></li>
-<li class="level1"><a href="#signals">Signals</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -81,17 +80,9 @@
 <a name="properties"></a>
 <h2 id="properties">Properties</h2>
 <ul>
-<li class="fn"><b><b><a href="qml-neuronify-touchsensor.html#underscore.oldCells-prop">_oldCells</a></b></b> : int</li>
-<li class="fn"><b><b><a href="qml-neuronify-touchsensor.html#actualCells-prop">actualCells</a></b></b> : var</li>
-<li class="fn"><b><b><a href="qml-neuronify-touchsensor.html#cells-prop">cells</a></b></b> : int</li>
-<li class="fn"><b><b><a href="qml-neuronify-touchsensor.html#dropFunction-prop">dropFunction</a></b></b> : var</li>
+<li class="fn"><b><b><a href="qml-neuronify-touchsensor.html#connections-prop">connections</a></b></b> : var</li>
+<li class="fn"><b><b><a href="qml-neuronify-touchsensor.html#sensing-prop">sensing</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-neuronify-touchsensor.html#sensingCurrentOutput-prop">sensingCurrentOutput</a></b></b> : real</li>
-</ul>
-<a name="signals"></a>
-<h2 id="signals">Signals</h2>
-<ul>
-<li class="fn"><b><b><a href="qml-neuronify-touchsensor.html#cellAt-method">cellAt</a></b></b>(<i> index</i>)</li>
-<li class="fn"><b><b><a href="qml-neuronify-touchsensor.html#resetCells-method">resetCells</a></b></b>()</li>
 </ul>
 <!-- $$$TouchSensor-description -->
 <a name="details"></a>
@@ -100,27 +91,14 @@
 <p>The touch sensor uses the mouse input on a desktop computer or the touch screen of a mobile device. This allows the user to give input to the neural network. The input is used to generate a constant current injected into the attached neurons.</p>
 <!-- @@@TouchSensor -->
 <h2>Property Documentation</h2>
-<!-- $$$_oldCells -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="underscore.oldCells-prop"><td class="tblQmlPropNode"><p><a name="underscore.oldCells-prop"></a><span class="name">_oldCells</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@_oldCells -->
+<!-- $$$connections -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="connections-prop"><td class="tblQmlPropNode"><p><a name="connections-prop"></a><span class="name">connections</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@connections -->
 <br/>
-<!-- $$$actualCells -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="actualCells-prop"><td class="tblQmlPropNode"><p><a name="actualCells-prop"></a><span class="name">actualCells</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@actualCells -->
-<br/>
-<!-- $$$cells -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="cells-prop"><td class="tblQmlPropNode"><p><a name="cells-prop"></a><span class="name">cells</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@cells -->
-<br/>
-<!-- $$$dropFunction -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dropFunction-prop"><td class="tblQmlPropNode"><p><a name="dropFunction-prop"></a><span class="name">dropFunction</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@dropFunction -->
+<!-- $$$sensing -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="sensing-prop"><td class="tblQmlPropNode"><p><a name="sensing-prop"></a><span class="name">sensing</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@sensing -->
 <br/>
 <!-- $$$sensingCurrentOutput -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="sensingCurrentOutput-prop"><td class="tblQmlPropNode"><p><a name="sensingCurrentOutput-prop"></a><span class="name">sensingCurrentOutput</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@sensingCurrentOutput -->
-<br/>
-<h2>Signal Documentation</h2>
-<!-- $$$cellAt -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="cellAt-method"><td class="tblQmlFuncNode"><p><a name="cellAt-method"></a><span class="name">cellAt</span>(<i> index</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@cellAt -->
-<br/>
-<!-- $$$resetCells -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="resetCells-method"><td class="tblQmlFuncNode"><p><a name="resetCells-method"></a><span class="name">resetCells</span>()</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@resetCells -->
 <br/>
 </div>
 </div>

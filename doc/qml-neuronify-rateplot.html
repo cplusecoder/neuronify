@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- Voltmeter.qml -->
-  <title>Voltmeter QML Type | Neuronify </title>
+<!-- RatePlot.qml -->
+  <title>RatePlot QML Type | Neuronify </title>
   <link rel="stylesheet" type="text/css" href="style/online-neuronify.css" />
   <link rel="shortcut icon" href="//d3hp9ud7yvwzy0.cloudfront.net/wp-content/themes/oneqt/images/favicon.ico.gzip" />
   <script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
@@ -67,54 +67,48 @@
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
 <div class="context">
-<h1 class="title">Voltmeter QML Type</h1>
+<h1 class="title">RatePlot QML Type</h1>
 <span class="subtitle"></span>
-<!-- $$$Voltmeter-brief -->
-<p>Reads the voltage of the neurons and shows a trace plot <a href="#details">More...</a></p>
-<!-- @@@Voltmeter -->
+<!-- $$$RatePlot-brief -->
+<p>Reads the firing rate of the neurons and shows a trace plot <a href="#details">More...</a></p>
+<!-- @@@RatePlot -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import Neuronify .</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="qml-node.html">Node</a></p>
 </td></tr></table></div><ul>
-<li><a href="qml-neuronify-voltmeter-members.html">List of all members, including inherited members</a></li>
+<li><a href="qml-neuronify-rateplot-members.html">List of all members, including inherited members</a></li>
 </ul>
 <a name="properties"></a>
 <h2 id="properties">Properties</h2>
 <ul>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#colors-prop">colors</a></b></b> : var</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#connectionPlots-prop">connectionPlots</a></b></b> : var</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#currentSeries-prop">currentSeries</a></b></b> : int</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#fontSize-prop">fontSize</a></b></b> : double</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#lastUpdateTime-prop">lastUpdateTime</a></b></b> : real</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#maximumPointCount-prop">maximumPointCount</a></b></b> : real</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#maximumTime-prop">maximumTime</a></b></b> : real</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#maximumValue-prop">maximumValue</a></b></b> : alias</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#minimumTime-prop">minimumTime</a></b></b> : real</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#minimumValue-prop">minimumValue</a></b></b> : alias</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#realTime-prop">realTime</a></b></b> : real</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#time-prop">time</a></b></b> : real</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#timeFactor-prop">timeFactor</a></b></b> : real</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#timeRange-prop">timeRange</a></b></b> : real</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#timeSinceLastUpdate-prop">timeSinceLastUpdate</a></b></b> : real</li>
-<li class="fn"><b><b><a href="qml-neuronify-voltmeter.html#voltageFactor-prop">voltageFactor</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#colors-prop">colors</a></b></b> : var</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#currentSeries-prop">currentSeries</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#lastUpdateTime-prop">lastUpdateTime</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#maximumPointCount-prop">maximumPointCount</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#maximumValue-prop">maximumValue</a></b></b> : alias</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#minimumValue-prop">minimumValue</a></b></b> : alias</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#rateFactor-prop">rateFactor</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#realTime-prop">realTime</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#showLegend-prop">showLegend</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#temporalResolution-prop">temporalResolution</a></b></b> : alias</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#time-prop">time</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#timeFactor-prop">timeFactor</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#timeRange-prop">timeRange</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#timeSinceLastUpdate-prop">timeSinceLastUpdate</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#title-prop">title</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-neuronify-rateplot.html#windowDuration-prop">windowDuration</a></b></b> : alias</li>
 </ul>
-<!-- $$$Voltmeter-description -->
+<!-- $$$RatePlot-description -->
 <a name="details"></a>
 <h2 id="details">Detailed Description</h2>
 </p>
-<p>Neurons can connect to the voltmeter. When they do, the voltmeter shows their voltage trace as a function of time. Each neuron gets spesific color in the voltmeter plot. To each voltmeter there is an associated VoltmeterControls item.</p>
-<!-- @@@Voltmeter -->
+<p>Neurons can connect to the firing rate-meter. When they do, the firing rate-meter shows their rate trace as a function of time. Each neuron gets spesific color in the firing rate-meter plot.</p>
+<!-- @@@RatePlot -->
 <h2>Property Documentation</h2>
 <!-- $$$colors -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="colors-prop"><td class="tblQmlPropNode"><p><a name="colors-prop"></a><span class="name">colors</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@colors -->
 <br/>
-<!-- $$$connectionPlots -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="connectionPlots-prop"><td class="tblQmlPropNode"><p><a name="connectionPlots-prop"></a><span class="name">connectionPlots</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@connectionPlots -->
-<br/>
 <!-- $$$currentSeries -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="currentSeries-prop"><td class="tblQmlPropNode"><p><a name="currentSeries-prop"></a><span class="name">currentSeries</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@currentSeries -->
-<br/>
-<!-- $$$fontSize -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="fontSize-prop"><td class="tblQmlPropNode"><p><a name="fontSize-prop"></a><span class="name">fontSize</span> : <span class="type">double</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@fontSize -->
 <br/>
 <!-- $$$lastUpdateTime -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="lastUpdateTime-prop"><td class="tblQmlPropNode"><p><a name="lastUpdateTime-prop"></a><span class="name">lastUpdateTime</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@lastUpdateTime -->
@@ -122,20 +116,23 @@
 <!-- $$$maximumPointCount -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="maximumPointCount-prop"><td class="tblQmlPropNode"><p><a name="maximumPointCount-prop"></a><span class="name">maximumPointCount</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@maximumPointCount -->
 <br/>
-<!-- $$$maximumTime -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="maximumTime-prop"><td class="tblQmlPropNode"><p><a name="maximumTime-prop"></a><span class="name">maximumTime</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@maximumTime -->
-<br/>
 <!-- $$$maximumValue -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="maximumValue-prop"><td class="tblQmlPropNode"><p><a name="maximumValue-prop"></a><span class="name">maximumValue</span> : <span class="type">alias</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@maximumValue -->
-<br/>
-<!-- $$$minimumTime -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="minimumTime-prop"><td class="tblQmlPropNode"><p><a name="minimumTime-prop"></a><span class="name">minimumTime</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@minimumTime -->
 <br/>
 <!-- $$$minimumValue -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="minimumValue-prop"><td class="tblQmlPropNode"><p><a name="minimumValue-prop"></a><span class="name">minimumValue</span> : <span class="type">alias</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@minimumValue -->
 <br/>
+<!-- $$$rateFactor -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="rateFactor-prop"><td class="tblQmlPropNode"><p><a name="rateFactor-prop"></a><span class="name">rateFactor</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@rateFactor -->
+<br/>
 <!-- $$$realTime -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="realTime-prop"><td class="tblQmlPropNode"><p><a name="realTime-prop"></a><span class="name">realTime</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@realTime -->
+<br/>
+<!-- $$$showLegend -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="showLegend-prop"><td class="tblQmlPropNode"><p><a name="showLegend-prop"></a><span class="name">showLegend</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@showLegend -->
+<br/>
+<!-- $$$temporalResolution -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="temporalResolution-prop"><td class="tblQmlPropNode"><p><a name="temporalResolution-prop"></a><span class="name">temporalResolution</span> : <span class="type">alias</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@temporalResolution -->
 <br/>
 <!-- $$$time -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="time-prop"><td class="tblQmlPropNode"><p><a name="time-prop"></a><span class="name">time</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@time -->
@@ -149,8 +146,11 @@
 <!-- $$$timeSinceLastUpdate -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="timeSinceLastUpdate-prop"><td class="tblQmlPropNode"><p><a name="timeSinceLastUpdate-prop"></a><span class="name">timeSinceLastUpdate</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@timeSinceLastUpdate -->
 <br/>
-<!-- $$$voltageFactor -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="voltageFactor-prop"><td class="tblQmlPropNode"><p><a name="voltageFactor-prop"></a><span class="name">voltageFactor</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@voltageFactor -->
+<!-- $$$title -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="title-prop"><td class="tblQmlPropNode"><p><a name="title-prop"></a><span class="name">title</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@title -->
+<br/>
+<!-- $$$windowDuration -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="windowDuration-prop"><td class="tblQmlPropNode"><p><a name="windowDuration-prop"></a><span class="name">windowDuration</span> : <span class="type">alias</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@windowDuration -->
 <br/>
 </div>
 </div>

@@ -74,7 +74,7 @@
 <p>This type holds the application. <a href="#details">More...</a></p>
 <!-- @@@Neuronify -->
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import Neuronify .</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://qt-project.org/doc/qt-5.2/qml-qtquick-rectangle.html">Rectangle</a></p>
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import Neuronify .</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="http://doc.qt.io/qt-5/qml-qtquick-rectangle.html">Rectangle</a></p>
 </td></tr></table></div><ul>
 <li><a href="qml-neuronify-neuronify-members.html">List of all members, including inherited members</a></li>
 </ul>
@@ -84,43 +84,46 @@
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#activeObject-prop">activeObject</a></b></b> : var</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#applicationActive-prop">applicationActive</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#canRedo-prop">canRedo</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#clickMode-prop">clickMode</a></b></b> : string</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#copiedNeurons-prop">copiedNeurons</a></b></b> : var</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#currentTimeStep-prop">currentTimeStep</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#draggedEntity-prop">draggedEntity</a></b></b> : var</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#graphEngine-prop">graphEngine</a></b></b> : alias</li>
-<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#lastStepTime-prop">lastStepTime</a></b></b> : real</li>
-<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#organizedConnections-prop">organizedConnections</a></b></b> : var</li>
-<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#organizedItems-prop">organizedItems</a></b></b> : var</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#highestZ-prop">highestZ</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#paused-prop">paused</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#playbackSpeed-prop">playbackSpeed</a></b></b> : alias</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#running-prop">running</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#selectedEntities-prop">selectedEntities</a></b></b> : var</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#snapGridSize-prop">snapGridSize</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#snappingEnabled-prop">snappingEnabled</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#time-prop">time</a></b></b> : real</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#undoIdx-prop">undoIdx</a></b></b> : int</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#undoIdxCopy-prop">undoIdxCopy</a></b></b> : int</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#undoList-prop">undoList</a></b></b> : var</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#undoRecordingEnabled-prop">undoRecordingEnabled</a></b></b> : bool</li>
-<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#voltmeters-prop">voltmeters</a></b></b> : var</li>
 </ul>
 <a name="signals"></a>
 <h2 id="signals">Signals</h2>
 <ul>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#addToUndoList-method">addToUndoList</a></b></b>()</li>
-<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#cleanupDeletedConnection-method">cleanupDeletedConnection</a></b></b>(<i> connection</i>)</li>
-<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#cleanupDeletedEntity-method">cleanupDeletedEntity</a></b></b>(<i> entity</i>)</li>
-<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#clickedConnection-method">clickedConnection</a></b></b>(<i> connection</i>)</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#applyProperties-method">applyProperties</a></b></b>(<i> object</i>,  <i> properties</i>)</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#clickedEntity-method">clickedEntity</a></b></b>(<i> entity</i>,  <i> mouse</i>)</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#connectEntities-method">connectEntities</a></b></b>(<i> itemA</i>,  <i> itemB</i>)</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#connectionExists-method">connectionExists</a></b></b>(<i> itemA</i>,  <i> itemB</i>)</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#createConnection-method">createConnection</a></b></b>(<i> sourceObject</i>,  <i> targetObject</i>)</li>
-<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#createConnectionToPoint-method">createConnectionToPoint</a></b></b>(<i> itemA</i>,  <i> connector</i>)</li>
-<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#createEntity-method">createEntity</a></b></b>(<i> fileUrl</i>,  <i> properties</i>,  <i> useAutoLayout</i>)</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#createEntity-method">createEntity</a></b></b>(<i> fileUrl</i>,  <i> properties</i>)</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#deleteEdge-method">deleteEdge</a></b></b>(<i> edge</i>)</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#deleteEverything-method">deleteEverything</a></b></b>()</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#deleteFromList-method">deleteFromList</a></b></b>(<i> list</i>,  <i> item</i>)</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#deleteNode-method">deleteNode</a></b></b>(<i> node</i>)</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#deleteSelected-method">deleteSelected</a></b></b>()</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#deselectAll-method">deselectAll</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#firstLoad-method">firstLoad</a></b></b>()</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#isItemUnderConnector-method">isItemUnderConnector</a></b></b>(<i> item</i>,  <i> source</i>,  <i> connector</i>)</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#itemUnderConnector-method">itemUnderConnector</a></b></b>(<i> source</i>,  <i> connector</i>,  <i> callback</i>)</li>
-<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#loadState-method">loadState</a></b></b>(<i> fileUrl</i>)</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#loadSimulation-method">loadSimulation</a></b></b>(<i> fileUrl</i>)</li>
+<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#raiseToTop-method">raiseToTop</a></b></b>(<i> node</i>)</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#redo-method">redo</a></b></b>()</li>
-<li class="fn"><b><b><a href="qml-neuronify-neuronify.html#resetOrganize-method">resetOrganize</a></b></b>()</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#resetStyle-method">resetStyle</a></b></b>()</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#saveState-method">saveState</a></b></b>(<i> fileUrl</i>)</li>
 <li class="fn"><b><b><a href="qml-neuronify-neuronify.html#selectAll-method">selectAll</a></b></b>()</li>
@@ -130,11 +133,11 @@
 <a name="details"></a>
 <h2 id="details">Detailed Description</h2>
 </p>
-<p>This item is created in the <a href="http://qt-project.org/doc/qt-5.2/qml-qtquick-controls-applicationwindow.html">ApplicationWindow</a>. It contains all the menues as well as the game canvas.</p>
+<p>This item is created in the <a href="http://doc.qt.io/qt-5/qml-qtquick-controls-applicationwindow.html">ApplicationWindow</a>. It contains all the menues as well as the game canvas.</p>
 <!-- @@@Neuronify -->
 <h2>Property Documentation</h2>
 <!-- $$$activeObject -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="activeObject-prop"><td class="tblQmlPropNode"><p><a name="activeObject-prop"></a><span class="name">activeObject</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@activeObject -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="activeObject-prop"><td class="tblQmlPropNode"><p><a name="activeObject-prop"></a><span class="name">activeObject</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@activeObject -->
 <br/>
 <!-- $$$applicationActive -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="applicationActive-prop"><td class="tblQmlPropNode"><p><a name="applicationActive-prop"></a><span class="name">applicationActive</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@applicationActive -->
@@ -142,29 +145,41 @@
 <!-- $$$canRedo -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="canRedo-prop"><td class="tblQmlPropNode"><p><a name="canRedo-prop"></a><span class="name">canRedo</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@canRedo -->
 <br/>
+<!-- $$$clickMode -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="clickMode-prop"><td class="tblQmlPropNode"><p><a name="clickMode-prop"></a><span class="name">clickMode</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@clickMode -->
+<br/>
 <!-- $$$copiedNeurons -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="copiedNeurons-prop"><td class="tblQmlPropNode"><p><a name="copiedNeurons-prop"></a><span class="name">copiedNeurons</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@copiedNeurons -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="copiedNeurons-prop"><td class="tblQmlPropNode"><p><a name="copiedNeurons-prop"></a><span class="name">copiedNeurons</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@copiedNeurons -->
 <br/>
 <!-- $$$currentTimeStep -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="currentTimeStep-prop"><td class="tblQmlPropNode"><p><a name="currentTimeStep-prop"></a><span class="name">currentTimeStep</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@currentTimeStep -->
 <br/>
+<!-- $$$draggedEntity -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="draggedEntity-prop"><td class="tblQmlPropNode"><p><a name="draggedEntity-prop"></a><span class="name">draggedEntity</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@draggedEntity -->
+<br/>
 <!-- $$$graphEngine -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="graphEngine-prop"><td class="tblQmlPropNode"><p><a name="graphEngine-prop"></a><span class="name">graphEngine</span> : <span class="type">alias</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@graphEngine -->
 <br/>
-<!-- $$$lastStepTime -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="lastStepTime-prop"><td class="tblQmlPropNode"><p><a name="lastStepTime-prop"></a><span class="name">lastStepTime</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@lastStepTime -->
+<!-- $$$highestZ -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="highestZ-prop"><td class="tblQmlPropNode"><p><a name="highestZ-prop"></a><span class="name">highestZ</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@highestZ -->
 <br/>
-<!-- $$$organizedConnections -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="organizedConnections-prop"><td class="tblQmlPropNode"><p><a name="organizedConnections-prop"></a><span class="name">organizedConnections</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@organizedConnections -->
+<!-- $$$paused -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="paused-prop"><td class="tblQmlPropNode"><p><a name="paused-prop"></a><span class="qmlreadonly">read-only</span><span class="name">paused</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@paused -->
 <br/>
-<!-- $$$organizedItems -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="organizedItems-prop"><td class="tblQmlPropNode"><p><a name="organizedItems-prop"></a><span class="name">organizedItems</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@organizedItems -->
+<!-- $$$playbackSpeed -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="playbackSpeed-prop"><td class="tblQmlPropNode"><p><a name="playbackSpeed-prop"></a><span class="name">playbackSpeed</span> : <span class="type">alias</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@playbackSpeed -->
 <br/>
 <!-- $$$running -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="running-prop"><td class="tblQmlPropNode"><p><a name="running-prop"></a><span class="name">running</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@running -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="running-prop"><td class="tblQmlPropNode"><p><a name="running-prop"></a><span class="qmlreadonly">read-only</span><span class="name">running</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@running -->
 <br/>
 <!-- $$$selectedEntities -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="selectedEntities-prop"><td class="tblQmlPropNode"><p><a name="selectedEntities-prop"></a><span class="name">selectedEntities</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@selectedEntities -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="selectedEntities-prop"><td class="tblQmlPropNode"><p><a name="selectedEntities-prop"></a><span class="name">selectedEntities</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@selectedEntities -->
+<br/>
+<!-- $$$snapGridSize -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="snapGridSize-prop"><td class="tblQmlPropNode"><p><a name="snapGridSize-prop"></a><span class="name">snapGridSize</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@snapGridSize -->
+<br/>
+<!-- $$$snappingEnabled -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="snappingEnabled-prop"><td class="tblQmlPropNode"><p><a name="snappingEnabled-prop"></a><span class="name">snappingEnabled</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@snappingEnabled -->
 <br/>
 <!-- $$$time -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="time-prop"><td class="tblQmlPropNode"><p><a name="time-prop"></a><span class="name">time</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@time -->
@@ -176,26 +191,17 @@
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="undoIdxCopy-prop"><td class="tblQmlPropNode"><p><a name="undoIdxCopy-prop"></a><span class="name">undoIdxCopy</span> : <span class="type">int</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@undoIdxCopy -->
 <br/>
 <!-- $$$undoList -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="undoList-prop"><td class="tblQmlPropNode"><p><a name="undoList-prop"></a><span class="name">undoList</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@undoList -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="undoList-prop"><td class="tblQmlPropNode"><p><a name="undoList-prop"></a><span class="name">undoList</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@undoList -->
 <br/>
 <!-- $$$undoRecordingEnabled -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="undoRecordingEnabled-prop"><td class="tblQmlPropNode"><p><a name="undoRecordingEnabled-prop"></a><span class="name">undoRecordingEnabled</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@undoRecordingEnabled -->
-<br/>
-<!-- $$$voltmeters -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="voltmeters-prop"><td class="tblQmlPropNode"><p><a name="voltmeters-prop"></a><span class="name">voltmeters</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@voltmeters -->
 <br/>
 <h2>Signal Documentation</h2>
 <!-- $$$addToUndoList -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="addToUndoList-method"><td class="tblQmlFuncNode"><p><a name="addToUndoList-method"></a><span class="name">addToUndoList</span>()</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@addToUndoList -->
 <br/>
-<!-- $$$cleanupDeletedConnection -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="cleanupDeletedConnection-method"><td class="tblQmlFuncNode"><p><a name="cleanupDeletedConnection-method"></a><span class="name">cleanupDeletedConnection</span>(<i> connection</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@cleanupDeletedConnection -->
-<br/>
-<!-- $$$cleanupDeletedEntity -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="cleanupDeletedEntity-method"><td class="tblQmlFuncNode"><p><a name="cleanupDeletedEntity-method"></a><span class="name">cleanupDeletedEntity</span>(<i> entity</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@cleanupDeletedEntity -->
-<br/>
-<!-- $$$clickedConnection -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="clickedConnection-method"><td class="tblQmlFuncNode"><p><a name="clickedConnection-method"></a><span class="name">clickedConnection</span>(<i> connection</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@clickedConnection -->
+<!-- $$$applyProperties -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="applyProperties-method"><td class="tblQmlFuncNode"><p><a name="applyProperties-method"></a><span class="name">applyProperties</span>(<i> object</i>, <i> properties</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@applyProperties -->
 <br/>
 <!-- $$$clickedEntity -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="clickedEntity-method"><td class="tblQmlFuncNode"><p><a name="clickedEntity-method"></a><span class="name">clickedEntity</span>(<i> entity</i>, <i> mouse</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@clickedEntity -->
@@ -209,11 +215,11 @@
 <!-- $$$createConnection -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="createConnection-method"><td class="tblQmlFuncNode"><p><a name="createConnection-method"></a><span class="name">createConnection</span>(<i> sourceObject</i>, <i> targetObject</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@createConnection -->
 <br/>
-<!-- $$$createConnectionToPoint -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="createConnectionToPoint-method"><td class="tblQmlFuncNode"><p><a name="createConnectionToPoint-method"></a><span class="name">createConnectionToPoint</span>(<i> itemA</i>, <i> connector</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@createConnectionToPoint -->
-<br/>
 <!-- $$$createEntity -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="createEntity-method"><td class="tblQmlFuncNode"><p><a name="createEntity-method"></a><span class="name">createEntity</span>(<i> fileUrl</i>, <i> properties</i>, <i> useAutoLayout</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@createEntity -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="createEntity-method"><td class="tblQmlFuncNode"><p><a name="createEntity-method"></a><span class="name">createEntity</span>(<i> fileUrl</i>, <i> properties</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@createEntity -->
+<br/>
+<!-- $$$deleteEdge -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="deleteEdge-method"><td class="tblQmlFuncNode"><p><a name="deleteEdge-method"></a><span class="name">deleteEdge</span>(<i> edge</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@deleteEdge -->
 <br/>
 <!-- $$$deleteEverything -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="deleteEverything-method"><td class="tblQmlFuncNode"><p><a name="deleteEverything-method"></a><span class="name">deleteEverything</span>()</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@deleteEverything -->
@@ -221,11 +227,17 @@
 <!-- $$$deleteFromList -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="deleteFromList-method"><td class="tblQmlFuncNode"><p><a name="deleteFromList-method"></a><span class="name">deleteFromList</span>(<i> list</i>, <i> item</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@deleteFromList -->
 <br/>
+<!-- $$$deleteNode -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="deleteNode-method"><td class="tblQmlFuncNode"><p><a name="deleteNode-method"></a><span class="name">deleteNode</span>(<i> node</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@deleteNode -->
+<br/>
 <!-- $$$deleteSelected -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="deleteSelected-method"><td class="tblQmlFuncNode"><p><a name="deleteSelected-method"></a><span class="name">deleteSelected</span>()</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@deleteSelected -->
 <br/>
 <!-- $$$deselectAll -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="deselectAll-method"><td class="tblQmlFuncNode"><p><a name="deselectAll-method"></a><span class="name">deselectAll</span>()</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@deselectAll -->
+<br/>
+<!-- $$$firstLoad -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="firstLoad-method"><td class="tblQmlFuncNode"><p><a name="firstLoad-method"></a><span class="name">firstLoad</span>()</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@firstLoad -->
 <br/>
 <!-- $$$isItemUnderConnector -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="isItemUnderConnector-method"><td class="tblQmlFuncNode"><p><a name="isItemUnderConnector-method"></a><span class="name">isItemUnderConnector</span>(<i> item</i>, <i> source</i>, <i> connector</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@isItemUnderConnector -->
@@ -233,14 +245,14 @@
 <!-- $$$itemUnderConnector -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="itemUnderConnector-method"><td class="tblQmlFuncNode"><p><a name="itemUnderConnector-method"></a><span class="name">itemUnderConnector</span>(<i> source</i>, <i> connector</i>, <i> callback</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@itemUnderConnector -->
 <br/>
-<!-- $$$loadState -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="loadState-method"><td class="tblQmlFuncNode"><p><a name="loadState-method"></a><span class="name">loadState</span>(<i> fileUrl</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@loadState -->
+<!-- $$$loadSimulation -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="loadSimulation-method"><td class="tblQmlFuncNode"><p><a name="loadSimulation-method"></a><span class="name">loadSimulation</span>(<i> fileUrl</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@loadSimulation -->
+<br/>
+<!-- $$$raiseToTop -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="raiseToTop-method"><td class="tblQmlFuncNode"><p><a name="raiseToTop-method"></a><span class="name">raiseToTop</span>(<i> node</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@raiseToTop -->
 <br/>
 <!-- $$$redo -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="redo-method"><td class="tblQmlFuncNode"><p><a name="redo-method"></a><span class="name">redo</span>()</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@redo -->
-<br/>
-<!-- $$$resetOrganize -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="resetOrganize-method"><td class="tblQmlFuncNode"><p><a name="resetOrganize-method"></a><span class="name">resetOrganize</span>()</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@resetOrganize -->
 <br/>
 <!-- $$$resetStyle -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="resetStyle-method"><td class="tblQmlFuncNode"><p><a name="resetStyle-method"></a><span class="name">resetStyle</span>()</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@resetStyle -->

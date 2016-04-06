@@ -74,49 +74,56 @@
 <p>The Node type is the base of all items in Neuronify. <a href="#details">More...</a></p>
 <!-- @@@Node -->
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import  </td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qml-neuronify-acclamp.html">ACClamp</a>, <a href="qml-neuronify-currentclamp.html">CurrentClamp</a>, <a href="qml-neuron.html">Neuron</a>, <a href="qml-neuronify-poissongenerator.html">PoissonGenerator</a>, <a href="qml-neuronify-retina.html">Retina</a>, <a href="qml-neuronify-speaker.html">Speaker</a>, <a href="qml-neuronify-touchsensor.html">TouchSensor</a>, and <a href="qml-neuronify-voltmeter.html">Voltmeter</a>.</p>
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import  </td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qml-neuronify-acclamp.html">ACClamp</a>, <a href="qml-neuronify-currentclamp.html">CurrentClamp</a>, <a href="qml-neuron.html">Neuron</a>, <a href="qml-neuronify-poissongenerator.html">PoissonGenerator</a>, <a href="qml-neuronify-rateplot.html">RatePlot</a>, <a href="qml-neuronify-retina.html">Retina</a>, <a href="qml-neuronify-rhythmgenerator.html">RhythmGenerator</a>, <a href="qml-neuronify-speaker.html">Speaker</a>, <a href="qml-neuronify-touchsensor.html">TouchSensor</a>, and <a href="qml-neuronify-voltmeter.html">Voltmeter</a>.</p>
 </td></tr></table></div><ul>
 <li><a href="qml-node-members.html">List of all members, including inherited members</a></li>
 </ul>
 <a name="properties"></a>
 <h2 id="properties">Properties</h2>
 <ul>
+<li class="fn"><b><b><a href="qml-node.html#canReceiveConnections-prop">canReceiveConnections</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-node.html#color-prop">color</a></b></b> : color</li>
 <li class="fn"><b><b><a href="qml-node.html#connectionPoint-prop">connectionPoint</a></b></b> : point</li>
 <li class="fn"><b><b><a href="qml-node.html#controls-prop">controls</a></b></b> : Component</li>
 <li class="fn"><b><b><a href="qml-node.html#copiedFrom-prop">copiedFrom</a></b></b> : var</li>
+<li class="fn"><b><b><a href="qml-node.html#dragProxy-prop">dragProxy</a></b></b> : var</li>
 <li class="fn"><b><b><a href="qml-node.html#dragging-prop">dragging</a></b></b> : bool</li>
-<li class="fn"><b><b><a href="qml-node.html#dumpableProperties-prop">dumpableProperties</a></b></b> : var</li>
 <li class="fn"><b><b><a href="qml-node.html#fileName-prop">fileName</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-node.html#isAlias-prop">isAlias</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-node.html#label-prop">label</a></b></b> : string</li>
 <li class="fn"><b><b><a href="qml-node.html#objectName-prop">objectName</a></b></b> : string</li>
 <li class="fn"><b><b><a href="qml-node.html#radius-prop">radius</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-node.html#removableChildren-prop">removableChildren</a></b></b> : var</li>
 <li class="fn"><b><b><a href="qml-node.html#selected-prop">selected</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-node.html#simulator-prop">simulator</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="qml-node.html#snapGridSize-prop">snapGridSize</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-node.html#square-prop">square</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-node.html#useDefaultMouseHandling-prop">useDefaultMouseHandling</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-node.html#velocity-prop">velocity</a></b></b> : vector2d</li>
 </ul>
 <a name="signals"></a>
 <h2 id="signals">Signals</h2>
 <ul>
-<li class="fn"><b><b><a href="qml-node.html#underscore.basicSelfDump-method">_basicSelfDump</a></b></b>(<i> index</i>)</li>
-<li class="fn"><b><b><a href="qml-node.html#underscore.deleteAllConnectionsInList-method">_deleteAllConnectionsInList</a></b></b>(<i> connectionsToDelete</i>)</li>
-<li class="fn"><b><b><a href="qml-node.html#aboutToDie-signal">aboutToDie</a></b></b>(var <i> entity</i>)</li>
 <li class="fn"><b><b><a href="qml-node.html#clicked-signal">clicked</a></b></b>(var <i> entity</i>, var <i> mouse</i>)</li>
-<li class="fn"><b><b><a href="qml-node.html#dragStarted-signal">dragStarted</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-node.html#clickedConnector-signal">clickedConnector</a></b></b>(var <i> entity</i>, var <i> mouse</i>)</li>
+<li class="fn"><b><b><a href="qml-node.html#dragEnded-signal">dragEnded</a></b></b>(var <i> entity</i>)</li>
+<li class="fn"><b><b><a href="qml-node.html#dragStarted-signal">dragStarted</a></b></b>(var <i> entity</i>)</li>
 <li class="fn"><b><b><a href="qml-node.html#droppedConnector-signal">droppedConnector</a></b></b>(var <i> poissonGenerator</i>, var <i> connector</i>)</li>
-<li class="fn"><b><b><a href="qml-node.html#dump-method">dump</a></b></b>(<i> index</i>,  <i> entities</i>)</li>
 <li class="fn"><b><b><a href="qml-node.html#fired-signal">fired</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-node.html#resolveAlias-method">resolveAlias</a></b></b>(<i> index</i>)</li>
 </ul>
 <!-- $$$Node-description -->
 <a name="details"></a>
 <h2 id="details">Detailed Description</h2>
 </p>
 <p>Node is a visual QML item that holds all common properties of items in Neuronify. It inherits <a href="nodebase.html">NodeBase</a>, which is its C++ counterpart.</p>
-<p>In principle, <a href="qml-node.html">Node</a> and <a href="nodebase.html">NodeBase</a> could be the same class, but because <a href="graphengine.html">GraphEngine</a> and <a href="nodeengine.html">NodeEngine</a> cannot know about a QML type, we need to split them up. This is because we wish to use some QML features to define the functionality of <a href="qml-node.html">Node</a> (such as <a href="http://qt-project.org/doc/qt-5.2/qml-qtquick-mousearea.html">MouseArea</a> dragging), that does not allow us to put all functionality of <a href="qml-node.html">Node</a> in C++.</p>
+<p>In principle, <a href="qml-node.html">Node</a> and <a href="nodebase.html">NodeBase</a> could be the same class, but because <a href="graphengine.html">GraphEngine</a> and <a href="nodeengine.html">NodeEngine</a> cannot know about a QML type, we need to split them up. This is because we wish to use some QML features to define the functionality of <a href="qml-node.html">Node</a> (such as <a href="http://doc.qt.io/qt-5/qml-qtquick-mousearea.html">MouseArea</a> dragging), that does not allow us to put all functionality of <a href="qml-node.html">Node</a> in C++.</p>
 <p><b>See also </b><a href="nodebase.html">NodeBase</a> and <a href="nodeengine.html">NodeEngine</a>.</p>
 <!-- @@@Node -->
 <h2>Property Documentation</h2>
+<!-- $$$canReceiveConnections -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="canReceiveConnections-prop"><td class="tblQmlPropNode"><p><a name="canReceiveConnections-prop"></a><span class="name">canReceiveConnections</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@canReceiveConnections -->
+<br/>
 <!-- $$$color -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="color-prop"><td class="tblQmlPropNode"><p><a name="color-prop"></a><span class="name">color</span> : <span class="type">color</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@color -->
 <br/>
@@ -124,19 +131,22 @@
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="connectionPoint-prop"><td class="tblQmlPropNode"><p><a name="connectionPoint-prop"></a><span class="name">connectionPoint</span> : <span class="type">point</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@connectionPoint -->
 <br/>
 <!-- $$$controls -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="controls-prop"><td class="tblQmlPropNode"><p><a name="controls-prop"></a><span class="name">controls</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-qtqml-component.html">Component</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@controls -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="controls-prop"><td class="tblQmlPropNode"><p><a name="controls-prop"></a><span class="name">controls</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtqml-component.html">Component</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@controls -->
 <br/>
 <!-- $$$copiedFrom -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="copiedFrom-prop"><td class="tblQmlPropNode"><p><a name="copiedFrom-prop"></a><span class="name">copiedFrom</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@copiedFrom -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="copiedFrom-prop"><td class="tblQmlPropNode"><p><a name="copiedFrom-prop"></a><span class="name">copiedFrom</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@copiedFrom -->
+<br/>
+<!-- $$$dragProxy -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dragProxy-prop"><td class="tblQmlPropNode"><p><a name="dragProxy-prop"></a><span class="name">dragProxy</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@dragProxy -->
 <br/>
 <!-- $$$dragging -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dragging-prop"><td class="tblQmlPropNode"><p><a name="dragging-prop"></a><span class="name">dragging</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@dragging -->
 <br/>
-<!-- $$$dumpableProperties -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dumpableProperties-prop"><td class="tblQmlPropNode"><p><a name="dumpableProperties-prop"></a><span class="name">dumpableProperties</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@dumpableProperties -->
-<br/>
 <!-- $$$fileName -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="fileName-prop"><td class="tblQmlPropNode"><p><a name="fileName-prop"></a><span class="name">fileName</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@fileName -->
+<br/>
+<!-- $$$isAlias -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="isAlias-prop"><td class="tblQmlPropNode"><p><a name="isAlias-prop"></a><span class="name">isAlias</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@isAlias -->
 <br/>
 <!-- $$$label -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="label-prop"><td class="tblQmlPropNode"><p><a name="label-prop"></a><span class="name">label</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@label -->
@@ -147,42 +157,48 @@
 <!-- $$$radius -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="radius-prop"><td class="tblQmlPropNode"><p><a name="radius-prop"></a><span class="name">radius</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@radius -->
 <br/>
+<!-- $$$removableChildren -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="removableChildren-prop"><td class="tblQmlPropNode"><p><a name="removableChildren-prop"></a><span class="name">removableChildren</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@removableChildren -->
+<br/>
 <!-- $$$selected -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="selected-prop"><td class="tblQmlPropNode"><p><a name="selected-prop"></a><span class="name">selected</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@selected -->
 <br/>
 <!-- $$$simulator -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="simulator-prop"><td class="tblQmlPropNode"><p><a name="simulator-prop"></a><span class="name">simulator</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-qtquick-item.html">Item</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@simulator -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="simulator-prop"><td class="tblQmlPropNode"><p><a name="simulator-prop"></a><span class="name">simulator</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-qtquick-item.html">Item</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@simulator -->
+<br/>
+<!-- $$$snapGridSize -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="snapGridSize-prop"><td class="tblQmlPropNode"><p><a name="snapGridSize-prop"></a><span class="name">snapGridSize</span> : <span class="type">real</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@snapGridSize -->
+<br/>
+<!-- $$$square -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="square-prop"><td class="tblQmlPropNode"><p><a name="square-prop"></a><span class="name">square</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@square -->
 <br/>
 <!-- $$$useDefaultMouseHandling -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="useDefaultMouseHandling-prop"><td class="tblQmlPropNode"><p><a name="useDefaultMouseHandling-prop"></a><span class="name">useDefaultMouseHandling</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@useDefaultMouseHandling -->
 <br/>
 <!-- $$$velocity -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="velocity-prop"><td class="tblQmlPropNode"><p><a name="velocity-prop"></a><span class="name">velocity</span> : <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-vector2d.html">vector2d</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@velocity -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="velocity-prop"><td class="tblQmlPropNode"><p><a name="velocity-prop"></a><span class="name">velocity</span> : <span class="type"><a href="http://doc.qt.io/qt-5/qml-vector2d.html">vector2d</a></span></p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@velocity -->
 <br/>
 <h2>Signal Documentation</h2>
-<!-- $$$_basicSelfDump -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="underscore.basicSelfDump-method"><td class="tblQmlFuncNode"><p><a name="underscore.basicSelfDump-method"></a><span class="name">_basicSelfDump</span>(<i> index</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@_basicSelfDump -->
-<br/>
-<!-- $$$_deleteAllConnectionsInList -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="underscore.deleteAllConnectionsInList-method"><td class="tblQmlFuncNode"><p><a name="underscore.deleteAllConnectionsInList-method"></a><span class="name">_deleteAllConnectionsInList</span>(<i> connectionsToDelete</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@_deleteAllConnectionsInList -->
-<br/>
-<!-- $$$aboutToDie -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="aboutToDie-signal"><td class="tblQmlFuncNode"><p><a name="aboutToDie-signal"></a><span class="name">aboutToDie</span>(<span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span><i> entity</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@aboutToDie -->
-<br/>
 <!-- $$$clicked -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="clicked-signal"><td class="tblQmlFuncNode"><p><a name="clicked-signal"></a><span class="name">clicked</span>(<span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span><i> entity</i>, <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span><i> mouse</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@clicked -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="clicked-signal"><td class="tblQmlFuncNode"><p><a name="clicked-signal"></a><span class="name">clicked</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span><i> entity</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span><i> mouse</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@clicked -->
+<br/>
+<!-- $$$clickedConnector -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="clickedConnector-signal"><td class="tblQmlFuncNode"><p><a name="clickedConnector-signal"></a><span class="name">clickedConnector</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span><i> entity</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span><i> mouse</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@clickedConnector -->
+<br/>
+<!-- $$$dragEnded -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dragEnded-signal"><td class="tblQmlFuncNode"><p><a name="dragEnded-signal"></a><span class="name">dragEnded</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span><i> entity</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@dragEnded -->
 <br/>
 <!-- $$$dragStarted -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dragStarted-signal"><td class="tblQmlFuncNode"><p><a name="dragStarted-signal"></a><span class="name">dragStarted</span>()</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@dragStarted -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dragStarted-signal"><td class="tblQmlFuncNode"><p><a name="dragStarted-signal"></a><span class="name">dragStarted</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span><i> entity</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@dragStarted -->
 <br/>
 <!-- $$$droppedConnector -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="droppedConnector-signal"><td class="tblQmlFuncNode"><p><a name="droppedConnector-signal"></a><span class="name">droppedConnector</span>(<span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span><i> poissonGenerator</i>, <span class="type"><a href="http://qt-project.org/doc/qt-5.2/qml-var.html">var</a></span><i> connector</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@droppedConnector -->
-<br/>
-<!-- $$$dump -->
-<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="dump-method"><td class="tblQmlFuncNode"><p><a name="dump-method"></a><span class="name">dump</span>(<i> index</i>, <i> entities</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@dump -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="droppedConnector-signal"><td class="tblQmlFuncNode"><p><a name="droppedConnector-signal"></a><span class="name">droppedConnector</span>(<span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span><i> poissonGenerator</i>, <span class="type"><a href="http://doc.qt.io/qt-5/qml-var.html">var</a></span><i> connector</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@droppedConnector -->
 <br/>
 <!-- $$$fired -->
 <div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="fired-signal"><td class="tblQmlFuncNode"><p><a name="fired-signal"></a><span class="name">fired</span>()</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@fired -->
+<br/>
+<!-- $$$resolveAlias -->
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="resolveAlias-method"><td class="tblQmlFuncNode"><p><a name="resolveAlias-method"></a><span class="name">resolveAlias</span>(<i> index</i>)</p></td></tr></table></div></div><div class="qmldoc"></div></div><!-- @@@resolveAlias -->
 <br/>
 </div>
 </div>
