@@ -86,6 +86,14 @@ DISTFILES += \
     android/src/org/cinpla/neuronify/AlwaysOnActivity.java \
     qml/sensors/singletons/qmldir \
     COPYING.md \
-    snapcraft.yaml
+    snapcraft.yaml \
+    ios/iOS.plist
 
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+ios {
+    QMAKE_INFO_PLIST = ios/iOS.plist
+    ios_icon.files = $$files($$PWD/ios/icon/*.png)
+    QMAKE_BUNDLE_DATA += ios_icon
+    app_launch_images.files = $$PWD/ios/launch/Launch.xib
+    QMAKE_BUNDLE_DATA += app_launch_images
+}
