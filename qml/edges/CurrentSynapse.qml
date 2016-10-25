@@ -16,9 +16,11 @@ Edge {
     property bool weightChange: false
     property bool firstWeightChange: true
     property bool learningEnabled: false
+    property bool resetFireTimer: false
 
     objectName: "CurrentSynapse"
     filename: "edges/CurrentSynapse.qml"
+    lineWidth: 1.0 + engine.maximumCurrent * 1e9
 
     onItemAChanged: {
         if(itemA && itemA.isNeuron && itemB && itemB.isNeuron) {
@@ -41,6 +43,7 @@ Edge {
                     if(!itemAFiredLast) {
                         weightChange = true
                     }
+                    resetFireTimer = true
                     itemAFiredLast = true
                 }
             })
@@ -52,6 +55,7 @@ Edge {
                     if(itemAFiredLast) {
                         weightChange = true
                     }
+                    resetFireTimer = true
                     itemAFiredLast = false
                 }
             })
@@ -70,7 +74,7 @@ Edge {
         property real linear
         property real exponential
 
-        property real timeSinceLastWeightChange: 0.0
+        property real timeSinceLastFire: 0.0
 
         property var triggers: []
 
@@ -93,27 +97,22 @@ Edge {
         ]
 
         function trigger() {
-            if(alphaFunction) {
-                linear = 0.0;
-                exponential = Math.exp(1.0);
-            } else {
-                exponential = 1.0;
-            }
+            exponential = maximumCurrent
         }
 
         onResettedDynamics: {
-            linear = 0.0;
-            exponential = 0.0;
-            triggers.length = 0;
+            linear = 0.0
+            exponential = 0.0
+            triggers.length = 0
             if(learningEnabled) {
-                maximumCurrent = 3.0e-9
+                maximumCurrent = 0.0
             }
         }
 
         onResettedProperties: {
             tau = 2.0e-3
             delay = 5.0e-3
-            alphaFunction = false;
+            alphaFunction = false
             if(!learningEnabled) {
                 maximumCurrent = 3.0e-9
             }
@@ -121,14 +120,7 @@ Edge {
 
         onStepped:{
             root.timeStep = dt;
-            if(alphaFunction) {
-                currentOutput = maximumCurrent * linear * exponential;
-            } else {
-                currentOutput = maximumCurrent * exponential;
-            }
-            if(alphaFunction) {
-                linear = linear + dt / tau;
-            }
+            currentOutput = exponential
             exponential = exponential - exponential * dt / tau;
             if(triggers.length > 0) {
                 if(triggers[0] < time) {
@@ -138,26 +130,30 @@ Edge {
             }
             if(learningEnabled) {
                 if(weightChange) {
+                    console.log("Weight changed")
                     if(!firstWeightChange) {
+                        console.log("Not first", timeSinceLastFire)
 
                         var delta = 0.0
                         if(itemAFiredLast) {
-                            delta = - 1e-9 * Math.exp(-timeSinceLastWeightChange / 0.002)
+                            delta = -20e-9 * Math.exp(-timeSinceLastFire / 0.0008)
                         } else {
-                            delta = 1e-9 * Math.exp(-timeSinceLastWeightChange / 0.001)
+                            delta = 10e-9 * Math.exp(-timeSinceLastFire / 0.0008)
                         }
                         maximumCurrent += delta
+                        maximumCurrent = Math.max(0.0, Math.min(3.0e-9, maximumCurrent))
 
                         console.log(delta)
-
-                        timeSinceLastWeightChange = 0.0
                     }
-
                     weightChange = false
                     firstWeightChange = false
                 }
+                if(resetFireTimer) {
+                    timeSinceLastFire = 0.0
+                    resetFireTimer = false
+                }
             }
-            timeSinceLastWeightChange += dt
+            timeSinceLastFire += dt
             time += dt;
         }
 
