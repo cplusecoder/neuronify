@@ -29,6 +29,7 @@ EdgeBase {
     }
     readonly property alias startPoint: sCurve.startPoint
     readonly property alias endPoint: sCurve.endPoint
+    property alias lineWidth: sCurve.lineWidth
 
     savedProperties: [
         PropertyGroup {
@@ -136,7 +137,6 @@ EdgeBase {
         color: connectionRoot._internalColor
         startPoint: itemA ? Qt.point(itemA.connectionPoint.x, itemA.connectionPoint.y) : Qt.point(0,0)
         endPoint: Qt.point(cx, cy)
-        lineWidth: 5.0
 
         controlPoint1: Qt.point(calculateControlPointX(), calculateControlPointY())
         controlPoint2: Qt.point(calculateControlPointX(), calculateControlPointY())
@@ -195,7 +195,7 @@ EdgeBase {
         id: connectionSpot
         x: cx - width / 2
         y: cy - height / 2
-        width: 18
+        width: 12
         height: width
 
         radius: (itemA && itemA.inhibitory) ? width / 2.0 : 0
