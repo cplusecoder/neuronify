@@ -12,10 +12,52 @@ Edge {
     id: root
 
     property real timeStep
+    property bool itemAFiredLast: false
+    property bool weightChange: false
+    property bool firstWeightChange: true
+    property bool learningEnabled: false
 
     objectName: "CurrentSynapse"
     filename: "edges/CurrentSynapse.qml"
     name: "Current based synapse"
+
+    onItemAChanged: {
+        if(itemA && itemA.isNeuron && itemB && itemB.isNeuron) {
+            setup()
+        }
+    }
+
+    onItemBChanged: {
+        if(itemA && itemA.isNeuron && itemB && itemB.isNeuron) {
+            setup()
+        }
+    }
+
+    function setup() {
+        console.log("Setting up with", itemA, itemB)
+
+        if(itemA.engine) {
+            itemA.engine.fired.connect(function() {
+                if(learningEnabled) {
+                    if(!itemAFiredLast) {
+                        weightChange = true
+                    }
+                    itemAFiredLast = true
+                }
+            })
+        }
+
+        if(itemB.engine) {
+            itemB.engine.fired.connect(function() {
+                if(learningEnabled) {
+                    if(itemAFiredLast) {
+                        weightChange = true
+                    }
+                    itemAFiredLast = false
+                }
+            })
+        }
+    }
 
     engine: EdgeEngine {
         id: engine
@@ -29,13 +71,15 @@ Edge {
         property real linear
         property real exponential
 
+        property real timeSinceLastWeightChange: 0.0
+
         property var triggers: []
 
         savedProperties: [
             PropertyGroup {
                 // properties
+                property alias learningEnabled: root.learningEnabled
                 property alias tau: engine.tau
-                property alias maximumCurrent: engine.maximumCurrent
                 property alias delay: engine.delay
                 property alias alphaFunction: engine.alphaFunction
 
@@ -43,6 +87,9 @@ Edge {
                 property alias linear: engine.linear
                 property alias exponential: engine.exponential
                 property alias triggers: engine.triggers
+
+                // depends on learning enabled
+                property alias maximumCurrent: engine.maximumCurrent
             }
         ]
 
@@ -59,13 +106,18 @@ Edge {
             linear = 0.0;
             exponential = 0.0;
             triggers.length = 0;
+            if(learningEnabled) {
+                maximumCurrent = 3.0e-9
+            }
         }
 
         onResettedProperties: {
             tau = 2.0e-3
-            maximumCurrent = 3.0e-9
             delay = 5.0e-3
             alphaFunction = false;
+            if(!learningEnabled) {
+                maximumCurrent = 3.0e-9
+            }
         }
 
         onStepped:{
@@ -85,6 +137,28 @@ Edge {
                     triggers.shift();
                 }
             }
+            if(learningEnabled) {
+                if(weightChange) {
+                    if(!firstWeightChange) {
+
+                        var delta = 0.0
+                        if(itemAFiredLast) {
+                            delta = - 1e-9 * Math.exp(-timeSinceLastWeightChange / 0.002)
+                        } else {
+                            delta = 1e-9 * Math.exp(-timeSinceLastWeightChange / 0.001)
+                        }
+                        maximumCurrent += delta
+
+                        console.log(delta)
+
+                        timeSinceLastWeightChange = 0.0
+                    }
+
+                    weightChange = false
+                    firstWeightChange = false
+                }
+            }
+            timeSinceLastWeightChange += dt
             time += dt;
         }
 
@@ -109,6 +183,13 @@ Edge {
 
     controls: Component {
         PropertiesPage {
+            property string title: "Current based synapse"
+            SwitchControl {
+                target: root
+                property: "learningEnabled"
+                checkedText: "Learning enabled"
+                uncheckedText: "Learning disabled"
+            }
             BoundSlider {
                 target: engine
                 property: "maximumCurrent"

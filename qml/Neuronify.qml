@@ -970,23 +970,6 @@ Rectangle {
                 id: neuronLayer
                 anchors.fill: parent
             }
-
-//            ShaderEffectSource {
-//                sourceItem: neuronLayer
-//                sourceRect: Qt.rect(-viewport.x, -viewport.y,
-//                                    viewport.width, viewport.height)
-//            }
-
-            //            DropShadow {
-            //                visible: Qt.platform.os == "linux"
-            //                anchors.fill: neuronLayer
-            //                source: neuronLayer
-            //                horizontalOffset: 1
-            //                verticalOffset: 4
-            //                radius: 6.0
-            //                samples: 17
-            //                color: Qt.rgba(0, 0, 0, 0.2)
-            //            }
         }
     }
 
