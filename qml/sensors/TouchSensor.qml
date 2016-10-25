@@ -90,11 +90,11 @@ Node {
         }
 
         onReleased: {
-            sensorRoot.sensing = false
+//            sensorRoot.sensing = false
         }
 
         onExited: {
-            sensorRoot.sensing =  false
+//            sensorRoot.sensing =  false
         }
     }
 
