@@ -136,12 +136,12 @@ Edge {
 
                         var delta = 0.0
                         if(itemAFiredLast) {
-                            delta = -20e-9 * Math.exp(-timeSinceLastFire / 0.0008)
+                            delta = -20e-9 * Math.exp(-timeSinceLastFire / 0.0024)
                         } else {
-                            delta = 10e-9 * Math.exp(-timeSinceLastFire / 0.0008)
+                            delta = 10e-9 * Math.exp(-timeSinceLastFire / 0.0016)
                         }
                         maximumCurrent += delta
-                        maximumCurrent = Math.max(0.0, Math.min(3.0e-9, maximumCurrent))
+                        maximumCurrent = Math.max(0.0, Math.min(10.0e-9, maximumCurrent))
 
                         console.log(delta)
                     }
