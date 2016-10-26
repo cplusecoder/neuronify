@@ -1014,6 +1014,15 @@ Rectangle {
             }
         }
 
+        onResetMemory: {
+            for(var i in graphEngine.edges) {
+                var edge = graphEngine.edges[i];
+                if(edge.engine) {
+                    edge.engine.resetMemory();
+                }
+            }
+        }
+
         onResetProperties: {
             for(var i in graphEngine.nodes) {
                 var entity = graphEngine.nodes[i];

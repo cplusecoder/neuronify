@@ -74,6 +74,12 @@ MainMenuPage {
                                 "qrc:/simulations/sterratt/refractory_period",
                             ]
                         },
+                        {
+                            name: "Memory",
+                            simulations: [
+                                "qrc:/simulations/memory/pattern_recognition",
+                            ]
+                        },
                     ]
                     Column {
                         spacing: Style.baseMargin

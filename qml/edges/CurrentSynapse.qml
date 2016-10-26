@@ -104,6 +104,9 @@ Edge {
             linear = 0.0
             exponential = 0.0
             triggers.length = 0
+        }
+
+        onResettedMemory: {
             if(learningEnabled) {
                 maximumCurrent = 0.0
             }

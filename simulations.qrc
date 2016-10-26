@@ -69,5 +69,8 @@
         <file>simulations/mix/lateral_inhibition_1/lateral_inhibition_1.qml</file>
         <file>simulations/mix/lateral_inhibition_2/lateral_inhibition_2.qml</file>
         <file>simulations/mix/disinhibition/disinhibition.qml</file>
+        <file>simulations/memory/pattern_recognition/pattern_recognition.nfy</file>
+        <file>simulations/memory/pattern_recognition/pattern_recognition.png</file>
+        <file>simulations/memory/pattern_recognition/pattern_recognition.qml</file>
     </qresource>
 </RCC>

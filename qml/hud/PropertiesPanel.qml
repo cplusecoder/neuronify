@@ -10,6 +10,7 @@ Item {
     id: root
 
     signal resetDynamics
+    signal resetMemory
     signal resetProperties
     signal saveToOpened
 
@@ -221,6 +222,12 @@ Item {
                 text: "Reset all dynamics"
                 onClicked: {
                     root.resetDynamics();
+                }
+            }
+            Button {
+                text: "Reset all memory"
+                onClicked: {
+                    root.resetMemory();
                 }
             }
             Button {

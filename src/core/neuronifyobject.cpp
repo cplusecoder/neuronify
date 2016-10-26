@@ -19,6 +19,15 @@ void NeuronifyObject::resetDynamics()
     emit resettedDynamics();
 }
 
+void NeuronifyObject::resetMemory()
+{
+    for(NeuronifyObject* child : findChildren<NeuronifyObject*>()) {
+        child->resetMemory();
+    }
+    resetMemoryEvent();
+    emit resettedMemory();
+}
+
 void NeuronifyObject::resetProperties()
 {
     for(NeuronifyObject* child : findChildren<NeuronifyObject*>()) {
@@ -29,6 +38,11 @@ void NeuronifyObject::resetProperties()
 }
 
 void NeuronifyObject::resetDynamicsEvent()
+{
+
+}
+
+void NeuronifyObject::resetMemoryEvent()
 {
 
 }

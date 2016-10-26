@@ -24,14 +24,17 @@ public:
 
 signals:
     void resettedDynamics();
+    void resettedMemory();
     void resettedProperties();
 
 public slots:
     void resetDynamics();
+    void resetMemory();
     void resetProperties();
 
 protected:
     virtual void resetDynamicsEvent();
+    virtual void resetMemoryEvent();
     virtual void resetPropertiesEvent();
 
 private:
