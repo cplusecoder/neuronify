@@ -1130,7 +1130,6 @@ Rectangle {
             } else {
                 imageWidth = workspaceFlickable.width / 2.0; // two icons per row in save view
             }
-            imageWidth = 1920
             workspaceFlickable.grabToImage(callback, Qt.size(imageWidth, imageWidth / aspectRatio));
         }
     }
