@@ -6,3 +6,6 @@ build_script:
   - git submodule update --init --recursive
   - qmake neuronify.pro
   - nmake
+  - cp "%QTDIR%\qml\*" release
+  - cp "%VS120COMNTOOLS%\..\..\VC\redist\x64\Microsoft.VC120.CRT\*" release
+  - windeployqt.exe -quick -quickwidgets -multimediaquick -multimedia -opengl -quickparticles -quickwidgets -qmldir . release
