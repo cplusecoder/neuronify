@@ -4,4 +4,4 @@ install:
 build_script:
   - git submodule update --init --recursive
   - qmake neuronify.pro
-  - jom.exe
+  - nmake
