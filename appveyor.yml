@@ -16,12 +16,12 @@ artifacts:
     type: zip
 
 deploy:
-  tag: autobuild-win-$(appveyor_build_version)
-  release: autobuild-win-$(appveyor_build_version)
-  description: 'Automated build'
+  description: 'Automated Windows build'
   provider: GitHub
   auth_token:
     secure: 6LmZ/bebQkiHy0uDmhrqvG/0LEQOTaAgHARYLmdjPEpyuPhBDIOrhPn+vArd01Kv
   artifact: /.*\.zip/
   draft: false
   prerelease: true
+  on:
+    appveyor_repo_tag: true
