@@ -6,6 +6,7 @@ build_script:
   - git submodule update --init --recursive
   - qmake neuronify.pro
   - nmake
+  - nmake clean
   - xcopy /s "%QTDIR%\qml" release
   - xcopy /s "%VS120COMNTOOLS%\..\..\VC\redist\x64\Microsoft.VC120.CRT" release
   - windeployqt.exe -quick -quickwidgets -multimediaquick -multimedia -opengl -quickparticles -quickwidgets -qmldir . release
@@ -15,8 +16,8 @@ artifacts:
     type: zip
 
 deploy:
-  tag: neuronify-autobuild-win-$(appveyor_build_version)
-  release: neuronify-autobuild-win-$(appveyor_build_version)
+  tag: autobuild-win-$(appveyor_build_version)
+  release: autobuild-win-$(appveyor_build_version)
   description: 'Automated build'
   provider: GitHub
   auth_token:
