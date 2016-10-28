@@ -16,3 +16,6 @@ before_install:
 script:
 - docker run ovilab/neuronify bash -c "/opt/qt57/bin/qmake neuronify.pro && make
   -j8"
+branches:
+  except:
+    - appveyor
