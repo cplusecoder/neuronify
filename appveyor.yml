@@ -9,3 +9,18 @@ build_script:
   - xcopy /s "%QTDIR%\qml" release
   - xcopy /s "%VS120COMNTOOLS%\..\..\VC\redist\x64\Microsoft.VC120.CRT" release
   - windeployqt.exe -quick -quickwidgets -multimediaquick -multimedia -opengl -quickparticles -quickwidgets -qmldir . release
+artifacts:
+  - path: release
+    name: windows-release
+    type: zip
+
+deploy:
+  tag: neuronify-autobuild-win-$(appveyor_build_version)
+  release: neuronify-autobuild-win-$(appveyor_build_version)
+  description: 'Automated build'
+  provider: GitHub
+  auth_token:
+    secure: 6LmZ/bebQkiHy0uDmhrqvG/0LEQOTaAgHARYLmdjPEpyuPhBDIOrhPn+vArd01Kv
+  artifact: /.*\.zip/
+  draft: false
+  prerelease: true
