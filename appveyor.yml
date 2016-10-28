@@ -14,7 +14,6 @@ artifacts:
   - path: release
     name: windows-release
     type: zip
-
 deploy:
   description: 'Automated Windows build'
   provider: GitHub
