@@ -70,5 +70,8 @@
         <file>qml/store/StoreFrontPage.qml</file>
         <file>qml/store/StoreItem.qml</file>
         <file>images/store/ic_search_black_48dp.png</file>
+        <file>images/logo/logo-with-text.png</file>
+        <file>images/logo/cinpla-logo.png</file>
+        <file>images/logo/uio-logo.png</file>
     </qresource>
 </RCC>
