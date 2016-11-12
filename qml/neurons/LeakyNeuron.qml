@@ -88,16 +88,17 @@ Neuron {
                     id: voltageClampedSwitch
                     target: neuronEngine
                     property: "voltageClamped"
-                    checkedText: "Clamp voltage"
-                    uncheckedText: "Don't clamp voltage"
+                    checkedText: "Limit voltage"
+                    uncheckedText: "Don't limit voltage"
                 }
 
                 BoundSlider {
                     enabled: voltageClampedSwitch.checked
                     text: "Minimum voltage"
                     unit: "mV"
-                    minimumValue: -200.0
-                    maximumValue: 200.0
+                    unitScale: 1e-3
+                    minimumValue: -200.0e-3
+                    maximumValue: 200.0e-3
                     target: neuronEngine
                     property: "minimumVoltage"
                 }
@@ -106,8 +107,9 @@ Neuron {
                     enabled: voltageClampedSwitch.checked
                     text: "Maximum voltage"
                     unit: "mV"
-                    minimumValue: -200.0
-                    maximumValue: 200.0
+                    unitScale: 1e-3
+                    minimumValue: -200.0e-3
+                    maximumValue: 200.0e-3
                     target: neuronEngine
                     property: "maximumVoltage"
                 }

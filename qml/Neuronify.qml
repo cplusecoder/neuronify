@@ -1,6 +1,5 @@
 import QtQuick 2.5
-import QtQuick.Controls 1.1
-import QtQuick.Controls 2.0 as QQC2
+import QtQuick.Controls 1.4
 import QtQuick.Dialogs 1.0
 import QtQuick.Layouts 1.1
 import QtQuick.Particles 2.0
@@ -55,6 +54,7 @@ Rectangle {
     property url currentSimulationUrl
     property bool advanced: false
     property bool firstRun: true
+    property int latestZ: 0
 
     property bool applicationActive: {
         if(Qt.platform.os === "android" || Qt.platform.os === "ios") {
@@ -82,7 +82,7 @@ Rectangle {
                 firstLoadTimer.start();
         Style.playbackSpeed = root.playbackSpeed
         focus: true
-//        forceActiveFocus()
+        //        forceActiveFocus()
     }
 
     function firstLoad() {
@@ -111,6 +111,7 @@ Rectangle {
     }
 
     function saveState(fileUrl) {
+        console.log("Saving state to", fileUrl)
         fileManager.saveState(fileUrl)
     }
 
@@ -380,7 +381,7 @@ Rectangle {
     }
 
     function deleteNode(node) {
-        console.log("Delete node");
+        console.log("Deleting node", node);
         if(selectedEntities.indexOf(node) !== -1) {
             deselectAll();
         }
@@ -394,7 +395,7 @@ Rectangle {
     }
 
     function deleteEdge(edge) {
-        console.log("Delete edge");
+        console.log("Deleting edge", edge);
         graphEngine.removeEdge(edge);
     }
 
@@ -405,7 +406,6 @@ Rectangle {
         }
         for(var i in toDelete) {
             var node = toDelete[i]
-            console.log("Deleting " + node);
             deleteNode(node);
         }
         if(activeObject && activeObject.isEdge) {
@@ -504,11 +504,8 @@ Rectangle {
         entity.dragEnded.connect(function(entity) {
             draggedEntity = undefined;
         });
-        entity.droppedConnector.connect(function(itemA, connector) {
-            var targetEntity = itemUnderConnector(itemA, connector)
-            if(targetEntity) {
-                connectEntities(itemA, targetEntity)
-            }
+        entity.receivedDrop.connect(function(from) {
+            connectEntities(from, entity)
         })
 
         // retina specific
@@ -559,7 +556,11 @@ Rectangle {
             deselectAll();
             activeObject = connection;
             connection.selected = true;
+            latestZ-=1
+            connection.z = latestZ
         });
+        latestZ-=1
+        connection.z = latestZ
         addToUndoList()
         graphEngine.addEdge(connection)
         return connection
@@ -600,7 +601,13 @@ Rectangle {
 
     Item {
         id: viewport
-        anchors.fill: parent
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            left: parent.left
+            leftMargin: -propertiesPanel.offset * 0.33
+        }
+        width: parent.width
     }
 
     Item {
@@ -670,7 +677,7 @@ Rectangle {
                 anchors.fill: parent
 
                 propagateComposedEvents: true
-                drag.target: workspace
+                drag.target: scaleAnimation.running ? undefined : workspace
 
                 onWheel: {
                     if(wheel.modifiers & Qt.ControlModifier) {
@@ -991,7 +998,7 @@ Rectangle {
 
         onRevealedChanged: {
             if(revealed) {
-//                root.focus = false
+                //                root.focus = false
                 clickMode = "selection"
 
             } else {
@@ -1039,7 +1046,21 @@ Rectangle {
         }
 
         onSaveToOpened: {
-            saveState(StandardPaths.originalSimulationLocation(currentSimulationUrl));
+            propertiesPanel.revealed = false
+            saveTimer.start(1000)
+        }
+
+        Timer {
+            id: saveTimer
+            onTriggered: {
+                saveState(StandardPaths.originalSimulationLocation(currentSimulationUrl));
+                var imageUrl = StandardPaths.toLocalFile(StandardPaths.originalSimulationLocation(currentSimulationUrl)).replace(".nfy", ".png")
+
+                workspaceFlickable.grabToImage(function(result) {
+                    console.log("Saving image to " + imageUrl);
+                    result.saveToFile(imageUrl);
+                }, Qt.size(workspaceFlickable.width / 3.0, workspaceFlickable.height / 3.0));
+            }
         }
 
         Binding {
@@ -1264,6 +1285,6 @@ Rectangle {
         if(event.modifiers === Qt.NoModifier && (event.key === Qt.Key_1 || event.key === Qt.Key_2 || event.key === Qt.Key_3 || event.key === Qt.Key_4)) {
             playbackControls.toggleSpeed(event.key)
         }
-   }
+    }
 
 }

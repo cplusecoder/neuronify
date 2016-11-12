@@ -216,7 +216,6 @@ Item {
         id: simulationComponent
         PropertiesPage {
             id: simulatonPage
-            property bool advanced: root.advanced
             title: "Simulation"
             Button {
                 text: "Reset all dynamics"
@@ -259,22 +258,8 @@ Item {
                     value: root.snappingEnabled
                 }
             }
-            CheckBox {
-                id: advancedCheckBox
-                text: "Show advanced features"
-                Binding {
-                    target: advancedCheckBox
-                    property: "checked"
-                    value: root.advanced
-                }
-                Binding {
-                    target: root
-                    property: "advanced"
-                    value: advancedCheckBox.checked
-                }
-            }
             Button {
-                visible: simulatonPage.advanced
+                visible: root.advanced
                 text: "Save to opened"
                 onClicked: {
                     root.saveToOpened();
