@@ -128,7 +128,7 @@ To build and explore neural networks, you drag neurons and measurement devices o
             }
 
             Image {
-                width: parent.width / 2
+                width: parent.width * 0.4
                 height: 64
                 smooth: true
                 antialiasing: true
@@ -137,7 +137,7 @@ To build and explore neural networks, you drag neurons and measurement devices o
             }
 
             Image {
-                width: parent.width / 2
+                width: parent.width * 0.6
                 height: 64
                 smooth: true
                 antialiasing: true
