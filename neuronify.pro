@@ -89,7 +89,6 @@ DISTFILES += \
     snapcraft.yaml \
     ios/iOS.plist \
     .travis/qt5-mac.sh \
-    .travis.sh \
     .snapcraft/snapcraft.yaml \
     .snapcraft/parts/plugins/x-qt57.py \
     installer/config.xml \
@@ -101,7 +100,8 @@ DISTFILES += \
     installer/packages/net.ovilab.neuronify/meta/installscript.qs \
     appveyor.yml \
     installer/packages/net.ovilab.neuronify/data/README.txt \
-    .travis.yml
+    .travis.yml \
+    .travis/Dockerfile
 
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 
