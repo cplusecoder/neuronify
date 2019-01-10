@@ -132,20 +132,15 @@ Edge {
             }
             if(learningEnabled) {
                 if(weightChange) {
-                    console.log("Weight changed")
                     if(!firstWeightChange) {
-                        console.log("Not first", timeSinceLastFire)
-
                         var delta = 0.0
                         if(itemAFiredLast) {
                             delta = -20e-9 * Math.exp(-timeSinceLastFire / 0.0024)
                         } else {
                             delta = 10e-9 * Math.exp(-timeSinceLastFire / 0.0016)
                         }
-                        maximumCurrent += delta
+                        maximumCurrent += delta * dt * 10
                         maximumCurrent = Math.max(0.0, Math.min(10.0e-9, maximumCurrent))
-
-                        console.log(delta)
                     }
                     weightChange = false
                     firstWeightChange = false
