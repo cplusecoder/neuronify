@@ -1,7 +1,7 @@
 import QtQuick 2.5
 import QtQuick.Controls 2.1
 import QtQuick.Controls.Material 2.1
-import QtQuick.Dialogs 1.0
+//import QtQuick.Dialogs 1.3
 import QtQuick.Layouts 1.3
 import QtQuick.Particles 2.0
 import QtQuick.Window 2.1
@@ -10,7 +10,7 @@ import QtCharts 2.1
 import QtMultimedia 5.5
 import Qt.labs.settings 1.0
 import Qt.labs.folderlistmodel 2.1
-import Qt.labs.platform 1.0
+import Qt.labs.platform 1.1
 
 import Neuronify 1.0
 import CuteVersioning 1.0
