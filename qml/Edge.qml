@@ -151,14 +151,14 @@ EdgeBase {
         rotation: Math.atan2(sCurve.endPoint.y - sCurve.startPoint.y,
                              sCurve.endPoint.x - sCurve.startPoint.x) / Math.PI * 180
 
-        MouseArea {
-            anchors.fill: parent
-            propagateComposedEvents: true
+//        MouseArea {
+//            anchors.fill: parent
+//            propagateComposedEvents: true
 
-            onClicked: {
-                connectionRoot.clicked(connectionRoot)
-            }
-        }
+//            onClicked: {
+//                connectionRoot.clicked(connectionRoot)
+//            }
+//        }
     }
 
     BezierCurve {

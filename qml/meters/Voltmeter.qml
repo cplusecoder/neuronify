@@ -65,16 +65,16 @@ Node {
     property real realTime: 0.0
     property int numberOfEdges: 0
 
-    controls: Component {
-        MeterControls {
-            meter: voltmeterRoot
-            engine: voltmeterEngine
-            sliderMinimum: -250
-            sliderMaximum: 250
-            unit: "mV"
-            meterType: "Voltmeter"
-        }
-    }
+//    controls: Component {
+//        MeterControls {
+//            meter: voltmeterRoot
+//            engine: voltmeterEngine
+//            sliderMinimum: -250
+//            sliderMaximum: 250
+//            unit: "mV"
+//            meterType: "Voltmeter"
+//        }
+//    }
     width: 320
     height: 240
     color: Style.meter.background
@@ -190,10 +190,10 @@ Node {
 
     }
 
-    ItemShadow {
-        anchors.fill: background
-        source: background
-    }
+//    ItemShadow {
+//        anchors.fill: background
+//        source: background
+//    }
 
     ValueAxis {
         id: dummyAxisY
@@ -383,10 +383,10 @@ Node {
         text: "Connect to neuron to see voltage"
     }
 
-    ResizeRectangle {}
+//    ResizeRectangle {}
 
-    Connector {
-        color: Style.meter.border.color
-//        visible: parent.selected || numberOfEdges < 1
-    }
+//    Connector {
+//        color: Style.meter.border.color
+////        visible: parent.selected || numberOfEdges < 1
+//    }
 }

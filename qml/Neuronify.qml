@@ -285,9 +285,9 @@ Rectangle {
             applyProperties(edge, savedProperties);
         }
 
-//        if(data.workspace) {
-//            workspace.load(data.workspace);
-//        }
+        if(data.workspace) {
+            workspace.load(data.workspace);
+        }
 
         undoRecordingDepth -= 1
 
@@ -502,8 +502,8 @@ Rectangle {
             properties.videoSurface = retinaLoader.item.videoSurface
         }
 
-//        properties.simulator = root
-//        properties.dragProxy = dragProxy
+        properties.simulator = root
+        properties.dragProxy = dragProxy
 
         var entity = component.createObject(neuronLayer, properties)
         if(!entity) {
@@ -520,26 +520,26 @@ Rectangle {
         undoRecordingDepth += 1
 
         // signals
-//        entity.clicked.connect(clickedEntity)
-//        entity.clicked.connect(raiseToTop)
-//        entity.dragStarted.connect(raiseToTop)
-//        entity.startConnectMultipleFromThis.connect(function() {
-//            clickMode = "connectMultipleFromThis"
-//            propertiesPanel.close()
-//        });
-//        entity.startConnectMultipleToThis.connect(function() {
-//            clickMode = "connectMultipleToThis"
-//            propertiesPanel.close()
-//        });
-//        entity.dragStarted.connect(function(entity) {
-//            draggedEntity = entity;
-//        });
-//        entity.dragEnded.connect(function(entity) {
-//            draggedEntity = undefined;
-//        });
-//        entity.receivedDrop.connect(function(from) {
-//            connectEntities(from, entity)
-//        })
+        entity.clicked.connect(clickedEntity)
+        entity.clicked.connect(raiseToTop)
+        entity.dragStarted.connect(raiseToTop)
+        entity.startConnectMultipleFromThis.connect(function() {
+            clickMode = "connectMultipleFromThis"
+            propertiesPanel.close()
+        });
+        entity.startConnectMultipleToThis.connect(function() {
+            clickMode = "connectMultipleToThis"
+            propertiesPanel.close()
+        });
+        entity.dragStarted.connect(function(entity) {
+            draggedEntity = entity;
+        });
+        entity.dragEnded.connect(function(entity) {
+            draggedEntity = undefined;
+        });
+        entity.receivedDrop.connect(function(from) {
+            connectEntities(from, entity)
+        })
 
         // retina specific
         if(isRetina) {
