@@ -75,7 +75,7 @@ Item {
 
                 Image {
                     id: image
-                    visible: false
+//                    visible: false
                     anchors.fill: parent
                     source: imageSource
                     fillMode: Image.PreserveAspectFit
@@ -84,17 +84,17 @@ Item {
                     asynchronous: true
                 }
 
-                DropShadow {
-                    anchors.fill: image
-                    source: image
-                    samples: 17
-                    radius: 8
-                    horizontalOffset: 1
-                    verticalOffset: 4
-                    color: Qt.hsla(0.0, 0.0, 0.0, 0.2)
-                    smooth: true
-                    antialiasing: true
-                }
+//                DropShadow {
+//                    anchors.fill: image
+//                    source: image
+//                    samples: 17
+//                    radius: 8
+//                    horizontalOffset: 1
+//                    verticalOffset: 4
+//                    color: Qt.hsla(0.0, 0.0, 0.0, 0.2)
+//                    smooth: true
+//                    antialiasing: true
+//                }
             }
 
         }
