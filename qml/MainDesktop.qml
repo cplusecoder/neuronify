@@ -135,13 +135,13 @@ Item {
 //            bottom: parent.bottom
 //        }
         anchors.fill: parent
-//        clip: true
-//        autoPause: root.state != "view" && root.state != "creation"
-//        onBackgroundClicked: {
-//            itemModelLoader.source = ""
-//            propertiesPanel.revealed = false
-//        }
-//        focus: true
+        clip: true
+        autoPause: root.state != "view" && root.state != "creation"
+        onBackgroundClicked: {
+            itemModelLoader.source = ""
+            propertiesPanel.revealed = false
+        }
+        focus: true
     }
 
 //    PlaybackControls {

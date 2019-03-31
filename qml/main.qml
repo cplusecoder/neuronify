@@ -140,38 +140,11 @@ Window {
 
     MainDesktop {
         id: mainDesktop
-//        anchors.fill: parent
-//        focus: true
-//        onRequestClose: {
-//            console.log("Close requested")
-//            root.close()
-//        }
-
-        width: 300
-        height: 300
-    }
-
-    Rectangle {
-        color: "blue"
-        width: 100
-        height: 100
-        x: 100
-        y: 300
-        MouseArea {
-            anchors.fill: parent
-            drag.target: parent
+        anchors.fill: parent
+        focus: true
+        onRequestClose: {
+            console.log("Close requested")
+            root.close()
         }
     }
-    Rectangle {
-        color: "green"
-        width: 100
-        height: 100
-        x: 400
-        y: 400
-        MouseArea {
-            anchors.fill: parent
-            drag.target: parent
-        }
-    }
-
 }
