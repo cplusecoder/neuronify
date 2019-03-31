@@ -40,17 +40,17 @@ Node {
         fireAnimation.restart()
     }
 
-    DropShadow {
-        anchors.fill: image
-        source: image
-        smooth: true
-        antialiasing: true
-        samples: 17
-        radius: 8
-        horizontalOffset: 1
-        verticalOffset: 4
-        color: Qt.hsla(0.0, 0.0, 0.0, 0.2)
-    }
+//    DropShadow {
+//        anchors.fill: image
+//        source: image
+//        smooth: true
+//        antialiasing: true
+//        samples: 17
+//        radius: 8
+//        horizontalOffset: 1
+//        verticalOffset: 4
+//        color: Qt.hsla(0.0, 0.0, 0.0, 0.2)
+//    }
 
     Image {
         id: image
@@ -160,21 +160,21 @@ Node {
         ]
     }
 
-    Connector {
-        color: inhibitory ? "#e41a1c" : "#6baed6"
-        connectorColor: inhibitory ? "#e41a1c" : "#6baed6"
-        initialPoint: Qt.point(root.width * 2 / 3, root.height * 2 / 3)
-    }
+//    Connector {
+//        color: inhibitory ? "#e41a1c" : "#6baed6"
+//        connectorColor: inhibitory ? "#e41a1c" : "#6baed6"
+//        initialPoint: Qt.point(root.width * 2 / 3, root.height * 2 / 3)
+//    }
 
-    DropArea {
-        id: dropArea
-        anchors {
-            fill: parent
-            margins: -16
-        }
-        keys: [ "connector" ]
-        onDropped: {
-            receivedDrop(drop.source.node)
-        }
-    }
+//    DropArea {
+//        id: dropArea
+//        anchors {
+//            fill: parent
+//            margins: -16
+//        }
+//        keys: [ "connector" ]
+//        onDropped: {
+//            receivedDrop(drop.source.node)
+//        }
+//    }
 }

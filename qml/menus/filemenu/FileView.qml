@@ -9,7 +9,6 @@ import QtQuick.Window 2.1
 import QtCharts 2.1
 import QtMultimedia 5.5
 import Qt.labs.settings 1.0
-import Qt.labs.folderlistmodel 2.1
 import Qt.labs.platform 1.0
 
 import Neuronify 1.0
@@ -191,19 +190,19 @@ Item {
                         signal refresh()
                         identifier: "community"
                         name: "Community"
-                        component: CommunityView {
-                            id: communityView
+//                        component: CommunityView {
+//                            id: communityView
 
-                            Connections {
-                                target: communityItem
-                                onRefresh: communityView.refresh()
-                            }
+//                            Connections {
+//                                target: communityItem
+//                                onRefresh: communityView.refresh()
+//                            }
 
-                            onItemClicked: {
-                                stackView.push(simulationComponent)
-                                stackView.currentItem.objectData = simulationData
-                            }
-                        }
+//                            onItemClicked: {
+//                                stackView.push(simulationComponent)
+//                                stackView.currentItem.objectData = simulationData
+//                            }
+//                        }
 
                         Component {
                             id: simulationComponent
@@ -227,7 +226,7 @@ Item {
                         id: mySimulationsItem
                         signal refresh()
                         name: "My simulations"
-                        visible: Firebase.loggedIn
+//                        visible: Firebase.loggedIn
                         component: MySimulations {
                             id: mySimulations
                             Connections {

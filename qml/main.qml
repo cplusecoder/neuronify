@@ -1,13 +1,13 @@
 import QtQuick 2.2
 import Qt.labs.settings 1.0
 import CuteVersioning 1.0
-import QtQuick.Window 2.0
+import QtQuick.Window 2.12
 import QtQuick.Controls 2.1
 import Neuronify 1.0
 
 import "qrc:/qml/style"
 
-ApplicationWindow {
+Window {
     id: root
 
     property real startupTime: 0
@@ -17,6 +17,22 @@ ApplicationWindow {
     width: 1136
     height: 640
     title: qsTr("Neuronify " + Version.latestTag)
+
+    Text {
+        anchors.centerIn: parent
+        text: "Hello, WASM!"
+    }
+
+    Rectangle {
+        width: 100
+        height: 100
+        color: "red"
+
+        MouseArea {
+            anchors.fill: parent
+            drag.target: parent
+        }
+    }
 
     Component.onCompleted: {
         console.log("ApplicationWindow load completed " + Date.now());
@@ -68,19 +84,19 @@ ApplicationWindow {
         resetStyle()
     }
 
-    onClosing: {
-        // Hack to keep back button from closing app
-        console.log("onClosing")
-        if (Qt.platform.os === "android"){
-            close.accepted = false
-            return
-        }
-        if(!mainDesktop.tryClose()) {
-            close.accepted = false
-            return
-        }
-        console.log("Neuronify closing...")
-    }
+//    onClosing: {
+//        // Hack to keep back button from closing app
+//        console.log("onClosing")
+//        if (Qt.platform.os === "android"){
+//            close.accepted = false
+//            return
+//        }
+//        if(!mainDesktop.tryClose()) {
+//            close.accepted = false
+//            return
+//        }
+//        console.log("Neuronify closing...")
+//    }
 
     function resetStyle() {
         Style.reset(width, height, Screen.pixelDensity)
@@ -110,13 +126,52 @@ ApplicationWindow {
         source: "https://github.com/google/material-design-icons/raw/master/iconfont/MaterialIcons-Regular.ttf"
     }
 
-    MainDesktop {
-        id: mainDesktop
-        anchors.fill: parent
-        focus: true
-        onRequestClose: {
-            console.log("Close requested")
-            root.close()
+    Rectangle {
+        color: "blue"
+        width: 100
+        height: 100
+        x: 200
+        y: 300
+        MouseArea {
+            anchors.fill: parent
+            drag.target: parent
         }
     }
+
+    MainDesktop {
+        id: mainDesktop
+//        anchors.fill: parent
+//        focus: true
+//        onRequestClose: {
+//            console.log("Close requested")
+//            root.close()
+//        }
+
+        width: 300
+        height: 300
+    }
+
+    Rectangle {
+        color: "blue"
+        width: 100
+        height: 100
+        x: 100
+        y: 300
+        MouseArea {
+            anchors.fill: parent
+            drag.target: parent
+        }
+    }
+    Rectangle {
+        color: "green"
+        width: 100
+        height: 100
+        x: 400
+        y: 400
+        MouseArea {
+            anchors.fill: parent
+            drag.target: parent
+        }
+    }
+
 }

@@ -26,7 +26,7 @@
 #include "io/propertygroup.h"
 #include "io/neuronifyfile.h"
 
-#include "io/downloadmanager.h"
+//#include "io/downloadmanager.h"
 
 #include <QApplication>
 #include <QQmlApplicationEngine>
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
     CuteVersioning::init();
 
     qmlRegisterSingletonType<FileIO>("Neuronify", 1, 0, "FileIO", &FileIO::qmlInstance);
-    qmlRegisterSingletonType<NeuronifyFile>("Neuronify", 1, 0, "NeuronifyFile", &NeuronifyFile::qmlInstance);
+//    qmlRegisterSingletonType<NeuronifyFile>("Neuronify", 1, 0, "NeuronifyFile", &NeuronifyFile::qmlInstance);
     qmlRegisterSingletonType<StandardPaths>("Neuronify", 1, 0, "StandardPaths", &StandardPaths::qmlInstance);
 
     qmlRegisterType<NodeBase>("Neuronify", 1, 0, "NodeBase");
@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<RateEngine>("Neuronify", 1, 0, "RateEngine");
     qmlRegisterType<PropertyGroup>("Neuronify", 1, 0, "PropertyGroup");
-    qmlRegisterType<DownloadManager>("Neuronify", 1, 0, "DownloadManager");
+//    qmlRegisterType<DownloadManager>("Neuronify", 1, 0, "DownloadManager");
 
 
     QApplication app(argc, argv);
@@ -98,10 +98,10 @@ int main(int argc, char *argv[])
         }
     }
 
-    QmlPreviewer previewer(app);
-    if(previewer.show()) {
-        return previewer.exec();
-    }
+//    QmlPreviewer previewer(app);
+//    if(previewer.show()) {
+//        return previewer.exec();
+//    }
 
     engine.load(QUrl(QStringLiteral("qrc:///qml/main.qml")));
     if(engine.rootObjects().size() > 0) {
