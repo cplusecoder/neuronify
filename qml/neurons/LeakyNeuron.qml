@@ -61,11 +61,11 @@ Neuron {
         }
     }
 
-//    controls: NeuronDashboard {
-//        neuronEngine: neuronEngine_
-//        leakCurrent: leakCurrent_
-//        neuron: root
-//    }
+    controls: NeuronDashboard {
+        neuronEngine: neuronEngine_
+        leakCurrent: leakCurrent_
+        neuron: root
+    }
 
 //    controls: Component {
 //        PropertiesPage {

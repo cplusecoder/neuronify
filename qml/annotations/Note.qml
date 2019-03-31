@@ -38,39 +38,39 @@ Node {
         property alias height: noteRoot.height
     }
 
-//    controls: Component {
-//        PropertiesPage {
-//            Text {
-//                text: "Text:"
-//                font: Style.control.font
-//                color: Style.text.color
-//            }
-//            TextArea {
-//                id: textInput
-//                anchors {
-//                    left: parent.left
-//                    right: parent.right
-//                }
-//                text: noteRoot.text
-//                wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-//                clip: true
-//                textFormat: Text.PlainText
-//                onFocusChanged: {
-//                    noteRoot.selected = focus
-//                }
-//                Binding {
-//                    target: noteRoot
-//                    property: "text"
-//                    value: textInput.text
-//                }
-//                Binding {
-//                    target: textInput
-//                    property: "text"
-//                    value: noteRoot.text
-//                }
-//            }
-//        }
-//    }
+    controls: Component {
+        PropertiesPage {
+            Text {
+                text: "Text:"
+                font: Style.control.font
+                color: Style.text.color
+            }
+            TextArea {
+                id: textInput
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                }
+                text: noteRoot.text
+                wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                clip: true
+                textFormat: Text.PlainText
+                onFocusChanged: {
+                    noteRoot.selected = focus
+                }
+                Binding {
+                    target: noteRoot
+                    property: "text"
+                    value: textInput.text
+                }
+                Binding {
+                    target: textInput
+                    property: "text"
+                    value: noteRoot.text
+                }
+            }
+        }
+    }
 
     Rectangle {
         id: background
@@ -81,10 +81,10 @@ Node {
         antialiasing: true
     }
 
-//    ItemShadow {
-//        source: background
-//        anchors.fill: background
-//    }
+    ItemShadow {
+        source: background
+        anchors.fill: background
+    }
 
     Text {
         anchors.fill: parent
@@ -98,6 +98,6 @@ Node {
         font.pixelSize: 20
     }
 
-//    ResizeRectangle {}
+    ResizeRectangle {}
 }
 

@@ -56,11 +56,11 @@ Node {
             }
         }
 
-//        MouseArea {
-//            anchors.fill: column
-//            onClicked: {
-//                simulator.loadSimulation(targetSimulation)
-//            }
-//        }
+        MouseArea {
+            anchors.fill: column
+            onClicked: {
+                simulator.loadSimulation(targetSimulation)
+            }
+        }
     }
 }

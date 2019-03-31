@@ -36,30 +36,30 @@ Node {
         }
     }
 
-//    controls: Component {
-//        PropertiesPage {
-//            BoundSlider {
-//                target: engine
-//                property: "currentOutput"
-//                text: "Current output"
-//                unit: "nA"
-//                minimumValue: 0.0e-9
-//                maximumValue: 30.0e-9
-//                stepSize: 0.01e-9
-//                unitScale: 1e-9
-//                precision: 2
+    controls: Component {
+        PropertiesPage {
+            BoundSlider {
+                target: engine
+                property: "currentOutput"
+                text: "Current output"
+                unit: "nA"
+                minimumValue: 0.0e-9
+                maximumValue: 30.0e-9
+                stepSize: 0.01e-9
+                unitScale: 1e-9
+                precision: 2
+            }
+
+//            ConnectMultipleControl {
+//                toEnabled: false
+//                node: currentClampRoot
 //            }
 
-////            ConnectMultipleControl {
-////                toEnabled: false
-////                node: currentClampRoot
-////            }
-
-////            ResetControl {
-////                engine: currentClampRoot.engine
-////            }
-//        }
-//    }
+//            ResetControl {
+//                engine: currentClampRoot.engine
+//            }
+        }
+    }
 
     Image {
         anchors.fill: parent
@@ -67,10 +67,10 @@ Node {
         source: "qrc:/images/generators/current_clamp.png"
     }
 
-//    Connector {
-//        color: "#dd5000"
-//        connectorColor: "#dd5000"
+    Connector {
+        color: "#dd5000"
+        connectorColor: "#dd5000"
 
-//    }
+    }
 }
 
