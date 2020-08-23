@@ -50,6 +50,8 @@ int main(int argc, char *argv[])
     qmlRegisterSingletonType<NeuronifyFile>("Neuronify", 1, 0, "NeuronifyFile", &NeuronifyFile::qmlInstance);
     qmlRegisterSingletonType<StandardPaths>("Neuronify", 1, 0, "StandardPaths", &StandardPaths::qmlInstance);
 
+    qmlRegisterType<FileTextStreamOut>("Neuronify", 1, 0, "FileTextStreamOut");
+
     qmlRegisterType<NodeBase>("Neuronify", 1, 0, "NodeBase");
     qmlRegisterType<NodeEngine>("Neuronify", 1, 0, "NodeEngine");
     qmlRegisterType<EdgeBase>("Neuronify", 1, 0, "EdgeBase");
